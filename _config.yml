@@ -1,0 +1,6 @@
+title: Timothy's Website
+description: Academic Portfolio and Analytics Repository
+theme: jekyll-theme-minima
+
+# Prevents default theme links from clashing with our custom Bootstrap navbar
+header_pages: []
