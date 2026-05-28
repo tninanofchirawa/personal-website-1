@@ -1,0 +1,10 @@
+# Block local server compilation folders
+_site/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+
+# Block your private document folders from being tracked or uploaded
+Docs and Pics/Documetns/Private_Data/
+*.sqlite3
+*.db

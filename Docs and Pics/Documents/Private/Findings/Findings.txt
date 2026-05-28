@@ -1,0 +1,110 @@
+yourusername.github.io/
+│
+├── _config.yml          # Basic site settings (keep it empty or minimal)
+├── _layouts/            # Replaces your Flask "templates" folder
+│   └── base.html        # Your global master layout with Navbar
+├── index.html           # Home page
+├── data-science.html    # Data Science page
+├── qa.html              # Q&A Accordion page
+└── math-club/           # Folder for sub-routes
+    ├── hpl.html         
+    ├── sdg.html         
+    └── training-camp.html
+
+
+-------------------------
+
+
+Hello, I want to make a GitHub pages for the following website....
+I will tell what is there in each pages - 
+
+1) index page
+There is the home page(main page)
+where there will be mainly paragraphs and it will be having a navigation bar that will have the connections to other pages
+
+2) Data-science-project page
+this page will have 
+- navigation
+- paragraphs (in containers)
+- it will have attached pics/ graphs / docs
+- it will have embedded forms in those containers
+
+3) there will be hits math club page -
+it will have images an d docs attached...
+
+it will have 3 subpages
+a) HPL - this will have image carousel, video embed from you tube, images and paragraphs each in their respective containers
+b) SDG - Image carousel and images and paraphs and etc in each container
+c) Training camp - docs, attached drive embedded, images, test(gform embedded) -- each in a container
+
+4) personal - navigation (like others and every page on the top heading/ sidebar) -image carousel - pics, etc
+
+5) QA - this will have drive embedded, there will be drop down QA
+
+
+make it so that this can be viewed by a phone /tab/ laptop -- make it flexible (no fixed width/height)
+
+------------------
+
+
+Can u write a Mail so that Students fill this form - 
+
+Main Objectives -
+1) People visit the Form 
+2) People visit the Site
+3) People fill the form
+
+Here is the demo,
+
+Hi Guys, 
+I am Timothy from Hindustan Math deprtment. (You guys remember filling a form related to College stress Sleep)
+well, here are the results - *data site first link*
+
+also, I am continuing in my journey and I want to make another as I am not satisfied by the results. You cannot believe how long it takes to make Graphs using Google Sheets. Making Grpahs took all the energy. Man, looking back that day -- what a waste I feel -- You cannot believe how long it took (5 Hours on the Document)
+
+Guys definetly see the Document. Here it is -- data site in the above website.
+Also, What do u feel about the site ?? -- Yes It took 1 full day 12 hours making this (Sad emoji)
+
+But, Now, I have a site that can b accessed by all and Full transepancy. 
+I am viewing this Person to learn all about Data Cleaning and if u visit this site  -- *My second link*
+
+You can find out more. Please my sincere request -- Can u fill this new form -- * hird link but this to gform*
+
+The main motives is to work with more data. Also, Please forward this --> I need 100+ data entires 
+
+Last time I got only 77 
+
+Your friend, Timothy 
+
+
+
+---------------
+
+Hi Guys,
+
+I am Timothy from the Hindustan Math department. You might remember a while back I asked you to fill out a form about college stress and sleep habits.
+(Or I asked your seniors, to force you to fill it 😂🤣)
+
+Well, the results are finally ready! You can check out all the data here:
+👉 Data form link
+
+I am still continuing on my data journey, but honestly, I wasn't completely satisfied with the first round of results. Making those graphs in Google Sheets drained absolutely all my energy. It took me 5 solid hours just working on that document. Looking back, I can't believe how much time it took! 😅
+
+I wanted full transparency so everyone could access the data, so I spent a full 12-hour day building that website. (Yes, it took a whole day 🥲). Definitely take a look at the document on the site above—I would love to know what you think of it!
+
+Now, I am shifting gears to learn all about Data Cleaning. If you want to see where I am learning from, you can visit this page:
+👉 Interesting Finds
+
+Because I need to practice working with more information, I have a sincere request: Could you please take a few minutes to fill out my new form? 
+👉  College Students Exam Time Routine
+
+Last time, we hit 77 responses. This time, my goal is to smash past 100+ data entries!
+
+It would mean a lot to me if you could fill it out and please forward this email to your friends to help me reach the goal.
+
+Thanks so much for your help!
+
+Your friend,
+Timothy
+
+
