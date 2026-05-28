@@ -4,3 +4,6 @@ theme: minima
 
 # Prevents default theme links from clashing with our custom Bootstrap navbar
 header_pages: []
+
+baseurl: "/personal-website-1/" # exact GitHub repository name
+url: "https://tninanofchirawa.github.io/personal-website-1/" # GitHub Pages URL

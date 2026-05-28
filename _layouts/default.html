@@ -2,50 +2,67 @@
 <html lang="en">
 <head>
   {% include head.html %}
+  <style>
+    /* THE RESPONSIVE HERO ENGINE */
+    .hero-banner {
+      height: 65vh; /* Slightly taller (65% viewport height) to let images breathe */
+      
+      /* Dynamic background targeting using Jekyll variables */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
+                        url('{{ page.hero_image | relative_url }}');
+      
+      /* Absolute mobile and desktop positioning layout rules */
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      color: #ffffff;
+      transition: all 0.3s ease-in-out;
+    }
+    .hero-banner h1{
+      font-size:4.5rem;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds a shadow so text reads easily over the huge image */
+    }
+    .hero-banner p{
+      font-size: 1.5rem ;
+    }
+
+    /* Shrink padding and text size smoothly when viewed on mobile screens */
+    /* Look for this block in your _layouts/default.html */
+@media (max-width: 768px) {
+  .hero-banner {
+    /* HANDS-ON EDIT: Force the hero image to take up 80% of the phone screen */
+    height: 80vh !important; 
+  }
+  
+  .hero-banner h1 {
+    font-size: 3.375rem !important; /* Make the title slightly bigger on mobile so it pops */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds a shadow so text reads easily over the huge image */
+  }
+  
+  .hero-banner p {
+    font-size: 1.1rem !important;
+    display: block !important; /* Forces your subtitle to show up on mobile for that inviting look */
+  }
+}
+  </style>
 </head>
 <body>
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-3">
-    <div class="container-fluid">
-      <a class="navbar-brand font-monospace fw-bold" href="{{ '/' | relative_url }}">TIMOTHY</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavbar" aria-controls="siteNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="siteNavbar">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="{{ '/' | relative_url }}">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ '/data-science.html' | relative_url }}">Data Science</a></li>
-          
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="mathDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Hits Math Club
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="mathDropdown">
-              <li><a class="dropdown-item" href="{{ '/math-club/index.html' | relative_url }}">Main Club Hub</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="{{ '/math-club/hpl.html' | relative_url }}">HPL Subpage</a></li>
-              <li><a class="dropdown-item" href="{{ '/math-club/sdg.html' | relative_url }}">SDG Subpage</a></li>
-              <li><a class="dropdown-item" href="{{ '/math-club/training-camp.html' | relative_url }}">Training Camp</a></li>
-            </ul>
-          </li>
-          
-          <li class="nav-item"><a class="nav-link" href="{{ '/personal.html' | relative_url }}">Personal</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ '/qa.html' | relative_url }}">Some Q&A</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="hero-banner d-flex justify-content-center align-items-center text-center px-3">
-    <div>
-      <h1 class="display-6 fw-bold">{% if page.hero_title %}{{ page.hero_title }}{% else %}{{ page.title }}{% endif %}</h1>
+  {% include navbar.html %}
+  <div class="hero-banner d-flex justify-content-center align-items-center text-center px-3 shadow-sm">
+    <div class="container">
+      <h1 class="display-5 fw-bold text-uppercase tracking-wide animate__animated animate__fadeInDown">
+        {% if page.hero_title %}{{ page.hero_title }}{% else %}{{ page.title }}{% endif %}
+      </h1>
+      {% if page.hero_subtitle %}
+        <p class="lead mb-0 text-light opacity-75 font-monospace d-none d-md-block">{{ page.hero_subtitle }}</p>
+      {% endif %}
     </div>
   </div>
 
   <main class="container-fluid py-4 px-3 px-md-5">
     {{ content }}
-  </main>
-
+</main>
+ {% include footer.html %}
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" async></script>
 </body>
 </html>
