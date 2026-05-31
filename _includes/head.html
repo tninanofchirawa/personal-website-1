@@ -4,58 +4,82 @@
 <!-- The Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Gentium+Basic:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Gentium+Basic:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@500&display=swap"
+  rel="stylesheet">
 
 <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
   /* Break Minima defaults to unlock total Bootstrap fluid control */
-  .wrapper { max-width: 100% !important; padding: 0 !important; }
-  .page-content { padding: 0 !important; }
-  .site-footer { margin-top: 2rem; padding: 2rem 0; background-color: #f8f9fa; border-top: 1px solid #e8e8e8; }
-  
+  .wrapper {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .page-content {
+    padding: 0 !important;
+  }
+
+  .site-footer {
+    margin-top: 2rem;
+    padding: 2rem 0;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e8e8e8;
+  }
+
   /* Global responsive scaling helpers */
-  iframe, img { max-width: 100%; height: auto; }
-  
+  iframe,
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
   /* Exact 65% Viewport Height Hero Setup */
   .hero-banner {
     height: 65vh;
-    background-color: #1e2d24; /* Rich dark pine/academic green */
+    background-color: #1e2d24;
+    /* Rich dark pine/academic green */
     color: #ffffff;
   }
 
   /* Fonts */
   /* 1. MAIN PAGE TITLES (H1) -> Gentium Basic */
-  h1, .hero-banner h1 {
+  h1,
+  .hero-banner h1 {
     font-family: 'Gentium Basic', serif !important;
     font-weight: 1000;
   }
 
   /* 2. SUB-HEADINGS (H2, H3) -> Oswald Medium */
-  h2, h3 {
+  h2,
+  h3 {
     font-family: 'Oswald', sans-serif !important;
     font-weight: 500;
     letter-spacing: 0.5px;
   }
 
   p {
-    font-family: 'Times New Roman' !important ;
-    font-size:large;
+    font-family: 'Times New Roman' !important;
+    font-size: large;
   }
 
   /* 3. YOUR SPECIAL SHORTCUT CLASS -> EB Garamond */
   .special-garamond {
     font-family: 'EB Garamond', serif !important;
-    font-size: 1.2rem; /* Scales up elegant serif text so it reads beautifully */
+    font-size: 1.2rem;
+    /* Scales up elegant serif text so it reads beautifully */
     line-height: 1.6;
   }
 
   /* Add this inside your _includes/head.html <style> block */
   .card-hover-effect:hover {
-    transform: translateY(-5px); /* Smoothly lifts the container box upwards */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.12) !important; /* Softens and deepens the drop shadow shadow */
-    cursor: pointer; /* Forces the pointer hand icon to show up anywhere on the box */
+    transform: translateY(-5px);
+    /* Smoothly lifts the container box upwards */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12) !important;
+    /* Softens and deepens the drop shadow shadow */
+    cursor: pointer;
+    /* Forces the pointer hand icon to show up anywhere on the box */
   }
-
 </style>

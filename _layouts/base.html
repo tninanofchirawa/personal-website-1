@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { background-color: #f8f9fa; }
+    body {
+      background-color: #f8f9fa;
+    }
+
     .hero-banner {
-      height: 20vh; /* 20% Viewport height */
+      height: 20vh;
+      /* 20% Viewport height */
       background-color: #1e2d24;
       color: white;
     }
-    iframe, img { max-width: 100%; height: auto; }
+
+    iframe,
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   </style>
 </head>
+
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top px-3">
@@ -27,16 +38,17 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="/data-science.html">Data Science</a></li>
-          
+
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="mathDropdown" role="button" data-bs-toggle="dropdown">Math Club</a>
+            <a class="nav-link dropdown-toggle" href="#" id="mathDropdown" role="button" data-bs-toggle="dropdown">Math
+              Club</a>
             <ul class="dropdown-menu dropdown-menu-end">
               <li><a class="dropdown-item" href="/math-club/hpl.html">HPL</a></li>
               <li><a class="dropdown-item" href="/math-club/sdg.html">SDG</a></li>
               <li><a class="dropdown-item" href="/math-club/training-camp.html">Training Camp</a></li>
             </ul>
           </li>
-          
+
           <li class="nav-item"><a class="nav-link" href="/qa.html">Q&A</a></li>
         </ul>
       </div>
@@ -53,4 +65,5 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
