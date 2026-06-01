@@ -5,6 +5,6 @@ _site/
 Gemfile.lock
 
 # Block your private document folders from being tracked or uploaded
-Docs and Pics/Documents/Private/
+Docs and Pics/Documents/Private
 *.sqlite3
 *.db
