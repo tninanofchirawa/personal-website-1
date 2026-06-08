@@ -13,7 +13,7 @@
 <div align="center">
   <kbd>
     <marquee behavior="scroll" direction="left" scrollamount="6" style="font-weight: bold; color: #007bff; font-family: monospace; font-size: 1.2em;">
-      🔥 Dynamic Layouts Built with Bootstrap 5 • 📊 Advanced Data Science Applications • 🧮 Rigorous Mathematical Modeling • 🚀 Welcome to the Portal!
+      🔥 Dynamic Layouts Built with Bootstrap 5 • 📊 Data Science Applications • 🧮 Mathematical Modeling • 🚀 Welcome to the Portal!
     </marquee>
   </kbd>
 </div>
@@ -25,7 +25,7 @@
 Below is the structured layout of our system. Click on any section heading to learn more about its functional purpose or click the live link above to interact with it directly in your web browser.
 
 ### 🏠 1) Home
-🏠✨ This is the landing page of the website. From here, you can access the main sections, explore the content, and discover why I decided to build this website in the first place 😄🚀.
+This is the landing page of the website.✨ From here, you can access the main sections, explore the content, and discover why I decided to build this website in the first place 😄🚀.
 
 
 ### 📊 2) Data Science Page
@@ -41,7 +41,7 @@ Here you'll find some of the main projects and activities I was involved in, inc
 I hope you enjoy exploring these projects and find the resources, experiences, and lessons shared here both useful and interesting. 🚀📖
 
 ### 📜 4) Terms and Conditions
-📜🔒 This page contains the Terms & Conditions, Privacy Policy, and guidelines governing the use of this website, its resources, and any data collected through forms.
+This page contains the Terms & Conditions, Privacy Policy, and guidelines governing the use of this website, its resources, and any data collected through forms.📜🔒 
 
 Questions about why this website exists, how data is handled, and what happens to submitted information are all answered here. 📊✨
 
