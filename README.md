@@ -1,4 +1,4 @@
-# 🌟 Welcome to my website
+# 🌟 Welcome to my Website
 
 <!-- 1. LIVE SITE LINK BUTTON -->
 <p align="center">
