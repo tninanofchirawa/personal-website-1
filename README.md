@@ -27,18 +27,22 @@ Below is the structured layout of our system. Click on any section heading to le
 ### 🏠 1) Home
 This is the landing page of the website.✨ From here, you can access the main sections, explore the content, and discover why I decided to build this website in the first place 😄🚀.
 
+<hr>
 
 ### 📊 2) Data Science Page
 This is where all survey forms 📝, collected datasets 📈, and analysis reports 📊 will be kept. I'll regularly post new projects and may ask for your participation through surveys and questionnaires.
 
 In many ways, this also serves as my Data Science blog 🚀—a place to share findings, experiments, and insights from the data we collect together.
 
-
+<hr>
+<hr>
 
 ### 🧮 3) Math Club
 Here you'll find some of the main projects and activities I was involved in, including the National Science Day Project (SDG) 🌍, the Hindustan Premier League (HPL) 🏏, and the Mathematics Training Camp 🎓.
 
 I hope you enjoy exploring these projects and find the resources, experiences, and lessons shared here both useful and interesting. 🚀📖
+
+<hr>
 
 ### 📜 4) Terms and Conditions
 This page contains the Terms & Conditions, Privacy Policy, and guidelines governing the use of this website, its resources, and any data collected through forms.📜🔒 
