@@ -42,6 +42,7 @@ Here you'll find some of the main projects and activities I was involved in, inc
 I hope you enjoy exploring these projects and find the resources, experiences, and lessons shared here both useful and interesting. 🚀📖
 
 <hr class="border-light opacity-25 m-0">
+
 ### 📜 4) Terms and Conditions
 This page contains the Terms & Conditions, Privacy Policy, and guidelines governing the use of this website, its resources, and any data collected through forms.📜🔒 
 
