@@ -2,7 +2,7 @@
 
 <!-- 1. LIVE SITE LINK BUTTON -->
 <p align="center">
-  <a href="[https://your-username.github.io/your-repository-name](https://tninanofchirawa.github.io/personal-website-1/index.html)" target="_blank" rel="noopener noreferrer">
+  <a href="https://tninanofchirawa.github.io/personal-website-1/index.html" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/🚀%20Launch%20Live%20App-Ctrl%20%2B%20Click%20To%20Open%20New%20Tab-blueviolet?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Launch Live App" />
   </a>
   <br />
