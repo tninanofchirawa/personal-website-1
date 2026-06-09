@@ -29,59 +29,51 @@
                                 Start</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ '/qa.html' | relative_url }}">Questions and Answers</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="{{ '/' | relative_url }}" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Questions and Answers
+                    </a>
+                    <ul class="dropdown-menu">
+
+                        <li><a class="dropdown-item" href="{{ '/q-a/index.html' | relative_url }}">Terms and
+                                Conditions</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="{{ '/q-a/1-qa.html' | relative_url }}">Some more
+                                links</a>
+                        </li>
+
+                    </ul>
                 </li>
-                <div class="collapse navbar-collapse ms-auto font-monospace" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ '/index.html' | relative_url }}">Home</a>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ '/personal.html' | relative_url }}">About Me</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="{{ '/' | relative_url }}" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Math Club
+                    </a>
+                    <ul class="dropdown-menu">
+
+                        <li><a class="dropdown-item" href="{{ '/math-club/index.html' | relative_url }}">Hits
+                                Math
+                                Club</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="{{ '/' | relative_url }}" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Questions and Answers
-                            </a>
-                            <ul class="dropdown-menu">
-
-                                <li><a class="dropdown-item" href="{{ '/q-a/index.html' | relative_url }}">Terms and
-                                        Conditions</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="{{ '/q-a/1-qa.html' | relative_url }}">Some more
-                                        links</a>
-                                </li>
-
-                            </ul>
+                        <li><a class="dropdown-item" href="{{ '/math-club/hpl.html' | relative_url }}">HPL</a>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ '/personal.html' | relative_url }}">About Me</a>
+                        <li><a class="dropdown-item" href="{{ '/math-club/sdg.html' | relative_url }}">SDG</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="{{ '/' | relative_url }}" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Math Club
-                            </a>
-                            <ul class="dropdown-menu">
-
-                                <li><a class="dropdown-item" href="{{ '/math-club/index.html' | relative_url }}">Hits
-                                        Math
-                                        Club</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="{{ '/math-club/hpl.html' | relative_url }}">HPL</a>
-                                </li>
-                                <li><a class="dropdown-item" href="{{ '/math-club/sdg.html' | relative_url }}">SDG</a>
-                                </li>
-                                <li><a class="dropdown-item"
-                                        href="{{ '/math-club/training-camp.html' | relative_url }}">Training Camp</a>
-                                </li>
-                            </ul>
+                        <li><a class="dropdown-item"
+                                href="{{ '/math-club/training-camp.html' | relative_url }}">Training Camp</a>
                         </li>
                     </ul>
-                </div>
+                </li>
+            </ul>
         </div>
+    </div>
 </nav>
