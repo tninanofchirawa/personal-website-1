@@ -79,6 +79,33 @@
   </main>
   {% include footer.html %}
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" async></script>
+  <script>
+    // 1. TRACK ACTUAL PAGE NAVIGATION CLICKS (Home, About Me, Dropdown Items)
+    document.querySelectorAll('.ga-nav-link').forEach(function (element) {
+      element.addEventListener('click', function () {
+        // Get text, remove extra spaces, change spaces to underscores, and lowercase it
+        var cleanName = this.innerText.trim().replace(/\s+/g, '_').toLowerCase();
+
+        gtag('event', 'navbar_click', {
+          'button_name': cleanName,
+          'link_url': this.getAttribute('href')
+        });
+      });
+    });
+
+    // 2. TRACK WHEN SOMEONE OPENS A DROPDOWN MENU
+    document.querySelectorAll('.ga-dropdown-toggle').forEach(function (element) {
+      element.addEventListener('click', function () {
+        var dropdownName = this.innerText.trim().replace(/\s+/g, '_').toLowerCase();
+
+        gtag('event', 'navbar_dropdown_open', {
+          'dropdown_name': dropdownName
+        });
+      });
+    });
+  </script>
+
+  
 </body>
 
 </html>
