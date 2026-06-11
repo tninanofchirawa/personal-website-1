@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
     <div class="container-fluid">
-        <a class="navbar-brand text-warning fw-bold fs-4" style="font-family: 'Times New Roman', Times, serif;"
-            href="{{ '/index.html' | relative_url }}">
+        <!-- Logo / Brand Tracking -->
+        <a class="navbar-brand text-warning fw-bold fs-4 ga-nav-link"
+            style="font-family: 'Times New Roman', Times, serif;" href="{{ '/index.html' | relative_url }}">
             Timothy's Website
         </a>
 
@@ -14,60 +15,63 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3 font-monospace">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ '/index.html' | relative_url }}">Home</a>
+                    <a class="nav-link ga-nav-link" href="{{ '/index.html' | relative_url }}">Home</a>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link dropdown-toggle ga-dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         Data-Science Project
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ '/d-s/index.html' | relative_url }}">Intro to the
-                                Project</a></li>
+                        <li><a class="dropdown-item ga-nav-link" href="{{ '/d-s/index.html' | relative_url }}">Intro to
+                                the Project</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="{{ '/d-s/1-start.html' | relative_url }}">Start</a></li>
-                        <li><a class="dropdown-item" href="{{ '/d-s/2-still-start.html' | relative_url }}">Still
-                                Start</a></li>
+                        <li><a class="dropdown-item ga-nav-link"
+                                href="{{ '/d-s/1-start.html' | relative_url }}">Start</a></li>
+                        <li><a class="dropdown-item ga-nav-link"
+                                href="{{ '/d-s/2-still-start.html' | relative_url }}">Still Start</a></li>
                     </ul>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link dropdown-toggle ga-dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         Questions and Answers
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ '/q-a/index.html' | relative_url }}">Terms and
+                        <li><a class="dropdown-item ga-nav-link" href="{{ '/q-a/index.html' | relative_url }}">Terms and
                                 Conditions</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="{{ '/q-a/1-qa.html' | relative_url }}">Some more links</a>
-                        </li>
+                        <li><a class="dropdown-item ga-nav-link" href="{{ '/q-a/1-qa.html' | relative_url }}">Some more
+                                links</a></li>
                     </ul>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ '/personal.html' | relative_url }}">About Me</a>
+                    <a class="nav-link ga-nav-link" href="{{ '/personal.html' | relative_url }}">About Me</a>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link dropdown-toggle ga-dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         Math Club
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ '/math-club/index.html' | relative_url }}">Hits Math
-                                Club</a></li>
+                        <li><a class="dropdown-item ga-nav-link"
+                                href="{{ '/math-club/index.html' | relative_url }}">Hits Math Club</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="{{ '/math-club/hpl.html' | relative_url }}">HPL</a></li>
-                        <li><a class="dropdown-item" href="{{ '/math-club/sdg.html' | relative_url }}">SDG</a></li>
-                        <li><a class="dropdown-item"
+                        <li><a class="dropdown-item ga-nav-link"
+                                href="{{ '/math-club/hpl.html' | relative_url }}">HPL</a></li>
+                        <li><a class="dropdown-item ga-nav-link"
+                                href="{{ '/math-club/sdg.html' | relative_url }}">SDG</a></li>
+                        <li><a class="dropdown-item ga-nav-link"
                                 href="{{ '/math-club/training-camp.html' | relative_url }}">Training Camp</a></li>
                     </ul>
                 </li>
