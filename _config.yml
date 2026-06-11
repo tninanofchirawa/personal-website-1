@@ -8,6 +8,6 @@ header_pages: []
 baseurl: "/personal-website-1/" # exact GitHub repository name
 url: "https://tninanofchirawa.github.io/personal-website-1/" # GitHub Pages URL
 
-# _config.yml
+# Google Analytics tracking ID
 google_analytics: G-LN7Y2T4WQV
 
