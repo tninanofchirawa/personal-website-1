@@ -12,7 +12,8 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3 font-monospace">
+            <!-- Changed 'me-auto' to 'ms-auto' to shift menu items to the right -->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 font-monospace">
 
                 <li class="nav-item">
                     <a class="nav-link ga-nav-link" href="{{ '/index.html' | relative_url }}">Home</a>
@@ -23,7 +24,7 @@
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Data-Science Project
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item ga-nav-link" href="{{ '/d-s/index.html' | relative_url }}">Intro to
                                 the Project</a></li>
                         <li>
@@ -41,7 +42,7 @@
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Questions and Answers
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item ga-nav-link" href="{{ '/q-a/index.html' | relative_url }}">Terms and
                                 Conditions</a></li>
                         <li>
@@ -61,7 +62,7 @@
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Math Club
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item ga-nav-link"
                                 href="{{ '/math-club/index.html' | relative_url }}">Hits Math Club</a></li>
                         <li>
