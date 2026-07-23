@@ -52,6 +52,114 @@
         /* Forces your subtitle to show up on mobile for that inviting look */
       }
     }
+
+    /* Fixed Container at bottom of screen */
+    .top-banner {
+      position: fixed;
+      bottom: 30px;
+      /* Moved from top to bottom */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 600px;
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      /* Modern highlighted gradient */
+      color: #ffffff;
+      padding: 10px 50px 10px 15px;
+      /* Added right padding to prevent button overlap */
+      border-radius: 50px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      z-index: 999999;
+      /* Keeps it on top of all elements */
+      user-select: none;
+      /* Prevents text highlighting on tap */
+      cursor: pointer;
+      transition: all 0.3s ease;
+      animation: slideUp 0.4s ease-out;
+      /* Changed to slideUp */
+    }
+
+    .top-banner:hover {
+      transform: translateX(-50%) scale(1.02);
+    }
+
+    /* Banner Content */
+    .banner-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .banner-badge {
+      background-color: #ef4444;
+      color: white;
+      font-size: 20px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .banner-text {
+      margin: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+
+    /* Close Button */
+    #close-banner-btn {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      font-size: 26px;
+      line-height: 1;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    #close-banner-btn:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    /* Slide Up Animation for Bottom Placement */
+    @keyframes slideUp {
+      from {
+        transform: translate(-50%, 100px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+      }
+    }
+
+    /* Mobile Responsive Adjustments */
+    @media (max-width: 480px) {
+      .top-banner {
+        width: 92%;
+        bottom: 15px;
+        /* Updated position for mobile screens */
+        padding: 12px 50px 12px 14px;
+      }
+
+      .banner-text {
+        font-size: 13px;
+      }
+    }
   </style>
 
 
@@ -105,7 +213,54 @@
     });
   </script>
 
-  
+  <!-- Floating Banner HTML -->
+  <div id="top-banner-container" class="top-banner">
+    <div id="banner-touch-area" class="banner-content">
+      <span class="banner-badge">GForm</span>
+      <p class="banner-text">
+        <strong>Form Link:</strong> Tap here to Fill the Gform!
+      </p>
+    </div>
+    <button id="close-banner-btn" aria-label="Dismiss banner">&times;</button>
+  </div>
+
+  <!-- Combined JavaScript (Single Tap + Once Per Session) -->
+  <script>
+    (function () {
+      const STORAGE_KEY = "has_dismissed_form_banner";
+
+      // 1. Check if the user has already interacted with or closed the banner
+      if (sessionStorage.getItem(STORAGE_KEY) === "true") {
+        const existingBanner = document.getElementById("top-banner-container");
+        if (existingBanner) existingBanner.remove();
+        return; // Stop running
+      }
+
+      // Target Google Form URL
+      const targetPageUrl = "https://forms.gle/igHN1Q2nAU7dbyLeA";
+
+      const banner = document.getElementById("top-banner-container");
+      const touchArea = document.getElementById("banner-touch-area");
+      const closeBtn = document.getElementById("close-banner-btn");
+
+      // Guard check in case elements are missing
+      if (!banner || !touchArea || !closeBtn) return;
+
+      // 2. Single tap / click redirection
+      touchArea.addEventListener("click", function () {
+        sessionStorage.setItem(STORAGE_KEY, "true"); // Don't show again in this session
+        window.location.href = targetPageUrl;
+      });
+
+      // 3. Cut / Remove element completely when close button is pressed
+      closeBtn.addEventListener("click", function (e) {
+        e.stopPropagation(); // Stops touchArea click event from firing
+        e.preventDefault();
+        sessionStorage.setItem(STORAGE_KEY, "true"); // Don't show again in this session
+        banner.remove(); // Permanently cuts the element from DOM
+      });
+    })();
+  </script>
 </body>
 
 </html>
