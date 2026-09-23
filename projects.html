@@ -1,0 +1,197 @@
+---
+layout: default
+title: Other Projects
+hero_title: Non-DS Projects
+hero_subtitle: Built with Purpose, Convenience & Code
+hero_image: Docs and Pics/Pictures/Public/Personal/Hero Image/Hero_image.jpg
+---
+
+<!-- Custom Styling for Hover Lift & Typography -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap');
+
+    .custom-font-container {
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    .mono-tag {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.72rem;
+    }
+
+    .card-hover-effect {
+        transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        cursor: pointer;
+    }
+
+    .card-hover-effect:hover {
+        transform: translateY(-8px) !important;
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    .ticket-box {
+        background-color: #f8fafc;
+        border-radius: 0.65rem;
+        transition: background-color 0.2s ease;
+    }
+
+    .card-hover-effect:hover .ticket-box {
+        background-color: #f1f5f9;
+    }
+</style>
+
+<div class="custom-font-container">
+
+
+    <!-- Introduction Card -->
+    <div class="row g-4 justify-content-center mb-4">
+        <div class="col-12 col-md-10">
+            <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light">
+
+                <h3 class="fw-bold text-dark mb-4">
+                    Some Other Projects
+                </h3>
+
+                <p class="small text-secondary mb-2 mt-1">
+                    ✝️ Built for the <span class="text fw-bold">Glory of Jesus</span> 
+                </p>
+
+                <p class="text-dark mb-0" style="line-height: 1.7;">
+                    💻 These are some of my personal projects — built ✨
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-4 text-muted opacity-25">
+
+    <!-- Projects Section -->
+    <div class="row g-4">
+        <div class="col-12">
+            <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light">
+
+                <!-- Header -->
+                <div class="mb-4">
+                    <div class="d-inline-flex align-items-center gap-2 mb-2">
+                        <span
+                            class="badge bg-secondary-subtle text-secondary border border-secondary-subtle rounded-pill px-3 py-1 text-uppercase mono-tag">
+                            Personal Utilities
+                        </span>
+                    </div>
+                    <h2 class="fw-bold text-dark tracking-tight mb-2">Independent Builds</h2>
+                    <p class="text-muted small mb-0 col-lg-8" style="line-height: 1.6;">
+                        Practical tools built to automate tasks and streamline media consumption, augmented with
+                        AI-assisted workflows.
+                    </p>
+                </div>
+
+                <!-- Project Cards Grid -->
+                <div class="row g-4">
+
+                    <!-- Card 1: YouTube Cleaner -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div
+                            class="card h-100 shadow-sm border rounded-4 p-4 bg-white d-flex flex-column position-relative card-hover-effect">
+
+                            <!-- Top Badge Row -->
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-success-subtle text-success rounded-3"
+                                    style="width: 48px; height: 48px;">
+                                    <span class="fs-4">🧹</span>
+                                </div>
+                                <span
+                                    class="badge bg-success-subtle text-success-emphasis border border-success-subtle rounded-pill px-3 py-2 mono-tag">
+                                    Completed Build
+                                </span>
+                            </div>
+
+                            <h5 class="fw-bold text-dark mb-1">YouTube Cleaner</h5>
+                            <p class="text-muted small mb-3">Focus-Driven Interface Utility</p>
+
+                            <!-- Ticket Box with Commit Timestamp -->
+                            <div class="ticket-box p-3 border-start border-3 border-success mb-3 flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <span class="text-uppercase fw-bold text-muted mono-tag"
+                                        style="letter-spacing: 0.04em;">Ticket Spec</span>
+                                    <span class="text-muted mono-tag">Updated: Sep 2025</span>
+                                </div>
+                                <p class="small text-secondary mb-2 mt-1">
+                                    A targeted browser utility designed to cut through algorithmic clutter, silence
+                                    distractions, and curate a clean learning interface. Built with AI-assisted
+                                    implementation.
+                                </p>
+                                <div class="d-flex align-items-center gap-2 pt-2 border-top border-light-subtle">
+                                    <span class="badge bg-white text-dark border px-2 py-1 mono-tag">Status:
+                                        Synced</span>
+                                    <span class="badge bg-white text-muted border px-2 py-1 mono-tag">Assisted by
+                                        AI</span>
+                                </div>
+                            </div>
+
+                            <div class="pt-2 mt-auto border-top">
+                                <a href="https://github.com/tninanofchirawa/youtube-cleaner" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="stretched-link text-success text-decoration-none small fw-semibold">
+                                    Inspect Repository &rarr;
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: YouTube Downloader -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div
+                            class="card h-100 shadow-sm border rounded-4 p-4 bg-white d-flex flex-column position-relative card-hover-effect">
+
+                            <!-- Top Badge Row -->
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-subtle text-primary rounded-3"
+                                    style="width: 48px; height: 48px;">
+                                    <span class="fs-4">📥</span>
+                                </div>
+                                <span
+                                    class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-2 mono-tag">
+                                    Utility Script
+                                </span>
+                            </div>
+
+                            <h5 class="fw-bold text-dark mb-1">YouTube Downloader</h5>
+                            <p class="text-muted small mb-3">Offline Resource Archive Tool</p>
+
+                            <!-- Ticket Box with Commit Timestamp -->
+                            <div class="ticket-box p-3 border-start border-3 border-primary mb-3 flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <span class="text-uppercase fw-bold text-muted mono-tag"
+                                        style="letter-spacing: 0.04em;">Ticket Spec</span>
+                                    <span class="text-muted mono-tag">Updated: Sep 2025</span>
+                                </div>
+                                <p class="small text-secondary mb-2 mt-1">
+                                    Automated offline lecture archiver allowing smooth downloads of high-yield study
+                                    sessions and technical talks. Built for offline study convenience using AI-augmented
+                                    scripting.
+                                </p>
+                                <div class="d-flex align-items-center gap-2 pt-2 border-top border-light-subtle">
+                                    <span class="badge bg-white text-dark border px-2 py-1 mono-tag">Status:
+                                        Synced</span>
+                                    <span class="badge bg-white text-muted border px-2 py-1 mono-tag">Assisted by
+                                        AI</span>
+                                </div>
+                            </div>
+
+                            <div class="pt-2 mt-auto border-top">
+                                <a href="https://github.com/tninanofchirawa/youtube-downloader" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="stretched-link text-primary text-decoration-none small fw-semibold">
+                                    Inspect Repository &rarr;
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
