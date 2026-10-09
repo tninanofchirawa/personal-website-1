@@ -4,18 +4,37 @@ title: SDG
 hero_title: National Science Day
 hero_image: math-club/HITS_Maths_Club_Pics/Project SDG/Hero Image/hero image.jpg
 event_image: math-club/HITS_Maths_Club_Pics/Project SDG/Poster/Merged_poster.png
-image_1: math-club/HITS_Maths_Club_Pics/Project SDG/Images/Image 1.jpg
-image_2: math-club/HITS_Maths_Club_Pics/Project SDG/Images/Image 2.jpg
-image_3: math-club/HITS_Maths_Club_Pics/Project SDG/Images/Image 3.jpg
-image_4: math-club/HITS_Maths_Club_Pics/Project SDG/Images/Image 4.jpg
-image_5: math-club/HITS_Maths_Club_Pics/Project SDG/Images/Image 5.jpg
-image_6: math-club/HITS_Maths_Club_Pics/Project SDG/Images/Image 6.jpg
-image_7: math-club/HITS_Maths_Club_Pics/Project SDG/Images/Image 7.jpg
+
+# SDG Photo Gallery
+# To add a new photo, simply add a new item below!
+sdg_gallery:
+  - image: math-club/HITS_Maths_Club_Pics/Project SDG/Images/Image 1.jpg
+    caption: 📸 LPG Gas leak Alarm
+    alt: LPG Gas leak Alarm
+  - image: math-club/HITS_Maths_Club_Pics/Project SDG/Images/Image 2.jpg
+    caption: 📸 Water Rocket
+    alt: Water Rocket
+  - image: math-club/HITS_Maths_Club_Pics/Project SDG/Images/Image 3.jpg
+    caption: 📸 Biotech + Mechatronics
+    alt: Biotech + Mechatronics
+  - image: math-club/HITS_Maths_Club_Pics/Project SDG/Images/Image 4.jpg
+    caption: 📸 Smart Drip Irrigation
+    alt: Smart Drip Irrigation
+  - image: math-club/HITS_Maths_Club_Pics/Project SDG/Images/Image 5.jpg
+    caption: 📸 Autonomous Craft
+    alt: Autonomous Craft
+  - image: math-club/HITS_Maths_Club_Pics/Project SDG/Images/Image 6.jpg
+    caption: 📸 Clean Rain Water
+    alt: Clean Rain Water
+  - image: math-club/HITS_Maths_Club_Pics/Project SDG/Images/Image 7.jpg
+    caption: 📸 Air Purification
+    alt: Air Purification
 ---
+
+<!-- Introduction Card -->
 <div class="row g-4 justify-content-center">
   <div class="col-12 col-md-10">
     <div class="p-4 bg-white rounded shadow-sm border">
-
       <p>
         The School of Basic and Applied Sciences hosts the National Science Fair every year, and our team was thrilled
         to secure <strong>2nd place</strong> in the 2025 edition 🏆🔥.
@@ -38,122 +57,61 @@ image_7: math-club/HITS_Maths_Club_Pics/Project SDG/Images/Image 7.jpg
         incredibly rewarding experience 🥳✨.
       </p>
 
-
-      <p>
+      <p class="mb-0">
         <i>To the curious juniors: "What happened in 2026?"</i> 🤔<i> The answer is simple — assignments, deadlines,
-          events,
-          and a severe shortage of time </i>😭😂.
+          events, and a severe shortage of time </i>😭😂.
       </p>
     </div>
   </div>
 </div>
 
-
-<div class="accordion accordion-flush mt-3 text-center border border-secondary rounded w-75 mx-auto" id="qaSystemMenu">
+<!-- Poster Accordion -->
+<div class="accordion accordion-flush mt-4 text-center border rounded w-75 mx-auto" id="sdgPosterMenu">
   <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button collapsed fw-bold"
-        style="font-family: 'Times New Roman', Times, serif;font-size: large;" type="button" data-bs-toggle="collapse"
-        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+    <h2 class="accordion-header" id="headingPoster">
+      <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+        data-bs-target="#collapsePoster" aria-expanded="false" aria-controls="collapsePoster">
         The Poster
       </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-      data-bs-parent="#qaSystemMenu">
+    <div id="collapsePoster" class="accordion-collapse collapse" aria-labelledby="headingPoster"
+      data-bs-parent="#sdgPosterMenu">
       <div class="text-center mt-3 p-2">
-        <img src="{{ page.event_image | relative_url }}" alt="HPL Event" class="img-fluid rounded">
+        <img src="{{ page.event_image | relative_url }}" alt="SDG Event Poster" class="img-fluid rounded">
       </div>
     </div>
   </div>
 </div>
 
-<hr>
+<hr class="my-4">
 
+<!-- SDG Gallery Carousel -->
 <div class="row g-4 justify-content-center">
   <div class="col-12 col-md-10">
     <div class="p-4 bg-white rounded shadow-sm border">
-
       <h3>Some Pics of SDG 2025</h3>
-      <p class="text-muted">Here’s a compilation of moments from the Mathematics Department and our sister departments
-        during SDG 2025.📸✨</p>
+      <p class="text-muted">Here’s a compilation of moments from the Mathematics Department and our sister departments during SDG 2025. 📸✨</p>
 
-      <div id="hplImageSlider" class="carousel slide shadow-sm rounded overflow-hidden" data-bs-ride="carousel">
+      <div id="sdgImageSlider" class="carousel slide shadow-sm rounded overflow-hidden" data-bs-ride="carousel">
         <div class="carousel-inner">
-
-          <div class="carousel-item active">
+          {% for item in page.sdg_gallery %}
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
             <figure class="figure d-block text-center m-0 bg-light p-3">
-              <img src="{{ page.image_1 | relative_url }}" alt="LPG Gas leak Alarm" class="img-fluid rounded shadow-sm">
+              <img src="{{ item.image | relative_url }}" alt="{{ item.alt }}" class="img-fluid rounded shadow-sm">
               <figcaption class="figure-caption text-muted font-italic mt-2" style="font-size: 1rem;">
-                📸 LPG Gas leak Alarm
+                {{ item.caption }}
               </figcaption>
             </figure>
           </div>
-
-          <div class="carousel-item">
-            <figure class="figure d-block text-center m-0 bg-light p-3">
-              <img src="{{ page.image_2 | relative_url }}" alt="Water Rocket" class="img-fluid rounded shadow-sm">
-              <figcaption class="figure-caption text-muted font-italic mt-2" style="font-size: 1rem;">
-                📸 Water Rocket
-              </figcaption>
-            </figure>
-          </div>
-
-          <div class="carousel-item">
-            <figure class="figure d-block text-center m-0 bg-light p-3">
-              <img src="{{ page.image_3 | relative_url }}" alt="Biotech + Mechatronics"
-                class="img-fluid rounded shadow-sm">
-              <figcaption class="figure-caption text-muted font-italic mt-2" style="font-size: 1rem;">
-                📸 Biotech + Mechatronics
-              </figcaption>
-            </figure>
-          </div>
-
-          <div class="carousel-item">
-            <figure class="figure d-block text-center m-0 bg-light p-3">
-              <img src="{{ page.image_4 | relative_url }}" alt="Smart Drip Irrigation"
-                class="img-fluid rounded shadow-sm">
-              <figcaption class="figure-caption text-muted font-italic mt-2" style="font-size: 1rem;">
-                📸 Smart Drip Irrigation
-              </figcaption>
-            </figure>
-          </div>
-
-          <div class="carousel-item">
-            <figure class="figure d-block text-center m-0 bg-light p-3">
-              <img src="{{ page.image_5 | relative_url }}" alt="Autonomous Craft" class="img-fluid rounded shadow-sm">
-              <figcaption class="figure-caption text-muted font-italic mt-2" style="font-size: 1rem;">
-                📸 Autonomus Craft
-              </figcaption>
-            </figure>
-          </div>
-
-          <div class="carousel-item">
-            <figure class="figure d-block text-center m-0 bg-light p-3">
-              <img src="{{ page.image_6 | relative_url }}" alt="Clean Rain Water" class="img-fluid rounded shadow-sm">
-              <figcaption class="figure-caption text-muted font-italic mt-2" style="font-size: 1rem;">
-                📸 Clean Rain Water
-              </figcaption>
-            </figure>
-          </div>
-
-          <div class="carousel-item">
-            <figure class="figure d-block text-center m-0 bg-light p-3">
-              <img src="{{ page.image_7 | relative_url }}" alt="Air Purification" class="img-fluid rounded shadow-sm">
-              <figcaption class="figure-caption text-muted font-italic mt-2" style="font-size: 1rem;">
-                📸 Air Purification
-              </figcaption>
-            </figure>
-          </div>
-
+          {% endfor %}
         </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#hplImageSlider" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#sdgImageSlider" data-bs-slide="prev">
           <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#hplImageSlider" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#sdgImageSlider" data-bs-slide="next">
           <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
         </button>
-
       </div>
     </div>
   </div>

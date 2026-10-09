@@ -1,0 +1,156 @@
+---
+layout: default
+title: CSES Problem Set Solutions
+hero_title: CSES Solutions
+hero_subtitle: Algorithmic Problem Solving & Competitive Programming in C++
+hero_image: Docs and Pics/Pictures/Public/Personal/Hero Image/Hero_image.jpg
+---
+
+<div class="custom-font-container">
+
+  <!-- Introduction Card -->
+  <div class="row g-4 justify-content-center mb-4">
+    <div class="col-12 col-md-10">
+      <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light">
+        <h3 class="fw-bold text-dark mb-3">
+          CSES Problem Set Solutions
+        </h3>
+        <p class="small text-secondary mb-2 mt-1">
+          📂 Tracked and synced directly from <span class="fw-bold text-dark">github.com/tninanofchirawa/cses</span>
+        </p>
+        <p class="text-secondary mb-0" style="line-height: 1.7;">
+          A catalog of competitive programming solutions written in C++. Click into any category below to view
+          all solved problems.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-4 text-muted opacity-25">
+
+  <!-- Projects Section -->
+  <div class="row g-4">
+    <div class="col-12">
+      <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light">
+
+        <!-- Header -->
+        <div class="mb-4">
+          <div class="d-inline-flex align-items-center gap-2 mb-2">
+            <span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle rounded-pill px-3 py-1 text-uppercase mono-tag">
+              Problem Categories
+            </span>
+          </div>
+          <h2 class="fw-bold text-dark tracking-tight mb-2">Topics & Sections</h2>
+          <p class="text-muted small mb-0 col-lg-8" style="line-height: 1.6;">
+            Only sections containing active solution code are listed below. Click any folder to inspect all
+            problem solutions inside.
+          </p>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="cses-loader" class="text-center py-5">
+          <div class="spinner-border text-primary" role="status"></div>
+          <p class="text-muted small mt-2 mono-tag">Checking repository folders...</p>
+        </div>
+
+        <!-- Folder Grid -->
+        <div id="cses-folder-grid" class="row g-4 d-none"></div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- GitHub API Folder Fetcher Script -->
+<script>
+  (async function fetchFolders() {
+    const USER = 'tninanofchirawa';
+    const REPO = 'cses';
+    const BRANCH = 'main';
+
+    const loader = document.getElementById('cses-loader');
+    const grid = document.getElementById('cses-folder-grid');
+
+    try {
+      const res = await fetch(`https://api.github.com/repos/${USER}/${REPO}/git/trees/${BRANCH}?recursive=1`);
+      if (!res.ok) throw new Error('Failed to fetch tree');
+      const data = await res.json();
+
+      // Count files per folder
+      const folderCounts = {};
+
+      (data.tree || []).forEach(item => {
+        if (item.type === 'blob' && !item.path.startsWith('.')) {
+          const parts = item.path.split('/');
+          if (parts.length > 1) {
+            const folder = parts[0];
+            const filename = parts.slice(1).join('/');
+            // Only count code files
+            if (/\.(cpp|cc|c|py|java)$/i.test(filename)) {
+              folderCounts[folder] = (folderCounts[folder] || 0) + 1;
+            }
+          }
+        }
+      });
+
+      const folders = Object.keys(folderCounts);
+
+      if (folders.length === 0) {
+        loader.innerHTML = '<p class="text-muted mono-tag">No folders with code found.</p>';
+        return;
+      }
+
+      let html = '';
+      folders.forEach(folder => {
+        const count = folderCounts[folder];
+        const displayName = folder.replace(/[-_]/g, ' ');
+        const targetUrl = `cses-folder.html?folder=${encodeURIComponent(folder)}`;
+
+        html += `
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border rounded-4 p-4 bg-white d-flex flex-column position-relative card-hover-effect">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="d-inline-flex align-items-center justify-content-center bg-primary-subtle text-primary rounded-3" style="width: 48px; height: 48px;">
+                  <span class="fs-4">📁</span>
+                </div>
+                <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-2 mono-tag">
+                  ${count} ${count === 1 ? 'Solution' : 'Solutions'}
+                </span>
+              </div>
+
+              <h5 class="fw-bold text-dark mb-1 text-capitalize">${displayName}</h5>
+              <p class="text-muted small mb-3">CSES Topic Section</p>
+
+              <div class="ticket-box p-3 border-start border-3 border-primary mb-3 flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="text-uppercase fw-bold text-muted mono-tag" style="letter-spacing: 0.04em;">Folder Spec</span>
+                  <span class="text-muted mono-tag">Synced</span>
+                </div>
+                <p class="small text-secondary mb-2 mt-1">
+                  Contains solved algorithmic challenges with C++ source files.
+                </p>
+                <div class="d-flex align-items-center gap-2 pt-2 border-top border-light-subtle">
+                  <span class="badge bg-white text-dark border px-2 py-1 mono-tag">Files: ${count}</span>
+                  <span class="badge bg-white text-muted border px-2 py-1 mono-tag">C++</span>
+                </div>
+              </div>
+
+              <div class="pt-2 mt-auto border-top">
+                <a href="${targetUrl}" class="stretched-link text-primary text-decoration-none small fw-semibold">
+                  Open Folder &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      loader.classList.add('d-none');
+      grid.innerHTML = html;
+      grid.classList.remove('d-none');
+    } catch (e) {
+      loader.innerHTML = '<p class="text-danger mono-tag">Could not load repository files.</p>';
+    }
+  })();
+</script>
