@@ -1,96 +1,127 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
     <div class="container-fluid">
-        <!-- Logo / Brand Tracking -->
+        <!-- Brand / Logo -->
         <a class="navbar-brand text-warning fw-bold fs-4 ga-nav-link"
             style="font-family: 'Times New Roman', Times, serif;" href="{{ '/index.html' | relative_url }}">
             Timothy's Website
         </a>
 
+        <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Changed 'me-auto' to 'ms-auto' to shift menu items to the right -->
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 font-monospace">
 
+                <!-- 1. Home -->
                 <li class="nav-item">
                     <a class="nav-link ga-nav-link" href="{{ '/index.html' | relative_url }}">Home</a>
                 </li>
 
+                <!-- 2. Projects (Reorganized & Structured) -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle ga-dropdown-toggle" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Projects
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <!-- Data Science Section -->
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                        <!-- Data Science Group -->
                         <li>
-                            <h6 class="dropdown-header">Data Science Projects</h6>
+                            <h6 class="dropdown-header text-uppercase fw-bold text-muted small">Data Science</h6>
                         </li>
-                        <li><a class="dropdown-item ga-nav-link" href="{{ '/d-s/index.html' | relative_url }}">Intro to
-                                the Project</a></li>
-                        <li><a class="dropdown-item ga-nav-link"
-                                href="{{ '/d-s/1-start.html' | relative_url }}">Start</a></li>
-                        <li><a class="dropdown-item ga-nav-link"
-                                href="{{ '/d-s/2-still-start.html' | relative_url }}">Still Start</a></li>
-
                         <li>
-                            <hr class="dropdown-divider">
+                            <a class="dropdown-item ga-nav-link" href="{{ '/d-s/index.html' | relative_url }}">
+                                Overview & Studies
+                            </a>
                         </li>
-
-                        <!-- Non-Data Science Section -->
                         <li>
-                            <h6 class="dropdown-header">Other Projects</h6>
+                            <a class="dropdown-item ga-nav-link" href="{{ '/d-s/1-start.html' | relative_url }}">
+                                Surveys & Reports
+                            </a>
                         </li>
-                        <li><a class="dropdown-item ga-nav-link" href="{{ '/Nd-s/cses.html' | relative_url }}">DSA</a>
-                        </li>
-                        <li><a class="dropdown-item ga-nav-link"
-                                href="{{ '/Nd-s/projects.html' | relative_url }}">Non-DS
-                                Overview</a></li>
-                    </ul>
-                </li>
 
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle ga-dropdown-toggle" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Questions and Answers
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item ga-nav-link" href="{{ '/q-a/index.html' | relative_url }}">Terms and
-                                Conditions</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item ga-nav-link" href="{{ '/q-a/1-qa.html' | relative_url }}">Some more
-                                links</a></li>
+
+                        <!-- Code & Programming Group -->
+                        <li>
+                            <h6 class="dropdown-header text-uppercase fw-bold text-muted small">Code & Builds</h6>
+                        </li>
+                        <li>
+                            <a class="dropdown-item ga-nav-link" href="{{ '/Nd-s/cses.html' | relative_url }}">
+                                DSA Solutions (CSES)
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item ga-nav-link" href="{{ '/Nd-s/projects.html' | relative_url }}">
+                                Independent Utilities
+                            </a>
+                        </li>
                     </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link ga-nav-link" href="{{ '/personal.html' | relative_url }}">About Me</a>
-                </li>
-
+                <!-- 3. Math Club -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle ga-dropdown-toggle" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Math Club
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item ga-nav-link"
-                                href="{{ '/math-club/index.html' | relative_url }}">Hits Math Club</a></li>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                        <li>
+                            <a class="dropdown-item ga-nav-link" href="{{ '/math-club/index.html' | relative_url }}">
+                                Club Highlights
+                            </a>
+                        </li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item ga-nav-link"
-                                href="{{ '/math-club/hpl.html' | relative_url }}">HPL</a></li>
-                        <li><a class="dropdown-item ga-nav-link"
-                                href="{{ '/math-club/sdg.html' | relative_url }}">SDG</a></li>
-                        <li><a class="dropdown-item ga-nav-link"
-                                href="{{ '/math-club/training-camp.html' | relative_url }}">Training Camp</a></li>
+                        <li>
+                            <a class="dropdown-item ga-nav-link" href="{{ '/math-club/hpl.html' | relative_url }}">
+                                HPL Event
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item ga-nav-link" href="{{ '/math-club/sdg.html' | relative_url }}">
+                                National Science Day (SDG)
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item ga-nav-link" href="{{ '/math-club/training-camp.html' | relative_url }}">
+                                Math Training Camp
+                            </a>
+                        </li>
                     </ul>
+                </li>
+
+                <!-- 4. Q&A -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle ga-dropdown-toggle" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Q&A
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                        <li>
+                            <a class="dropdown-item ga-nav-link" href="{{ '/q-a/index.html' | relative_url }}">
+                                Terms & Policy
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item ga-nav-link" href="{{ '/q-a/1-qa.html' | relative_url }}">
+                                Useful Resources
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- 5. About Me -->
+                <li class="nav-item">
+                    <a class="nav-link ga-nav-link" href="{{ '/personal.html' | relative_url }}">About Me</a>
                 </li>
 
             </ul>
