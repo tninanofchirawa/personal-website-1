@@ -1,14 +1,68 @@
-# Block local server compilation folders
+# ==============================================================================
+# STRICT GITIGNORE - TIMOTHY'S PERSONAL WEBSITE
+# Keeps all private assets, internal handbooks, and build artifacts hidden
+# ==============================================================================
+
+# --- 1. Private Handbooks & Internal Documentation (DO NOT LEAK TO PUBLIC) ---
+HANDBOOK.md
+*handbook*
+*HANDBOOK*
+*.private
+*.private.*
+
+# --- 2. Hidden & Private Folders ---
+.private/
+_private/
+private/
+Private/
+**/Private/**
+**/private/**
+*#Extra's*
+*#Extra*
+
+# --- 3. Jekyll & Static Site Compilation Folders ---
 _site/
 .jekyll-cache/
 .jekyll-metadata
+.sass-cache/
+
+# --- 4. Ruby & Bundler Environments ---
 Gemfile.lock
+.bundle/
+vendor/
+.gem/
 
-# Block your private document folders from being tracked or uploaded
-# Docs and Pics
-Docs and Pics/Documents/Private/
-Docs and Pics/Pictures/Private/
+# --- 5. Operating System Junk & Hidden Thumbs ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Thumbs.db:encryptable
+desktop.ini
+$RECYCLE.BIN/
 
-#Other files to ignore
+# --- 6. Editor & IDE Settings ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# --- 7. Temporary, Scratch & Log Files ---
+*.log
+*.tmp
+*.bak
+*.orig
+scratch/
+npm-debug.log*
+yarn-debug.log*
+
+# --- 8. Databases & Local Datastores ---
+*.sqlite
 *.sqlite3
 *.db

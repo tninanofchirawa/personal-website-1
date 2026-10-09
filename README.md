@@ -20,13 +20,7 @@
   </kbd>
 </div>
 
-<hr />
 
-> [!NOTE]
-> 📖 **Looking for the Complete Developer Handbook?**
-> Check out [**HANDBOOK.md**](HANDBOOK.md) for an in-depth walkthrough of the site architecture, file mapping, and step-by-step guides on how to manually edit any page.
-
----
 
 ## 🗺️ Portal Navigation
 
