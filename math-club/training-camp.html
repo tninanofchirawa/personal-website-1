@@ -4,23 +4,57 @@ title: Training Camp
 hero_title: Training Camp
 hero_image: math-club/HITS_Maths_Club_Pics/Traing Camp/Hero Image/math.png
 event_image: math-club/HITS_Maths_Club_Pics/Traing Camp/GIF/math-prep.gif
+
+# Assessment Test Series Configuration
+# To add a new test or edit questions, simply update this list!
+tests:
+  - assessment_label: "1st Assessment"
+    title: "Test 1"
+    questions: 20
+    form_url: "https://forms.gle/yvbFkdZNsSP23s5z9"
+    syllabus_title: "Syllabus Matrix - Test 1"
+    syllabus_items:
+      - "Quadratic Equations"
+      - "Permutations and Combinantions"
+      - "Sequence and Series"
+      - "Probability"
+
+  - assessment_label: "2nd Assessment"
+    title: "Test 2"
+    questions: 25
+    form_url: "https://forms.gle/c3Zs9MLHrbbfBWp88"
+    syllabus_title: "Syllabus Matrix - Test 2"
+    syllabus_items:
+      - "Sets, Relations and Functions"
+      - "Calculus"
+
+  - assessment_label: "3rd Assessment"
+    title: "Test 3"
+    questions: 20
+    form_url: "https://forms.gle/VsPZdFAV9q3nYK2t9"
+    syllabus_title: "Syllabus Matrix - Test 3"
+    syllabus_items:
+      - "Conic Section"
+      - "Statistics"
+      - "Probability"
 ---
+
+<!-- Introduction Card with GIF Banner -->
 <div class="row g-4 justify-content-center">
   <div class="col-12 col-md-10 col-xl-8">
     <div class="p-4 bg-white rounded shadow-sm border">
       <h3>The September 2025 Math Training Camp</h3>
-      <h6>📢 First-Year BTech Training Camp Recap! 📐✨</h6><br>
-      <p>
+      <h6>📢 First-Year BTech Training Camp Recap! 📐✨</h6>
+      <p class="mt-3">
         🎬 A quick look at our Mathematics Camp for the BTech juniors! We covered everything from the basics to advanced
         concepts, with a strong focus on Mental Math mastery ⚡🧠 and essential Class 11–12 mathematics 📚.<br><br>
-
         Take a look! 👇
       </p>
 
       <div id="personalImageGallery" class="carousel slide rounded border shadow-sm my-3" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="{{ page.event_image | relative_url }}" alt="HPL Event" class="img-fluid rounded w-100">
+            <img src="{{ page.event_image | relative_url }}" alt="Training Camp GIF" class="img-fluid rounded w-100">
           </div>
         </div>
       </div>
@@ -28,27 +62,24 @@ event_image: math-club/HITS_Maths_Club_Pics/Traing Camp/GIF/math-prep.gif
   </div>
 </div>
 
-<hr>
+<hr class="my-4">
 
+<!-- Question Banks and Notes Section -->
 <div class="row g-4">
   <div class="col-12">
     <div class="p-3 p-md-4 bg-white rounded shadow-sm border">
-
-      <h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-        Question Banks and Notes -
-      </h4>
+      <h4>Question Banks and Notes -</h4>
       <p class="text-muted small mb-3">
         📚 All the notes and question banks from the 6-day camp can be found here! 🚀✨
       </p>
 
-      <div class="border border-3 rounded bg-light overflow-hidden">
-        <iframe src=https://drive.google.com/embeddedfolderview?id=1pUdMThV7tL4wZn1_cr9HowhA4MCWsgCr#list" width="100%"
-          height="450" style="display: block; border: none;">
+      <div class="border rounded bg-light overflow-hidden mb-4">
+        <iframe src="https://drive.google.com/embeddedfolderview?id=1pUdMThV7tL4wZn1_cr9HowhA4MCWsgCr#list"
+          width="100%" height="450" style="display: block; border: none;">
           Loading GFolder…
         </iframe>
       </div>
-      <br>
-      <br>
+
       <p>
         📚 All the resources here were written and compiled by the Mathematics students as part of an intensive
         preparation camp. The collection includes:
@@ -62,246 +93,85 @@ event_image: math-club/HITS_Maths_Club_Pics/Traing Camp/GIF/math-prep.gif
         <li>📋 Syllabus and topic roadmap</li>
       </ul>
 
-      <p>
-        We recommend starting with the syllabus to get an overview of the topics and learning path.
-      </p>
-
-      <p>
-        🚀 A big thank you to all the participants whose enthusiasm, dedication, and hard work made the camp such a
-        rewarding experience.
-      </p>
-
-      <p>
-        💯 Questions, corrections, or feedback are always welcome—feel free to reach out via email. Happy learning!
-      </p>
-
+      <p>We recommend starting with the syllabus to get an overview of the topics and learning path.</p>
+      <p>🚀 A big thank you to all the participants whose enthusiasm, dedication, and hard work made the camp such a rewarding experience.</p>
+      <p class="mb-0">💯 Questions, corrections, or feedback are always welcome—feel free to reach out via email. Happy learning!</p>
     </div>
   </div>
 </div>
 
 <hr class="my-4">
 
+<!-- Test Series Assessments -->
 <div class="row g-3">
   <div class="col-12">
     <div class="p-3 p-md-4 bg-white rounded shadow-sm border">
-      <h3 class="mb-4 text-primary" style="font-family: 'Times New Roman', Times, serif;">Here are the Test series ➡️
-      </h3>
+      <h3 class="mb-4 text-primary times-text">Here are the Test series ➡️</h3>
 
-      <div class="row gy-3 align-items-stretch">
-        <div class="col-12">
-          <div class="row gx-4 gy-3 align-items-stretch">
-            <div class="col-12 col-md-6">
-              <div class="p-2 bg-white rounded shadow-sm border h-100">
-                <h4 style="font-family: Cambria, Georgia, serif;">1st Assessment</h4>
-                <p class="text-muted small mb-3">📝 Link to the Gform of the test below:</p>
-                <hr>
-                <div
-                  class="card h-auto shadow-sm border border-primary rounded-4 p-2 bg-white position-relative card-hover-effect"
-                  style="transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                  <div class="card-body d-flex align-items-start">
+      {% for test in page.tests %}
+      <div class="row gx-4 gy-3 align-items-stretch mb-4">
+        <!-- Test Form Card -->
+        <div class="col-12 col-md-6">
+          <div class="p-3 bg-white rounded shadow-sm border h-100 d-flex flex-column">
+            <h4>{{ test.assessment_label }}</h4>
+            <p class="text-muted small mb-2">📝 Link to the Gform of the test below:</p>
+            <hr class="my-2 opacity-25">
 
-                    <div class="me-3 p-2 bg-light rounded-3 text-primary fs-3 line-height-1">
-                      📝
-                    </div>
-
-
-                    <div>
-                      <h3 class="h5 card-title fw-bold text-dark mb-2 times-text">
-                        Test 1
-                      </h3>
-
-                      <p class="card-text text-muted small special-garamond mb-3" style="line-height: 1.5;">
-                        Use the form below to attempt questions based on the topics covered and
-                        discussed during the classes. 📚✨
-                        <br>
-                        <strong>Good luck, and do your best! 🚀</strong>
-                      </p>
-
-                      <div class="d-flex align-items-center text-success small fw-bold font-monospace mb-3">
-                        <span class="me-1">🎯</span> There are 20 Questions
-                      </div>
-
-                      <a href="https://forms.gle/yvbFkdZNsSP23s5z9" target="_blank"
-                        class="stretched-link text-decoration-none text-primary small fw-bold font-monospace">
-                        Click to attempt the Test &rarr;
-                      </a>
-                    </div>
+            <div class="card h-100 shadow-sm border border-primary rounded-4 p-2 bg-white position-relative card-hover-effect">
+              <div class="card-body d-flex align-items-start">
+                <div class="me-3 p-2 bg-light rounded-3 text-primary fs-3 lh-1">📝</div>
+                <div>
+                  <h3 class="h5 card-title fw-bold text-dark mb-2 times-text">{{ test.title }}</h3>
+                  <p class="card-text text-muted small special-garamond mb-3">
+                    Use the form below to attempt questions based on the topics covered and discussed during the classes. 📚✨
+                    <br><strong>Good luck, and do your best! 🚀</strong>
+                  </p>
+                  <div class="d-flex align-items-center text-success small fw-bold font-monospace mb-3">
+                    <span class="me-1">🎯</span> There are {{ test.questions }} Questions
                   </div>
+                  <a href="{{ test.form_url }}" target="_blank" rel="noopener noreferrer"
+                    class="stretched-link text-decoration-none text-primary small fw-bold font-monospace">
+                    Click to attempt the Test &rarr;
+                  </a>
                 </div>
-              </div>
-            </div>
-
-
-            <div class="col-12 col-md-6">
-              <div class="p-4 bg-light rounded shadow-sm border h-100">
-                <h4 style="font-family: Cambria, Georgia, serif;" class="text-dark">Syllabus Matrix - Test 1</h4>
-                <p class="text-muted small mb-4">🎯 Focus areas for this evaluation module:</p>
-
-                <ul class="list-unstyled fw-bold lh-lg ps-2">
-                  <li class="mb-3 d-flex align-items-center">
-                    <span class="text-primary me-2">🔹</span> Quadratic Equations
-                  </li>
-                  <li class="mb-3 d-flex align-items-center">
-                    <span class="text-primary me-2">🔹</span> Permutations and Combinantions
-                  </li>
-                  <li class="mb-3 d-flex align-items-center">
-                    <span class="text-primary me-2">🔹</span> Sequence and Series
-                  </li>
-                  <li class="mb-3 d-flex align-items-center">
-                    <span class="text-primary me-2">🔹</span> Probability
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <hr class="my-4">
-
-
-          <div class="row gx-4 gy-2 align-items-stretch">
-            <div class="col-12 col-md-6">
-              <div class="p-2 bg-white rounded shadow-sm border h-100">
-                <h4 style="font-family: Cambria, Georgia, serif;">2nd Assessment</h4>
-                <p class="text-muted small mb-3">📝 Link to the Gform of the test below:</p>
-                <hr>
-                <div
-                  class="card h-auto shadow-sm border border-primary rounded-4 p-2 bg-white position-relative card-hover-effect"
-                  style="transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                  <div class="card-body d-flex align-items-start">
-
-                    <div class="me-3 p-2 bg-light rounded-3 text-primary fs-3 line-height-1">
-                      📝
-                    </div>
-
-
-                    <div>
-                      <h3 class="h5 card-title fw-bold text-dark mb-2 times-text">
-                        Test 2
-                      </h3>
-
-                      <p class="card-text text-muted small special-garamond mb-3" style="line-height: 1.5;">
-                        Use the form below to attempt questions based on the topics covered and
-                        discussed during the classes. 📚✨
-                        <br>
-                        <strong>Good luck, and do your best! 🚀</strong>
-                      </p>
-
-                      <div class="d-flex align-items-center text-success small fw-bold font-monospace mb-3">
-                        <span class="me-1">🎯</span> There are 25 Questions
-                      </div>
-
-                      <a href="https://forms.gle/c3Zs9MLHrbbfBWp88" target="_blank"
-                        class="stretched-link text-decoration-none text-primary small fw-bold font-monospace">
-                        Click to attempt the Test &rarr;
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-12 col-md-6">
-              <div class="p-4 bg-light rounded shadow-sm border h-100">
-                <h4 style="font-family: Cambria, Georgia, serif;" class="text-dark">Syllabus Matrix - Test 2</h4>
-                <p class="text-muted small mb-4">🎯 Focus areas for this evaluation module:</p>
-
-                <ul class="list-unstyled fw-bold lh-lg ps-2">
-                  <li class="mb-3 d-flex align-items-center">
-                    <span class="text-primary me-2">🔹</span> Sets, Relations and Functions
-                  </li>
-                  <li class="mb-3 d-flex align-items-center">
-                    <span class="text-primary me-2">🔹</span> Calculus
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-
-          <hr class="my-4">
-
-
-          <div class="row gx-4 gy-2 align-items-stretch">
-            <div class="col-12 col-md-6">
-              <div class="p-2 bg-white rounded shadow-sm border h-100">
-                <h4 style="font-family: Cambria, Georgia, serif;">3rd Assessment</h4>
-                <p class="text-muted small mb-3">📝 Link to the Gform of the test below:</p>
-                <hr>
-                <div
-                  class="card h-auto shadow-sm border border-primary rounded-4 p-2 bg-white position-relative card-hover-effect"
-                  style="transition: transform 0.2s ease, box-shadow 0.2s ease;">
-                  <div class="card-body d-flex align-items-start">
-
-                    <div class="me-3 p-2 bg-light rounded-3 text-primary fs-3 line-height-1">
-                      📝
-                    </div>
-
-
-                    <div>
-                      <h3 class="h5 card-title fw-bold text-dark mb-2 times-text">
-                        Test 3
-                      </h3>
-
-                      <p class="card-text text-muted small special-garamond mb-3" style="line-height: 1.5;">
-                        Use the form below to attempt questions based on the topics covered and
-                        discussed during the classes. 📚✨
-                        <br>
-                        <strong>Good luck, and do your best! 🚀</strong>
-                      </p>
-
-                      <div class="d-flex align-items-center text-success small fw-bold font-monospace mb-3">
-                        <span class="me-1">🎯</span> There are 20 Questions
-                      </div>
-
-                      <a href="https://forms.gle/VsPZdFAV9q3nYK2t9" target="_blank"
-                        class="stretched-link text-decoration-none text-primary small fw-bold font-monospace">
-                        Click to attempt the Test &rarr;
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-12 col-md-6">
-              <div class="p-4 bg-light rounded shadow-sm border h-100">
-                <h4 style="font-family: Cambria, Georgia, serif;" class="text-dark">Syllabus Matrix - Test 3</h4>
-                <p class="text-muted small mb-4">🎯 Focus areas for this evaluation module:</p>
-
-                <ul class="list-unstyled fw-bold lh-lg ps-2">
-                  <li class="mb-3 d-flex align-items-center">
-                    <span class="text-primary me-2">🔹</span> Conic Section
-                  </li>
-                  <li class="mb-3 d-flex align-items-center">
-                    <span class="text-primary me-2">🔹</span> Statistics
-                  </li>
-                  <li class="mb-3 d-flex align-items-center">
-                    <span class="text-primary me-2">🔹</span> Probability
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Syllabus Matrix Card -->
+        <div class="col-12 col-md-6">
+          <div class="p-4 bg-light rounded shadow-sm border h-100">
+            <h4 class="text-dark">{{ test.syllabus_title }}</h4>
+            <p class="text-muted small mb-4">🎯 Focus areas for this evaluation module:</p>
+
+            <ul class="list-unstyled fw-bold lh-lg ps-2 mb-0">
+              {% for topic in test.syllabus_items %}
+              <li class="mb-2 d-flex align-items-center">
+                <span class="text-primary me-2">🔹</span> {{ topic }}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <br>
+      {% unless forloop.last %}
+      <hr class="my-4 opacity-25">
+      {% endunless %}
+      {% endfor %}
+
       <hr class="my-4">
-      <div>
-        <p> I want to thank my seniors, professors, and HOD for all the love and support they’ve shown me for every
-          plan
+      <div class="pt-2">
+        <p class="mb-0">
+          I want to thank my seniors, professors, and HOD for all the love and support they’ve shown me for every plan
           I come up with — even the dumb ones 😉
           Also, a huge thanks to the juniors for sitting through the boring lectures 😅 and still giving such a great
           performance during the event.<br>
-          And last but definitely not least, thank Christ for giving me this opportunity.</p>
+          And last but definitely not least, thank Christ for giving me this opportunity.
+        </p>
       </div>
 
     </div>
   </div>
-</div>
-
-
-
 </div>

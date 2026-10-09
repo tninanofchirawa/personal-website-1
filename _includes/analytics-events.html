@@ -1,0 +1,27 @@
+<!-- Navigation Click & Dropdown Analytics Tracker -->
+<script>
+  // 1. Track page navigation clicks (Home, About Me, Dropdown Items)
+  document.querySelectorAll('.ga-nav-link').forEach(function (element) {
+    element.addEventListener('click', function () {
+      var cleanName = this.innerText.trim().replace(/\s+/g, '_').toLowerCase();
+      if (typeof gtag === 'function') {
+        gtag('event', 'navbar_click', {
+          'button_name': cleanName,
+          'link_url': this.getAttribute('href')
+        });
+      }
+    });
+  });
+
+  // 2. Track dropdown menu openings
+  document.querySelectorAll('.ga-dropdown-toggle').forEach(function (element) {
+    element.addEventListener('click', function () {
+      var dropdownName = this.innerText.trim().replace(/\s+/g, '_').toLowerCase();
+      if (typeof gtag === 'function') {
+        gtag('event', 'navbar_dropdown_open', {
+          'dropdown_name': dropdownName
+        });
+      }
+    });
+  });
+</script>

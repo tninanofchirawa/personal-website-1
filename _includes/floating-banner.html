@@ -1,0 +1,45 @@
+<!-- Floating Google Form Banner Component -->
+<div id="top-banner-container" class="top-banner">
+  <div id="banner-touch-area" class="banner-content">
+    <span class="banner-badge">GForm</span>
+    <p class="banner-text">
+      <strong>Form Link:</strong> Tap here to Fill the Data Collection Form!
+    </p>
+  </div>
+  <button id="close-banner-btn" aria-label="Dismiss banner">&times;</button>
+</div>
+
+<!-- Floating Banner Session Controller -->
+<script>
+  (function () {
+    const STORAGE_KEY = "has_dismissed_form_banner";
+
+    // 1. Check if user already dismissed or interacted with the banner during this session
+    if (sessionStorage.getItem(STORAGE_KEY) === "true") {
+      const existingBanner = document.getElementById("top-banner-container");
+      if (existingBanner) existingBanner.remove();
+      return;
+    }
+
+    const targetPageUrl = "https://forms.gle/igHN1Q2nAU7dbyLeA";
+    const banner = document.getElementById("top-banner-container");
+    const touchArea = document.getElementById("banner-touch-area");
+    const closeBtn = document.getElementById("close-banner-btn");
+
+    if (!banner || !touchArea || !closeBtn) return;
+
+    // 2. Redirect on tap/click
+    touchArea.addEventListener("click", function () {
+      sessionStorage.setItem(STORAGE_KEY, "true");
+      window.location.href = targetPageUrl;
+    });
+
+    // 3. Dismiss on close button tap
+    closeBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+      sessionStorage.setItem(STORAGE_KEY, "true");
+      banner.remove();
+    });
+  })();
+</script>

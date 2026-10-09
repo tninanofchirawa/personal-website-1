@@ -1,0 +1,131 @@
+---
+layout: default
+title: Folder Solutions
+hero_title: Folder Files
+hero_subtitle: Solution Source Codes
+hero_image: Docs and Pics/Pictures/Public/Personal/Hero Image/Hero_image.jpg
+---
+
+<div class="custom-font-container">
+
+  <!-- Top Navigation Row -->
+  <div class="mb-4">
+    <a href="cses.html" class="text-decoration-none text-secondary small fw-semibold mono-tag">
+      &larr; Back to All Categories
+    </a>
+  </div>
+
+  <!-- Folder Info Header -->
+  <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light mb-4">
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <div>
+        <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-1 text-uppercase mono-tag mb-2">
+          Directory
+        </span>
+        <h2 class="fw-bold text-dark tracking-tight mb-1 text-capitalize" id="folder-title">
+          Loading Folder...
+        </h2>
+        <p class="text-muted small mb-0" id="file-counter">Reading code files...</p>
+      </div>
+      <a id="github-folder-link" href="#" target="_blank" rel="noopener noreferrer"
+        class="btn btn-outline-dark btn-sm rounded-pill px-3 py-2 mono-tag">
+        View on GitHub &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- Loader -->
+  <div id="folder-loader" class="text-center py-5">
+    <div class="spinner-border text-primary" role="status"></div>
+    <p class="text-muted small mt-2 mono-tag">Fetching files...</p>
+  </div>
+
+  <!-- Lined-Up Mini Code Boxes Grid -->
+  <div id="files-grid" class="row g-3 d-none">
+    <!-- Injected dynamically -->
+  </div>
+
+</div>
+
+<!-- GitHub API File Fetcher Script -->
+<script>
+  (async function loadFolderFiles() {
+    const USER = 'tninanofchirawa';
+    const REPO = 'cses';
+    const BRANCH = 'main';
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const folder = urlParams.get('folder');
+
+    const titleEl = document.getElementById('folder-title');
+    const countEl = document.getElementById('file-counter');
+    const loader = document.getElementById('folder-loader');
+    const grid = document.getElementById('files-grid');
+    const ghFolderLink = document.getElementById('github-folder-link');
+
+    if (!folder) {
+      titleEl.textContent = 'Folder Not Found';
+      countEl.textContent = 'No folder parameter provided.';
+      loader.classList.add('d-none');
+      return;
+    }
+
+    const cleanTitle = folder.replace(/[-_]/g, ' ');
+    titleEl.textContent = cleanTitle;
+    ghFolderLink.href = `https://github.com/${USER}/${REPO}/tree/${BRANCH}/${folder}`;
+
+    try {
+      const res = await fetch(`https://api.github.com/repos/${USER}/${REPO}/git/trees/${BRANCH}?recursive=1`);
+      if (!res.ok) throw new Error('API fetch error');
+      const data = await res.json();
+
+      // Filter for code files inside this specific folder
+      const files = (data.tree || []).filter(item => {
+        if (item.type === 'blob' && item.path.startsWith(folder + '/')) {
+          const fname = item.path.replace(folder + '/', '');
+          return /\.(cpp|cc|c|py|java)$/i.test(fname);
+        }
+        return false;
+      });
+
+      countEl.textContent = `${files.length} Solved Problem${files.length === 1 ? '' : 's'}`;
+
+      if (files.length === 0) {
+        loader.innerHTML = '<p class="text-muted mono-tag">No solution files found in this folder.</p>';
+        return;
+      }
+
+      let boxesHtml = '';
+      files.forEach(file => {
+        const filename = file.path.replace(folder + '/', '');
+        const cleanName = filename.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ');
+        const fileGithubUrl = `https://github.com/${USER}/${REPO}/blob/${BRANCH}/${file.path}`;
+
+        boxesHtml += `
+          <div class="col-12 col-md-6 col-lg-4">
+            <a href="${fileGithubUrl}" target="_blank" rel="noopener noreferrer" class="code-box-card">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <div class="d-flex align-items-center gap-2">
+                  <span class="fs-5">📄</span>
+                  <span class="mono-tag text-uppercase fw-bold text-secondary">C++ Solution</span>
+                </div>
+                <span class="arrow-icon text-muted small">&rarr;</span>
+              </div>
+
+              <div>
+                <h6 class="fw-bold text-dark text-capitalize mb-1 text-truncate">${cleanName}</h6>
+                <span class="mono-tag text-muted small text-truncate d-block">${filename}</span>
+              </div>
+            </a>
+          </div>
+        `;
+      });
+
+      loader.classList.add('d-none');
+      grid.innerHTML = boxesHtml;
+      grid.classList.remove('d-none');
+    } catch (e) {
+      loader.innerHTML = '<p class="text-danger mono-tag">Failed to load files from GitHub.</p>';
+    }
+  })();
+</script>

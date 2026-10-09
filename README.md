@@ -1,4 +1,4 @@
-# 🌟 Welcome to my Website
+# 🌟 Welcome to Timothy's Website
 
 <!-- 1. LIVE SITE LINK BUTTON -->
 <p align="center">
@@ -11,7 +11,7 @@
 
 <hr />
 
-<!-- 2. MOVING WORDS ANIMATION (PURE HTML/CSS MARQUEE) -->
+<!-- 2. MOVING WORDS ANIMATION -->
 <div align="center">
   <kbd>
     <marquee behavior="scroll" direction="left" scrollamount="6" style="font-weight: bold; color: #007bff; font-family: monospace; font-size: 1.2em;">
@@ -22,44 +22,61 @@
 
 <hr />
 
+> [!NOTE]
+> 📖 **Looking for the Complete Developer Handbook?**
+> Check out [**HANDBOOK.md**](HANDBOOK.md) for an in-depth walkthrough of the site architecture, file mapping, and step-by-step guides on how to manually edit any page.
+
+---
+
 ## 🗺️ Portal Navigation
 
 Below is the structured layout of our system. Click on any section heading to learn more about its functional purpose or click the live link above to interact with it directly in your web browser.
 
-### 🏠 1) Home
-This is the landing page of the website.✨ From here, you can access the main sections, explore the content, and discover why I decided to build this website in the first place 😄🚀.
+### 🏠 1) [Home](index.html)
+The central landing page. Features the monthly Promise Verse, direct shortcut cards to the main sections, and the project purpose statement.
 
 <hr class="border-light opacity-25 m-0">
 
-### 📊 2) Data Science Page
-This is where all survey forms 📝, collected datasets 📈, and analysis reports 📊 will be kept. I'll regularly post new projects and may ask for your participation through surveys and questionnaires.
-
-In many ways, this also serves as my Data Science blog 🚀—a place to share findings, experiments, and insights from the data we collect together.
-
-<hr class="border-light opacity-25 m-0">
-
-### 🧮 3) Math Club
-Here you'll find some of the main projects and activities I was involved in, including the National Science Day Project (SDG) 🌍, the Hindustan Premier League (HPL) 🏏, and the Mathematics Training Camp 🎓.
-
-I hope you enjoy exploring these projects and find the resources, experiences, and lessons shared here both useful and interesting. 🚀📖
+### 📊 2) [Data Science Portal](d-s/index.html)
+A centralized hub for survey forms 📝, collected datasets 📈, and analytical reports 📊.
+- [`d-s/1-start.html`](d-s/1-start.html): Sleep Habits Survey, Google Forms, and embedded interactive metric charts.
+- [`d-s/2-still-start.html`](d-s/2-still-start.html): Mathematical modeling coming soon.
 
 <hr class="border-light opacity-25 m-0">
 
-### 📜 4) Terms and Conditions
-This page contains the Terms & Conditions, Privacy Policy, and guidelines governing the use of this website, its resources, and any data collected through forms.📜🔒 
+### 💻 3) [Non-DS & DSA Projects](Nd-s/projects.html)
+- [`Nd-s/projects.html`](Nd-s/projects.html): Independent utility builds (YouTube Cleaner, YouTube Downloader).
+- [`Nd-s/cses.html`](Nd-s/cses.html): Competitive programming solutions dynamically synced via GitHub API from the `cses` repo.
 
-Questions about why this website exists, how data is handled, and what happens to submitted information are all answered here. 📊✨
+<hr class="border-light opacity-25 m-0">
 
+### 🧮 4) [Math Club](math-club/index.html)
+Highlights from the HITS Mathematics Club:
+- [`math-club/hpl.html`](math-club/hpl.html): Hindustan Premier League (HPL) behind-the-scenes event story.
+- [`math-club/sdg.html`](math-club/sdg.html): National Science Day (SDG) 2nd place recap and photo gallery.
+- [`math-club/training-camp.html`](math-club/training-camp.html): September 2025 BTech Math Training Camp notes, syllabus matrices, and 3-part test series.
 
-<hr />
+<hr class="border-light opacity-25 m-0">
 
-## 🛠️ System Tech Stack
+### 👤 5) [About Me](personal.html)
+Personal background, academic journey at HITS, campus moments carousel, and inter-collegiate events.
 
-| Technology | Purpose | Sizing Utilities Used |
-| :--- | :--- | :--- |
-| **Bootstrap 5** | Core Responsive Framework | `row`, `gx-4`, `gy-3`, `align-items-stretch` |
-| **CSS3** | Layout Customization & Animation | `h-100`, `w-100`, `<marquee>` behaviors |
-| **Git & GitHub** | Version Control & Deployments | Directory mapping, README rendering |
+<hr class="border-light opacity-25 m-0">
+
+### 📜 6) [Q&A & Policies](q-a/index.html)
+Terms & Conditions, Google Drive policy PDF viewer, and interactive question-and-answer accordion.
 
 ---
-<p align="center">Designed with precision for academic and technical excellence. Checked via Git Status.</p>
+
+## 🛠️ System Tech Stack & Architecture
+
+| Technology | Role | Highlights |
+| :--- | :--- | :--- |
+| **Jekyll** | Static Site Generator | Modular includes, front-matter data loops, `default` layout |
+| **Bootstrap 5** | Responsive Layout Grid | Utility flexbox, responsive containers, modals, accordions |
+| **Custom CSS** | Central Styling Engine | Typography, hero banner scaling, card hover lift, floating banner |
+| **GitHub Pages** | Hosting & Continuous Deployment | Built automatically on push to `main` branch |
+
+---
+
+<p align="center">Designed with precision for academic and technical excellence. Maintained by Timothy.</p>
