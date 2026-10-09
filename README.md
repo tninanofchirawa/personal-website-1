@@ -1,76 +1,51 @@
-# 🌟 Welcome to Timothy's Website
+# 🌟 Welcome to Timothy's Space
 
 <!-- 1. LIVE SITE LINK BUTTON -->
 <p align="center">
   <a href="https://tninanofchirawa.github.io/personal-website-1/index.html" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/🚀%20Launch%20Live%20App-Ctrl%20%2B%20Click%20To%20Open%20New%20Tab-blueviolet?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Launch Live App" />
+    <img src="https://img.shields.io/badge/🚀%20Launch%20Live%20Website-Ctrl%20%2B%20Click%20To%20Open-blueviolet?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Launch Live Website" />
   </a>
   <br />
-  <small>💡 <em>Tip: <strong>Ctrl + Click</strong> (or Cmd + Click on Mac) to open the live application in a separate window!</em></small>
+  <small>💡 <em>Tip: <strong>Ctrl + Click</strong> (or Cmd + Click on Mac) to open the live website in a new tab!</em></small>
 </p>
 
 <hr />
 
-<!-- 2. MOVING WORDS ANIMATION -->
+<!-- 2. MARQUEE BANNER -->
 <div align="center">
   <kbd>
-    <marquee behavior="scroll" direction="left" scrollamount="6" style="font-weight: bold; color: #007bff; font-family: monospace; font-size: 1.2em;">
-      🔥 Dynamic Layouts Built with Bootstrap 5 • 📊 Data Science Applications • 🧮 Mathematical Modeling • 🚀 Welcome to the Portal!
+    <marquee behavior="scroll" direction="left" scrollamount="6" style="font-weight: bold; color: #007bff; font-family: monospace; font-size: 1.15em;">
+      📊 Real-World Data Studies • 🧮 Mathematical Modeling • 🏆 HITS Math Club Highlights • 💻 DSA & Competitive Programming
     </marquee>
   </kbd>
 </div>
 
+<hr />
 
+## 📖 The Story Behind This Site
 
-## 🗺️ Portal Navigation
+It all started with a simple Google Form sent to friends and seniors at **Hindustan Institute of Technology and Science (HITS)** about college stress and sleep habits. 
 
-Below is the structured layout of our system. Click on any section heading to learn more about its functional purpose or click the live link above to interact with it directly in your web browser.
+77 students took the time to answer. But when it came to compiling the numbers and building custom charts in Google Sheets, it took five solid, exhausting hours of wrestling with cells and formulas. Looking back at that screen late at night, a clear realization struck:
 
-### 🏠 1) [Home](index.html)
-The central landing page. Features the monthly Promise Verse, direct shortcut cards to the main sections, and the project purpose statement.
+> *"I can't expect students to share their honest data with me if they never get to see what happens to it. True learning needs transparency."*
 
-<hr class="border-light opacity-25 m-0">
-
-### 📊 2) [Data Science Portal](d-s/index.html)
-A centralized hub for survey forms 📝, collected datasets 📈, and analytical reports 📊.
-- [`d-s/1-start.html`](d-s/1-start.html): Sleep Habits Survey, Google Forms, and embedded interactive metric charts.
-- [`d-s/2-still-start.html`](d-s/2-still-start.html): Mathematical modeling coming soon.
-
-<hr class="border-light opacity-25 m-0">
-
-### 💻 3) [Non-DS & DSA Projects](Nd-s/projects.html)
-- [`Nd-s/projects.html`](Nd-s/projects.html): Independent utility builds (YouTube Cleaner, YouTube Downloader).
-- [`Nd-s/cses.html`](Nd-s/cses.html): Competitive programming solutions dynamically synced via GitHub API from the `cses` repo.
-
-<hr class="border-light opacity-25 m-0">
-
-### 🧮 4) [Math Club](math-club/index.html)
-Highlights from the HITS Mathematics Club:
-- [`math-club/hpl.html`](math-club/hpl.html): Hindustan Premier League (HPL) behind-the-scenes event story.
-- [`math-club/sdg.html`](math-club/sdg.html): National Science Day (SDG) 2nd place recap and photo gallery.
-- [`math-club/training-camp.html`](math-club/training-camp.html): September 2025 BTech Math Training Camp notes, syllabus matrices, and 3-part test series.
-
-<hr class="border-light opacity-25 m-0">
-
-### 👤 5) [About Me](personal.html)
-Personal background, academic journey at HITS, campus moments carousel, and inter-collegiate events.
-
-<hr class="border-light opacity-25 m-0">
-
-### 📜 6) [Q&A & Policies](q-a/index.html)
-Terms & Conditions, Google Drive policy PDF viewer, and interactive question-and-answer accordion.
+So, fueled by curiosity and encouraged by professors, I sat down for an uninterrupted **12-hour coding marathon**. Learning HTML, CSS, and Jekyll along the way, I built this website from the ground up so that every survey, every metric, and every analytical report would have an open, accessible home.
 
 ---
 
-## 🛠️ System Tech Stack & Architecture
+## ✨ What You'll Find Here
 
-| Technology | Role | Highlights |
-| :--- | :--- | :--- |
-| **Jekyll** | Static Site Generator | Modular includes, front-matter data loops, `default` layout |
-| **Bootstrap 5** | Responsive Layout Grid | Utility flexbox, responsive containers, modals, accordions |
-| **Custom CSS** | Central Styling Engine | Typography, hero banner scaling, card hover lift, floating banner |
-| **GitHub Pages** | Hosting & Continuous Deployment | Built automatically on push to `main` branch |
+Today, this space has grown far beyond that initial sleep study. It serves as my central academic notebook:
+- **📊 Data Science & Surveys**: Real student research initiatives, raw findings, and analytical reports.
+- **🧮 HITS Math Club**: Memories and milestones with my department — from winning **2nd place** at the National Science Fair (SDG) to behind-the-scenes chaos at the **Hindustan Premier League (HPL)** and coaching sessions at our **Math Training Camp**.
+- **💻 Independent Builds & DSA**: Algorithmic problem-solving in C++ synced directly from my CSES repository, alongside browser utilities built to make daily study smoother.
+
+Above all, this project exists to keep me accountable, encourage my peers in mathematics to build openly, and celebrate the journey step by step.
 
 ---
 
-<p align="center">Designed with precision for academic and technical excellence. Maintained by Timothy.</p>
+<p align="center">
+  <em>"Built for the Glory of Jesus, with code, math, and gratitude."</em><br />
+  <strong>— Yours truly, Timothy ☺️</strong>
+</p>
