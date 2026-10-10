@@ -1,6 +1,5 @@
 # ==============================================================================
-# STRICT GITIGNORE - TIMOTHY'S PERSONAL WEBSITE
-# Keeps all private assets, internal handbooks, and build artifacts hidden
+# GITIGNORE - TIMOTHY'S PERSONAL WEBSITE
 # ==============================================================================
 
 # --- 1. Private Handbooks & Internal Documentation (DO NOT LEAK TO PUBLIC) ---
