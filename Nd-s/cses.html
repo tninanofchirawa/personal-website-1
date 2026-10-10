@@ -8,20 +8,77 @@ hero_image: assets/images/personal/Hero_image.jpg
 
 <div class="custom-font-container">
 
-  <!-- Introduction Card -->
+  <!-- CSES Introduction Card -->
   <div class="row g-4 justify-content-center mb-4">
     <div class="col-12 col-md-10">
-      <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light">
-        <h3 class="fw-bold text-dark mb-3">
-          CSES Problem Set Solutions
-        </h3>
-        <p class="small text-secondary mb-2 mt-1">
-          📂 Tracked and synced directly from <span class="fw-bold text-dark">github.com/tninanofchirawa/cses</span>
-        </p>
-        <p class="text-secondary mb-0" style="line-height: 1.7;">
-          A catalog of competitive programming solutions written in C++. Click into any category below to view
-          all solved problems.
-        </p>
+      <div class="p-4 p-md-4 rounded-4 shadow-sm border cses-notebook-card">
+
+        <div class="cses-terminal-text">
+
+          <!-- Heading -->
+          <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2">
+            <h3 class="cses-title-mono mb-0">
+              ✝️ CSES Problem Set — One Step at a Time
+            </h3>
+            <span class="mono-tag px-2 py-1 rounded bg-white text-muted border border-warning-subtle">
+              dev.journal.c++
+            </span>
+          </div>
+
+          <!-- Repo Link -->
+          <p class="small text-muted mb-3">
+            $ git clone <a href="https://github.com/tninanofchirawa/cses" target="_blank" rel="noopener noreferrer"
+              class="fw-semibold">github.com/tninanofchirawa/cses</a>
+          </p>
+
+          <!-- Core Story -->
+          <p class="mb-2">
+            <strong>By the grace of Jesus, this is a patient journey through algorithmic thinking.</strong>
+            Solving CSES one problem at a time in C++—bridging pure discrete mathematics with practical implementation.
+          </p>
+
+          <p class="mb-3">
+            CSES is our foundation. HackerRank, Codeforces, and deeper competitive domains lie ahead.
+          </p>
+
+          <!-- Hint-first Notice Box -->
+          <div class="cses-note-box mb-3">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-warning text-dark border border-warning-subtle notice-badge">Notice</span>
+              <span class="notice-title text-uppercase">The Joy of the Struggle</span>
+            </div>
+            <p class="mb-0 notice-content">
+              Solutions are available on GitHub, but I am organizing this archive to offer <strong>hints rather than
+                direct answers</strong>. The real breakthrough happens in the confusion, the whiteboard dry-runs, and
+              the sudden moment everything clicks.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- CSES Completion Progress -->
+        <div class="p-3 rounded-3 border bg-white mt-3">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="mono-tag text-uppercase fw-bold text-dark">
+              CSES Completion Progress
+            </span>
+            <span class="mono-tag text-dark fw-bold" id="progress-stats-text">
+              Calculating...
+            </span>
+          </div>
+
+          <div class="water-bar-container">
+            <div id="cses-water-fill" class="water-bar-fill"></div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mt-2">
+            <span class="mono-tag text-muted">
+              Benchmark Target: CSES Set
+            </span>
+            <span class="mono-tag text-muted" id="percent-text">0%</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -36,7 +93,8 @@ hero_image: assets/images/personal/Hero_image.jpg
         <!-- Header -->
         <div class="mb-4">
           <div class="d-inline-flex align-items-center gap-2 mb-2">
-            <span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle rounded-pill px-3 py-1 text-uppercase mono-tag">
+            <span
+              class="badge bg-secondary-subtle text-secondary border border-secondary-subtle rounded-pill px-3 py-1 text-uppercase mono-tag">
               Problem Categories
             </span>
           </div>
@@ -62,95 +120,5 @@ hero_image: assets/images/personal/Hero_image.jpg
 
 </div>
 
-<!-- GitHub API Folder Fetcher Script -->
-<script>
-  (async function fetchFolders() {
-    const USER = 'tninanofchirawa';
-    const REPO = 'cses';
-    const BRANCH = 'main';
-
-    const loader = document.getElementById('cses-loader');
-    const grid = document.getElementById('cses-folder-grid');
-
-    try {
-      const res = await fetch(`https://api.github.com/repos/${USER}/${REPO}/git/trees/${BRANCH}?recursive=1`);
-      if (!res.ok) throw new Error('Failed to fetch tree');
-      const data = await res.json();
-
-      // Count files per folder
-      const folderCounts = {};
-
-      (data.tree || []).forEach(item => {
-        if (item.type === 'blob' && !item.path.startsWith('.')) {
-          const parts = item.path.split('/');
-          if (parts.length > 1) {
-            const folder = parts[0];
-            const filename = parts.slice(1).join('/');
-            // Only count code files
-            if (/\.(cpp|cc|c|py|java)$/i.test(filename)) {
-              folderCounts[folder] = (folderCounts[folder] || 0) + 1;
-            }
-          }
-        }
-      });
-
-      const folders = Object.keys(folderCounts);
-
-      if (folders.length === 0) {
-        loader.innerHTML = '<p class="text-muted mono-tag">No folders with code found.</p>';
-        return;
-      }
-
-      let html = '';
-      folders.forEach(folder => {
-        const count = folderCounts[folder];
-        const displayName = folder.replace(/[-_]/g, ' ');
-        const targetUrl = `cses-folder.html?folder=${encodeURIComponent(folder)}`;
-
-        html += `
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 shadow-sm border rounded-4 p-4 bg-white d-flex flex-column position-relative card-hover-effect">
-              <div class="d-flex align-items-center justify-content-between mb-3">
-                <div class="d-inline-flex align-items-center justify-content-center bg-primary-subtle text-primary rounded-3" style="width: 48px; height: 48px;">
-                  <span class="fs-4">📁</span>
-                </div>
-                <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-2 mono-tag">
-                  ${count} ${count === 1 ? 'Solution' : 'Solutions'}
-                </span>
-              </div>
-
-              <h5 class="fw-bold text-dark mb-1 text-capitalize">${displayName}</h5>
-              <p class="text-muted small mb-3">CSES Topic Section</p>
-
-              <div class="ticket-box p-3 border-start border-3 border-primary mb-3 flex-grow-1">
-                <div class="d-flex justify-content-between align-items-center mb-1">
-                  <span class="text-uppercase fw-bold text-muted mono-tag" style="letter-spacing: 0.04em;">Folder Spec</span>
-                  <span class="text-muted mono-tag">Synced</span>
-                </div>
-                <p class="small text-secondary mb-2 mt-1">
-                  Contains solved algorithmic challenges with C++ source files.
-                </p>
-                <div class="d-flex align-items-center gap-2 pt-2 border-top border-light-subtle">
-                  <span class="badge bg-white text-dark border px-2 py-1 mono-tag">Files: ${count}</span>
-                  <span class="badge bg-white text-muted border px-2 py-1 mono-tag">C++</span>
-                </div>
-              </div>
-
-              <div class="pt-2 mt-auto border-top">
-                <a href="${targetUrl}" class="stretched-link text-primary text-decoration-none small fw-semibold">
-                  Open Folder &rarr;
-                </a>
-              </div>
-            </div>
-          </div>
-        `;
-      });
-
-      loader.classList.add('d-none');
-      grid.innerHTML = html;
-      grid.classList.remove('d-none');
-    } catch (e) {
-      loader.innerHTML = '<p class="text-danger mono-tag">Could not load repository files.</p>';
-    }
-  })();
-</script>
+<!-- External CSES Progress & Folder Loader Script -->
+<script src="{{ '/assets/js/cses.js' | relative_url }}" defer></script>
