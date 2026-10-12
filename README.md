@@ -15,7 +15,7 @@
 <div align="center">
   <kbd>
     <marquee behavior="scroll" direction="left" scrollamount="6" style="font-weight: bold; color: #007bff; font-family: monospace; font-size: 1.15em;">
-      📊 Real-World Data Studies • 🧮 Mathematical Modeling • 🏆 HITS Math Club Highlights • 💻 DSA & Competitive Programming
+      📊 Real-World Data Studies • 🧮 Mathematical Modeling • 🏆 HITS Events & Milestones
     </marquee>
   </kbd>
 </div>
@@ -30,18 +30,9 @@ It all started with a simple Google Form sent to friends and seniors at **Hindus
 
 > *"I can't expect students to share their honest data with me if they never get to see what happens to it. True learning needs transparency."*
 
-So, fueled by curiosity and encouraged by professors, I sat down for an uninterrupted **12-hour coding marathon**. Learning HTML, CSS, and Jekyll along the way, I built this website from the ground up so that every survey, every metric, and every analytical report would have an open, accessible home.
+Thus This website was *Born*. ☺️
 
----
-
-## ✨ What You'll Find Here
-
-Today, this space has grown far beyond that initial sleep study. It serves as my central academic notebook:
-- **📊 Data Science & Surveys**: Real student research initiatives, raw findings, and analytical reports.
-- **🧮 HITS Math Club**: Memories and milestones with my department — from winning **2nd place** at the National Science Fair (SDG) to behind-the-scenes chaos at the **Hindustan Premier League (HPL)** and coaching sessions at our **Math Training Camp**.
-- **💻 Independent Builds & DSA**: Algorithmic problem-solving in C++ synced directly from my CSES repository, alongside browser utilities built to make daily study smoother.
-
-Above all, this project exists to keep me accountable, encourage my peers in mathematics to build openly, and celebrate the journey step by step.
+Over time, this space also became a place to document the journey at HITS—sharing the small events, student initiatives, and club activities we organized and participated in along the way.
 
 ---
 
