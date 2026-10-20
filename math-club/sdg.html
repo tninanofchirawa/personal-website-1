@@ -30,36 +30,43 @@ sdg_gallery:
     caption: 📸 Air Purification
     alt: Air Purification
 ---
-
+<!-- Top Navigation Row -->
+<div class="mb-4">
+  <a href="index.html" class="text-decoration-none text-secondary small fw-semibold mono-tag">
+    &larr; Back to Math Club Page
+  </a>
+</div>
 <!-- Introduction Card -->
 <div class="row g-4 justify-content-center">
   <div class="col-12 col-md-10">
     <div class="p-4 bg-white rounded shadow-sm border">
       <p>
-        The School of Basic and Applied Sciences hosts the National Science Fair every year, and our team was thrilled
-        to secure <strong>2nd place</strong> in the 2025 edition 🏆🔥.
+        The School of Basic and Applied Sciences hosts the National Science Fair every year, and our team secured
+        <strong>2nd place</strong> in the 2025 edition 🏆🔥. Proof that mathematicians occasionally step out of their
+        notebooks and into the real world. 😌📐
       </p>
 
       <p>
-        We presented our <em>Tamil Nadu State Championship Math Project 2025</em> 📚✨ and entered the competition with
-        plenty of confidence 😭😂. While we were ultimately outperformed by an outstanding team of B.Tech students with
-        an innovative electricity-based project ⚡👏, we have nothing but admiration for their work.
+        We presented our <em>Tamil Nadu State Championship Math Project 2025</em>
+        📚✨ with plenty of confidence — only to be outperformed by an excellent B.Tech team with an electricity-based
+        project ⚡👏. Congratulations to them! We graciously accepted second place and called it a learning experience.
+        Naturally. 😭😂
       </p>
 
       <p>
-        Beyond the competition, our team built a website, experimented with servos and motors, and explored several
-        hands-on engineering ideas. However, the real crowd favorite was undoubtedly the 🚀 water rocket, which turned
-        out to be an absolute success!
+        We built a website, experimented with servos and motors, and explored engineering ideas. Yet the real star was
+        our 🚀 water rocket. Months of work, and apparently, launching something into the air wins every time. 😂
       </p>
 
       <p>
-        Most importantly, seeing months of effort come together and receiving recognition on such a stage was an
-        incredibly rewarding experience 🥳✨.
+        Jokes aside, seeing our efforts recognised was genuinely rewarding 🥳✨. It reminded us that mathematics can go
+        beyond lecture notes and exam papers.
       </p>
 
       <p class="mb-0">
-        <i>To the curious juniors: "What happened in 2026?"</i> 🤔<i> The answer is simple — assignments, deadlines,
-          events, and a severe shortage of time </i>😭😂.
+        <i>And the juniors ask, "What happened in 2026?"</i> 🤔 Assignments, deadlines, club events, and a spectacular
+        shortage of time. 😭😂 No sequel this year, unfortunately. Juniors, consider this a warning: start early — your
+        future seniors are watching. 😌📚
       </p>
     </div>
   </div>
@@ -69,13 +76,23 @@ sdg_gallery:
 <div class="accordion accordion-flush mt-4 text-center border rounded w-75 mx-auto" id="sdgPosterMenu">
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingPoster">
-      <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
-        data-bs-target="#collapsePoster" aria-expanded="false" aria-controls="collapsePoster">
+      <button
+        class="accordion-button collapsed fw-bold"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapsePoster"
+        aria-expanded="false"
+        aria-controls="collapsePoster"
+      >
         The Poster
       </button>
     </h2>
-    <div id="collapsePoster" class="accordion-collapse collapse" aria-labelledby="headingPoster"
-      data-bs-parent="#sdgPosterMenu">
+    <div
+      id="collapsePoster"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingPoster"
+      data-bs-parent="#sdgPosterMenu"
+    >
       <div class="text-center mt-3 p-2">
         <img src="{{ page.event_image | relative_url }}" alt="SDG Event Poster" class="img-fluid rounded">
       </div>
@@ -90,19 +107,21 @@ sdg_gallery:
   <div class="col-12 col-md-10">
     <div class="p-4 bg-white rounded shadow-sm border">
       <h3>Some Pics of SDG 2025</h3>
-      <p class="text-muted">Here’s a compilation of moments from the Mathematics Department and our sister departments during SDG 2025. 📸✨</p>
+      <p class="text-muted">
+        Here’s a compilation of moments from the Mathematics Department and our sister departments during SDG 2025. 📸✨
+      </p>
 
       <div id="sdgImageSlider" class="carousel slide shadow-sm rounded overflow-hidden" data-bs-ride="carousel">
         <div class="carousel-inner">
           {% for item in page.sdg_gallery %}
-          <div class="carousel-item {% if forloop.first %}active{% endif %}">
-            <figure class="figure d-block text-center m-0 bg-light p-3">
-              <img src="{{ item.image | relative_url }}" alt="{{ item.alt }}" class="img-fluid rounded shadow-sm">
-              <figcaption class="figure-caption text-muted font-italic mt-2" style="font-size: 1rem;">
-                {{ item.caption }}
-              </figcaption>
-            </figure>
-          </div>
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+              <figure class="figure d-block text-center m-0 bg-light p-3">
+                <img src="{{ item.image | relative_url }}" alt="{{ item.alt }}" class="img-fluid rounded shadow-sm">
+                <figcaption class="figure-caption text-muted font-italic mt-2" style="font-size: 1rem;">
+                  {{ item.caption }}
+                </figcaption>
+              </figure>
+            </div>
           {% endfor %}
         </div>
 
