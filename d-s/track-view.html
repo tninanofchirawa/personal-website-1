@@ -1,0 +1,96 @@
+---
+layout: default
+title: Ticket Explorer
+hero_title: Folder Files
+hero_subtitle: Solution Source Codes & Problem Sets
+hero_image: assets/images/data-science/train.jpg
+---
+
+<div class="custom-font-container"
+     data-repo-user="tninanofchirawa"
+     data-repo-name="ds-puzzles-and-exercises"
+     data-repo-branch="main"
+     data-ticket-target="100"
+     data-file-types="py|ipynb|cpp|cc|c|java|md">
+
+  <!-- Top Navigation Row -->
+  <div class="mb-4">
+    <a href="3 - qa.html" class="text-decoration-none text-secondary small fw-semibold mono-tag">
+      &larr; Back to main DS problem set archive
+    </a>
+  </div>
+
+  <!-- Folder Info Header (Main Heading) -->
+  <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light mb-4">
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <div>
+        <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-1 text-uppercase mono-tag mb-2">
+          Directory
+        </span>
+        <h2 class="fw-bold text-dark tracking-tight mb-1 text-capitalize" id="folder-title">
+          Loading Folder...
+        </h2>
+        <p class="text-muted small mb-0" id="file-counter">Reading code files...</p>
+      </div>
+      <a id="github-folder-link" href="#" target="_blank" rel="noopener noreferrer"
+        class="btn btn-outline-dark btn-sm rounded-pill px-3 py-2 mono-tag">
+        View on GitHub &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       TICKET DESCRIPTION & STUDY NOTES CARD
+       Positioned ABOVE the small water container and BELOW the main heading.
+       Displays the 4 canonical sections (Main Heading, Quote, Repo Structure, How to approach).
+       Clean card header without any "readme synced" badges!
+       ========================================================================= -->
+  <div id="ticket-description-box" class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light mb-4">
+    <!-- Card Header Row -->
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2">
+      <div class="d-flex align-items-center gap-2">
+        <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-3 py-1 text-uppercase mono-tag">
+          Ticket Spec &amp; Study Notes
+        </span>
+        <span class="badge bg-success-subtle text-success-emphasis border border-success-subtle px-2 py-1 mono-tag">
+          Active Track
+        </span>
+      </div>
+      <span class="badge bg-light text-muted border px-2 py-1 mono-tag" id="ticket-module-badge">
+        Interactive Track
+      </span>
+    </div>
+
+    <!-- Dedication Tag -->
+    <p class="small text-secondary mb-3">
+      ✝️ Built for the <span class="fw-bold">Glory of Jesus</span>
+    </p>
+
+    <!-- Main Rich Description Content (Rendered in DS Editorial Typography) -->
+    <div id="ticket-description-content" class="ticket-markdown-body">
+      <!-- Populated dynamically from window.TICKET_DESCRIPTIONS or synced from GitHub README.md -->
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SMALL WATER PROGRESS CONTAINER (UNDER the description)
+       Positioned directly below the description card to report completion progress.
+       ========================================================================= -->
+  <div id="ticket-water-container" class="p-3 p-md-4 rounded-4 border border-light-subtle bg-light bg-opacity-50 mb-4 d-none">
+    <!-- Injected dynamically by AppWaterBar -->
+  </div>
+
+  <!-- Loader -->
+  <div id="folder-loader" class="text-center py-5">
+    <div class="spinner-border text-primary" role="status"></div>
+    <p class="text-muted small mt-2 mono-tag">Fetching folder modules and files...</p>
+  </div>
+
+  <!-- Lined-Up Subfolder Tickets & Code Boxes Grid (NO water container in mini folders!) -->
+  <div id="files-grid" class="row g-3 d-none">
+    <!-- Injected dynamically as subfolder tickets and code cards -->
+  </div>
+
+</div>
+
+{% include repo-scripts.html %}

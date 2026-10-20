@@ -1,0 +1,93 @@
+---
+layout: default
+title: Contact Me
+hero_title: Contact Me
+hero_subtitle: Questions, feedback, or just saying hello
+hero_image: assets/images/qa/forest2.jpg
+---
+
+<!-- Top Navigation Row -->
+<div class="mb-4">
+  <a href="{{ '/' | relative_url }}" class="text-decoration-none text-secondary small fw-semibold mono-tag">
+    &larr; Back to Home Screen
+  </a>
+</div>
+
+<!-- Contact Card Content -->
+<div class="row justify-content-center">
+  <div class="col-12 col-md-9 col-lg-8">
+    <section class="bg-white rounded-4 shadow-sm border p-4 p-md-5">
+
+      <h1 class="fw-bold mb-3">Contact Me 👋</h1>
+
+      <!-- Personal Intro -->
+      <p class="text-secondary">
+        Hey! 👋 I'm Timothy, a student from Chennai, currently studying at Hindustan Institute of Technology and
+        Science (HITS). Just another mathematics student trying to make sense of the world — one equation, one
+        bug, and one questionable life decision at a time. 😅
+      </p>
+
+      <p class="text-secondary mb-0">
+        I'm into Mathematics, Data Science, programming, and finding out what happens when theory meets reality.
+        💻📊 This website is my little playground for projects, experiments, and things I'm learning along the
+        way. Some will work, some will need debugging, and some will probably teach me why they didn't work. 🐛
+      </p>
+
+      <hr class="my-4">
+
+      <!-- Get in Touch Section -->
+      <h2 class="h5 fw-bold mb-3">Get in Touch 📬</h2>
+
+      <p class="text-secondary mb-3">
+        Got a question, a cool idea, a project suggestion, or spotted something I've broken? 😂 Feel free to email
+        me! I can't promise an instant reply, but I can promise to give it a look.
+      </p>
+
+      <!-- Email (Words turn from blue to green on copy) -->
+      <p class="mb-0">
+        <strong>Email:</strong>
+        <button
+          type="button"
+          class="copy-email-link ms-1"
+          onclick="copyEmailAddress(this)"
+        >rohan.chirawa@gmail.com</button>
+      </p>
+
+    </section>
+  </div>
+</div>
+
+<!-- Click-to-Copy Script (Words turn blue to green) -->
+<script>
+  function copyEmailAddress(el) {
+    const email = 'rohan.chirawa@gmail.com';
+    function turnGreen() {
+      el.classList.add('copied');
+      setTimeout(() => {
+        el.classList.remove('copied');
+      }, 2000);
+    }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email).then(turnGreen).catch(() => fallbackCopy(email, turnGreen));
+    } else {
+      fallbackCopy(email, turnGreen);
+    }
+  }
+
+  function fallbackCopy(text, callback) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand('copy');
+      callback();
+    } catch (err) {
+      console.error('Fallback copy failed', err);
+    }
+    document.body.removeChild(ta);
+  }
+</script>

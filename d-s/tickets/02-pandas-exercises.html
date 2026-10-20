@@ -1,0 +1,167 @@
+---
+layout: default
+title: 02-pandas-exercises Ticket Spec
+hero_title: 02-pandas-exercises
+hero_subtitle: Ticket Spec & Detailed Study Description
+hero_image: assets/images/data-science/forest.jpg
+---
+
+<div class="custom-font-container">
+
+  <!-- Top Navigation & Action Row -->
+  <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+    <a href="{{ '/d-s/3 - qa.html' | relative_url }}" class="text-decoration-none text-secondary small fw-semibold mono-tag">
+      &larr; Back to main DS problem set archive
+    </a>
+    <a href="https://github.com/tninanofchirawa/ds-puzzles-and-exercises/tree/main/02-pandas-exercises"
+       target="_blank" rel="noopener noreferrer"
+       class="btn btn-outline-dark btn-sm rounded-pill px-3 py-2 mono-tag">
+      View on GitHub &rarr;
+    </a>
+  </div>
+
+  <!-- Main Ticket Description Card -->
+  <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light-subtle mb-4">
+
+    <!-- Ticket Badge Header -->
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2 pb-2 border-bottom border-light-subtle">
+      <div class="d-flex align-items-center gap-2">
+        <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-3 py-1 text-uppercase mono-tag">
+          Ticket Spec &amp; Study Notes
+        </span>
+        <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-2 py-1 mono-tag">
+          Active Track
+        </span>
+      </div>
+      <span class="badge bg-light text-muted border px-2 py-1 mono-tag">
+        02-pandas-exercises
+      </span>
+    </div>
+
+    <!-- Dedication -->
+    <p class="small text-secondary mb-4">
+      ✝️ Built for the <span class="fw-bold">Glory of Jesus</span>
+    </p>
+
+    <!-- 1) MAIN HEADING -->
+    <div class="mb-4">
+      <h2 class="editorial-heading-1 fw-bold text-dark mb-2">
+        📊 Pandas Data Wrangling Exercises — Handwritten Solutions
+      </h2>
+      <div class="d-flex flex-wrap gap-2">
+        <span class="badge bg-success-subtle text-success-emphasis border border-success-subtle mono-tag">Python 3.9+</span>
+        <span class="badge bg-dark-subtle text-dark border border-dark-subtle mono-tag">Pandas</span>
+        <span class="badge bg-info-subtle text-info-emphasis border border-info-subtle mono-tag">Data Cleaning</span>
+      </div>
+    </div>
+
+    <!-- 2) INITIAL QUOTE AND PARAGRAPH -->
+    <div class="editorial-blockquote my-4">
+      <p class="mb-0">
+        "Real-world data is dirty, unindexed, and full of NaN traps. Tame it with vectorized filtering, grouping, and clean schema joins."
+      </p>
+    </div>
+
+    <div class="ticket-markdown-body mb-4">
+      <p class="editorial-paragraph">
+        Welcome to <strong>Pandas Data Wrangling Exercises — Handwritten Solutions!</strong> 📊
+      </p>
+      <p class="editorial-paragraph">
+        This repository contains structured solutions to canonical Pandas exercises, focusing on practical data transformation, aggregation, and cleanup pipelines.
+      </p>
+      <p class="editorial-paragraph">
+        From multi-dataset relational merges to hierarchical multi-indexes and time series resampling, these exercises build real-world confidence in transforming raw data into analysis-ready formats.
+      </p>
+      <p class="editorial-paragraph">
+        The emphasis is on method-chaining readability, defensive indexing, avoiding chained assignments, and minimizing unnecessary memory overhead.
+      </p>
+    </div>
+
+    <hr class="my-4 text-muted opacity-25">
+
+    <!-- 3) REPO STRUCTURE AND PROGRESS -->
+    <div class="mb-4">
+      <h3 class="editorial-heading-2 mb-3">
+        🧭 Repository Structure &amp; Progress
+      </h3>
+      <p class="ticket-markdown-body mb-3">
+        The exercises are divided into thematic modules:
+      </p>
+
+      <div class="markdown-table-wrapper">
+        <table class="markdown-table">
+          <thead>
+            <tr>
+              <th>Directory</th>
+              <th>Core Topics</th>
+              <th>Key Operations &amp; Concepts</th>
+              <th class="text-center">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>01-filtering-and-sorting/</code></td>
+              <td>Filtering &amp; Sorting</td>
+              <td>Boolean indexing, <code>.loc[]</code>, <code>.iloc[]</code>, <code>.query()</code>, sort_values</td>
+              <td class="text-center"><span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle px-2 py-1 mono-tag">🔄 In Progress</span></td>
+            </tr>
+            <tr>
+              <td><code>02-grouping-and-aggregation/</code></td>
+              <td>Grouping &amp; Aggregation</td>
+              <td><code>groupby()</code>, <code>agg()</code>, transform, filter, pivot tables</td>
+              <td class="text-center"><span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle px-2 py-1 mono-tag">⏳ Pending</span></td>
+            </tr>
+            <tr>
+              <td><code>03-merging-and-joining/</code></td>
+              <td>Merging &amp; Joining</td>
+              <td>Inner/outer/left joins, concatenate, merge with keys, handling duplicates</td>
+              <td class="text-center"><span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle px-2 py-1 mono-tag">⏳ Pending</span></td>
+            </tr>
+            <tr>
+              <td><code>04-time-series-and-dates/</code></td>
+              <td>Time Series &amp; Dates</td>
+              <td>Datetime conversion, date offsets, resampling, rolling windows</td>
+              <td class="text-center"><span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle px-2 py-1 mono-tag">⏳ Pending</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small text-muted fst-italic mt-2 mb-0">
+        *Directory names, topics, and completion statuses will be updated as work progresses.
+      </p>
+    </div>
+
+    <hr class="my-4 text-muted opacity-25">
+
+    <!-- 4) HOW TO APPROACH -->
+    <div class="mb-2">
+      <h3 class="editorial-heading-2 mb-3">
+        💡 How to Approach These Puzzles
+      </h3>
+      <p class="ticket-markdown-body mb-3">
+        The objective is to master vector operations and defensive data engineering in Pandas:
+      </p>
+
+      <ol class="editorial-list">
+        <li>
+          <strong>Never iterate with loops.</strong> Avoid <code>for</code> loops and row-by-row iteration. Use vectorized column operations or NumPy backends.
+        </li>
+        <li>
+          <strong>Use explicit indexers.</strong> Always specify <code>.loc</code> or <code>.iloc</code> when modifying slices to prevent <code>SettingWithCopyWarning</code>.
+        </li>
+        <li>
+          <strong>Embrace method chaining.</strong> Write clear, readable multi-step transformations wrapped in parentheses.
+        </li>
+        <li>
+          <strong>Check column data types early.</strong> Convert strings to categoricals or datetimes to save memory and ensure numeric math works correctly.
+        </li>
+      </ol>
+
+      <p class="ticket-markdown-body mb-0">
+        The goal is clean, performant data pipeline construction that scales with large datasets.
+      </p>
+    </div>
+
+  </div>
+
+</div>

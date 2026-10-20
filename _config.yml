@@ -1,7 +1,7 @@
-title: Timothy's Website
-description: Academic Portfolio and Analytics Repository
+title: ✨ Timothy's Digital Playground
+description: 🛠️ Scratching some itches
+logo: assets/images/home/logo.png
 theme: minima
-
 # Prevents default theme links from clashing with our custom Bootstrap navbar
 header_pages: []
 
@@ -10,4 +10,3 @@ url: "https://tninanofchirawa.github.io/personal-website-1/" # GitHub Pages URL
 
 # Google Analytics tracking ID
 google_analytics: G-LN7Y2T4WQV
-

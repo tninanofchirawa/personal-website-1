@@ -1,0 +1,24 @@
+---
+layout: default
+title: Contact Me
+hero_title: Contact Me
+hero_image: assets/images/qa/forest2.jpg
+---
+
+<div class="row justify-content-center py-4">
+  <div class="col-12 col-md-8 text-center">
+    <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border">
+      <h2 class="fw-bold mb-3">Redirecting to Contact Me...</h2>
+      <p class="text-secondary mb-4">
+        If you are not redirected automatically, please click the button below:
+      </p>
+      <a href="{{ '/contact.html' | relative_url }}" class="btn btn-primary px-4 py-2 font-monospace">
+        Go to Contact Page &rarr;
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.location.replace("{{ '/contact.html' | relative_url }}");
+</script>
