@@ -1,0 +1,164 @@
+---
+layout: default
+title: 03-pandas-puzzles-100 Ticket Spec
+hero_title: 03-pandas-puzzles-100
+hero_subtitle: Ticket Spec & Detailed Study Description
+hero_image: assets/images/data-science/forest3.jpg
+---
+
+<div class="custom-font-container">
+
+  <!-- Top Navigation & Action Row -->
+  <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+    <a href="{{ '/d-s/3 - qa.html' | relative_url }}" class="text-decoration-none text-secondary small fw-semibold mono-tag">
+      &larr; Back to main DS problem set archive
+    </a>
+    <a href="https://github.com/tninanofchirawa/ds-puzzles-and-exercises/tree/main/03-pandas-puzzles-100"
+       target="_blank" rel="noopener noreferrer"
+       class="btn btn-outline-dark btn-sm rounded-pill px-3 py-2 mono-tag">
+      View on GitHub &rarr;
+    </a>
+  </div>
+
+  <!-- Main Ticket Description Card -->
+  <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light-subtle mb-4">
+
+    <!-- Ticket Badge Header -->
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-2 pb-2 border-bottom border-light-subtle">
+      <div class="d-flex align-items-center gap-2">
+        <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle rounded-pill px-3 py-1 text-uppercase mono-tag">
+          Ticket Spec &amp; Study Notes
+        </span>
+        <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-2 py-1 mono-tag">
+          Active Track
+        </span>
+      </div>
+      <span class="badge bg-light text-muted border px-2 py-1 mono-tag">
+        03-pandas-puzzles-100
+      </span>
+    </div>
+
+    <!-- Dedication -->
+    <p class="small text-secondary mb-4">
+      ✝️ Built for the <span class="fw-bold">Glory of Jesus</span>
+    </p>
+
+    <!-- 1) MAIN HEADING -->
+    <div class="mb-4">
+      <h2 class="editorial-heading-1 fw-bold text-dark mb-2">
+        🧩 100 Pandas Puzzles — Handwritten Solutions
+      </h2>
+      <div class="d-flex flex-wrap gap-2">
+        <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle mono-tag">Python 3.9+</span>
+        <span class="badge bg-dark-subtle text-dark border border-dark-subtle mono-tag">Pandas</span>
+        <span class="badge bg-info-subtle text-info-emphasis border border-info-subtle mono-tag">Test-Driven</span>
+      </div>
+    </div>
+
+    <!-- 2) INITIAL QUOTE AND PARAGRAPH -->
+    <div class="editorial-blockquote my-4">
+      <p class="mb-0">
+        "Solving practical DataFrame problems with competitive programming discipline—writing test-driven solutions without slow row loops."
+      </p>
+    </div>
+
+    <div class="ticket-markdown-body mb-4">
+      <p class="editorial-paragraph">
+        Welcome to <strong>100 Pandas Puzzles — Handwritten Solutions!</strong> 🧩
+      </p>
+      <p class="editorial-paragraph">
+        Inspired by the canonical repository by ajcr, this collection tackles 100 test-driven puzzles covering subtle corner cases, string transformations, grouping heuristics, and rolling calculations.
+      </p>
+      <p class="editorial-paragraph">
+        Each puzzle tests precision thinking: how to achieve exact data frame shapes and assertions using idiomatic Pandas syntax.
+      </p>
+      <p class="editorial-paragraph">
+        Solutions prioritize concise, functional idioms that leverage optimized C/Cython execution paths under the hood.
+      </p>
+    </div>
+
+    <hr class="my-4 text-muted opacity-25">
+
+    <!-- 3) REPO STRUCTURE AND PROGRESS -->
+    <div class="mb-4">
+      <h3 class="editorial-heading-2 mb-3">
+        🧭 Repository Structure &amp; Progress
+      </h3>
+      <p class="ticket-markdown-body mb-3">
+        Puzzles are partitioned across fundamental concepts:
+      </p>
+
+      <div class="markdown-table-wrapper">
+        <table class="markdown-table">
+          <thead>
+            <tr>
+              <th>Directory / Section</th>
+              <th>Core Topics</th>
+              <th>Key Operations &amp; Concepts</th>
+              <th class="text-center">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>01-dataframe-basics/</code></td>
+              <td>DataFrame Basics &amp; Creation</td>
+              <td>Indexing, shape inspection, column renaming, simple transformations</td>
+              <td class="text-center"><span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle px-2 py-1 mono-tag">🔄 In Progress</span></td>
+            </tr>
+            <tr>
+              <td><code>02-filtering-and-values/</code></td>
+              <td>Filtering &amp; Handling Values</td>
+              <td>Missing value imputation, conditional clipping, boolean masks</td>
+              <td class="text-center"><span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle px-2 py-1 mono-tag">⏳ Pending</span></td>
+            </tr>
+            <tr>
+              <td><code>03-string-operations/</code></td>
+              <td>Series String Methods</td>
+              <td>Regex parsing, splitting, stripping, string vectorization</td>
+              <td class="text-center"><span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle px-2 py-1 mono-tag">⏳ Pending</span></td>
+            </tr>
+            <tr>
+              <td><code>04-window-and-time/</code></td>
+              <td>Window &amp; Group Aggregations</td>
+              <td>Rolling averages, cumulative sums, multi-index slicing</td>
+              <td class="text-center"><span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle px-2 py-1 mono-tag">⏳ Pending</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small text-muted fst-italic mt-2 mb-0">
+        *Directory names, topics, and completion statuses will be updated as work progresses.
+      </p>
+    </div>
+
+    <hr class="my-4 text-muted opacity-25">
+
+    <!-- 4) HOW TO APPROACH -->
+    <div class="mb-2">
+      <h3 class="editorial-heading-2 mb-3">
+        💡 How to Approach These Puzzles
+      </h3>
+      <p class="ticket-markdown-body mb-3">
+        Solve with test-driven precision:
+      </p>
+
+      <ol class="editorial-list">
+        <li>
+          <strong>Read the assertion first.</strong> Understand what exact types and indices the test case expects.
+        </li>
+        <li>
+          <strong>Check for built-in methods.</strong> Pandas almost always has a specialized vectorized method for common tasks (e.g. <code>clip()</code>, <code>cumsum()</code>, <code>explode()</code>).
+        </li>
+        <li>
+          <strong>Avoid intermediate mutable side-effects.</strong> Treat DataFrames as immutable where possible for predictable test passes.
+        </li>
+      </ol>
+
+      <p class="ticket-markdown-body mb-0">
+        The goal is intuitive mastery over data structures that underpins real machine learning engineering.
+      </p>
+    </div>
+
+  </div>
+
+</div>

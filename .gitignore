@@ -1,9 +1,10 @@
 # ==============================================================================
-# GITIGNORE - TIMOTHY'S PERSONAL WEBSITE
+# GITIGNORE
 # ==============================================================================
 
-# --- 1. Private Handbooks & Internal Documentation (DO NOT LEAK TO PUBLIC) ---
+# --- 1. Private Handbooks & Internal Documentation ---
 HANDBOOK.md
+HANDBOOK-2.md
 *handbook*
 *HANDBOOK*
 *.private
@@ -65,3 +66,4 @@ yarn-debug.log*
 *.sqlite
 *.sqlite3
 *.db
+*.py

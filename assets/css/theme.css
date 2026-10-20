@@ -1,0 +1,176 @@
+/* ==========================================================================
+   Role: Theme, Resets & Central Typography
+   Scope: Base overrides, normalize rules, and central typography engine.
+   ========================================================================== */
+
+/* --- 1. Minima Overrides & Base Resets --- */
+.wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.page-content {
+  padding: 0 !important;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+.site-footer {
+  margin-top: 2rem;
+  padding: 2rem 0;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e8e8e8;
+}
+
+/* --- 2. Typography Rules --- */
+h1 {
+  font-family: 'Gentium Basic', serif !important;
+  font-weight: 700;
+}
+
+h2,
+h3 {
+  font-family: 'Oswald', sans-serif !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif !important;
+  font-size: large;
+}
+
+.special-garamond,
+.special-garamond p {
+  font-family: 'EB Garamond', serif !important;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.custom-font-container {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+.mono-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+}
+
+.times-text {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.accordion-button {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.15rem;
+}
+
+.font-heading-thick {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.font-serif-merriweather,
+.font-serif-merriweather p,
+.font-serif-merriweather li {
+  font-family: 'Merriweather', Georgia, serif !important;
+}
+
+.text-size-editorial,
+.text-size-editorial p,
+.text-size-editorial li {
+  font-size: 12pt !important;
+  line-height: 1.75 !important;
+}
+
+/* --- 3. Footer Navigation Styles --- */
+.footer-link {
+  color: #adb5bd;
+  text-decoration: none;
+  transition: color 0.18s ease-in-out;
+}
+
+.footer-link:hover {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+/* --- 4. Policy & Utility Page Styles --- */
+.toc-link {
+  color: #475569;
+  text-decoration: none;
+  display: block;
+  padding: 0.28rem 0.55rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.toc-link:hover {
+  background-color: #e2e8f0;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.policy-callout {
+  border-left: 4px solid #0d6efd;
+  background-color: #f8fafc;
+  padding: 0.9rem 1.15rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.contact-action-btn {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.contact-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* --- 5. Interactive Copy-Email Element (Turns Blue to Green) --- */
+.copy-email-link {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.95em;
+  color: #0d6efd !important;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: inline;
+  text-decoration: none;
+  transition: color 0.25s ease-in-out;
+  vertical-align: baseline;
+}
+
+.copy-email-link:hover {
+  color: #0a58ca !important;
+  text-decoration: underline;
+}
+
+.copy-email-link.copied {
+  color: #198754 !important; /* Transitions fully to green on copy */
+  text-decoration: none;
+}
+
+
