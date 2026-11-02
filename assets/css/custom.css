@@ -1,13 +1,24 @@
 /* ==========================================================================
    Central Site Stylesheet Bundle
-   Aggregates specialized, modular stylesheets for theme, hero, cards, banner,
-   water progress bars, and editorial markdown typography.
-   Each module has 2-3 focused roles to keep code clean and unburdened.
+   Aggregates modular stylesheets organized into base, components, and editorial.
+   Each module has focused roles to keep code clean and unburdened.
    ========================================================================== */
 
-@import url('theme.css');
-@import url('hero.css');
-@import url('cards.css');
-@import url('banner.css');
-@import url('progress.css');
-@import url('markdown.css');
+/* --- 1. Base Engine & Variables --- */
+@import url('base/variables.css');
+@import url('base/resets.css');
+@import url('base/typography.css');
+
+/* --- 2. Interactive & Layout Components --- */
+@import url('components/navbar.css');
+@import url('components/hero.css');
+@import url('components/cards.css');
+@import url('components/banner.css');
+@import url('components/progress.css');
+@import url('components/footer.css');
+@import url('components/utilities.css');
+
+/* --- 3. Editorial & Longform Story Engine --- */
+@import url('editorial/math-club.css');
+@import url('editorial/story.css');
+@import url('editorial/markdown.css');

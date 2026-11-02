@@ -8,14 +8,14 @@
   {% endif %}
 </head>
 
-<body>
+<body class="{% if page.url contains '/math-club/' %}math-club-editorial{% endif %}">
   {% include navbar.html %}
 
   <!-- Responsive Hero Banner Engine -->
   <div class="hero-banner d-flex justify-content-center align-items-center text-center px-3 shadow-sm"
     style="background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('{{ page.hero_image | relative_url }}');">
     <div class="container">
-      <h1 class="display-5 fw-bold text-uppercase tracking-wide">
+      <h1 class="display-5 fw-bold text-uppercase tracking-wide text-white">
         {% if page.hero_title %}{{ page.hero_title }}{% else %}{{ page.title }}{% endif %}
       </h1>
       {% if page.hero_subtitle %}

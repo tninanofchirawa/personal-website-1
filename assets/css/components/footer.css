@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Footer Layout & Navigation Links Engine
+   Scope: Site footer container, links, hover transitions, and legal notes.
+   ========================================================================== */
+
+.site-footer {
+  margin-top: 2rem;
+  padding: 2rem 0;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e8e8e8;
+}
+
+.footer-link {
+  color: #adb5bd;
+  text-decoration: none;
+  transition: color 0.18s ease-in-out;
+}
+
+.footer-link:hover {
+  color: #ffffff !important;
+  text-decoration: underline;
+}

@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Responsive Hero Banner Engine
+   Scope: Full-bleed hero banner layouts, image overlays, and breakpoint scaling.
+   Text Mandate: Hero title is pure white (#ffffff) with NO dark shadows.
+   ========================================================================== */
+
+.hero-banner {
+  height: 65vh;
+  background-color: #1e2d24;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-banner h1 {
+  font-family: 'Gentium Basic', serif !important;
+  font-weight: 700;
+  font-size: 4.5rem;
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+.hero-banner p {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 80vh !important;
+  }
+
+  .hero-banner h1 {
+    font-size: 3.375rem !important;
+    color: #ffffff !important;
+    text-shadow: none !important;
+  }
+
+  .hero-banner p {
+    font-size: 1.1rem !important;
+    display: block !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-shadow: none !important;
+  }
+}

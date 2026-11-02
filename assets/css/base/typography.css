@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Base Fallback Typography Rules (Non-Editorial / Legacy Pages)
+   Scope: Gentium, Oswald, Times New Roman, and Garamond typography fallbacks.
+   ========================================================================== */
+
+h1 {
+  font-family: 'Gentium Basic', serif !important;
+  font-weight: 700;
+}
+
+h2,
+h3 {
+  font-family: 'Oswald', sans-serif !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif !important;
+  font-size: large;
+}
+
+.special-garamond,
+.special-garamond p {
+  font-family: 'EB Garamond', serif !important;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.custom-font-container {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+.mono-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+}
+
+.times-text {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.accordion-button {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.15rem;
+}
+
+.font-heading-thick {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.font-serif-merriweather,
+.font-serif-merriweather p,
+.font-serif-merriweather li {
+  font-family: 'Merriweather', Georgia, serif !important;
+}
+
+.text-size-editorial,
+.text-size-editorial p,
+.text-size-editorial li {
+  font-size: 12pt !important;
+  line-height: 1.75 !important;
+}

@@ -1,0 +1,160 @@
+/* ==========================================================================
+   Editorial Story Layout & Event Details Engine
+   Scope: HPL 1.0, HPL 2.0, and story/editorial showcase pages.
+   ========================================================================== */
+
+.story-wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 4rem 1rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  color: #374151;
+  -webkit-font-smoothing: antialiased;
+}
+
+.story-wrapper p {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+}
+
+/* Back Navigation */
+.story-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.story-nav a:hover {
+  color: #111827;
+}
+
+/* Editorial Intro */
+.story-lead {
+  font-family: 'Merriweather', Georgia, serif !important;
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: #1f2937;
+  margin: 2rem 0;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+/* Featured Image Box */
+.story-poster {
+  margin: 2.5rem 0 3.5rem 0;
+}
+
+.story-poster img {
+  border-radius: 12px;
+  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.07), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* Section Framing */
+.story-section {
+  margin-bottom: 3.25rem;
+}
+
+.section-tag {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+  margin-bottom: 0.4rem;
+}
+
+/* Headings: Merriweather */
+.story-section h2 {
+  font-family: 'Merriweather', Georgia, serif !important;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.25rem 0;
+  line-height: 1.35;
+}
+
+/* Body Typography */
+.story-section p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #4b5563;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+}
+
+.story-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* Carousel Custom Touches */
+.carousel-card {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f1f5f9;
+}
+
+.carousel-item img {
+  max-height: 480px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 2rem;
+  height: 2rem;
+  background-size: 55%;
+}
+
+/* Subtle Divider */
+.story-divider {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+  margin: 3.5rem 0;
+}
+
+/* Closing Dedication */
+.dedication-card {
+  background: #f9fafb;
+  border-left: 3px solid #111827;
+  border-radius: 0 8px 8px 0;
+  padding: 1.75rem 2rem;
+  margin-top: 3.5rem;
+}
+
+.dedication-card h2 {
+  font-family: 'Merriweather', Georgia, serif !important;
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.dedication-card p {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.dedication-highlight {
+  font-weight: 600;
+  color: #111827 !important;
+}
+
+.dedication-signoff {
+  font-family: 'Merriweather', Georgia, serif !important;
+  color: #111827 !important;
+  margin-bottom: 0;
+}

@@ -38,56 +38,49 @@ tests:
       - "Statistics"
       - "Probability"
 ---
+
 <!-- Top Navigation Row -->
 <div class="mb-4">
-  <a href="index.html" class="text-decoration-none text-secondary small fw-semibold mono-tag">
-    &larr; Back to Math Club Page
+  <a href="index.html" class="text-decoration-none text-secondary small fw-semibold">
+    &larr; Back to Math Club
   </a>
 </div>
+
 <!-- Introduction Card with GIF Banner -->
 <div class="row g-4 justify-content-center">
   <div class="col-12 col-md-10 col-xl-8">
-    <div class="p-4 bg-white rounded shadow-sm border">
-      <h3>The September 2025 Math Training Camp</h3>
-      <h6>📢 First-Year BTech Training Camp Recap! 📐✨</h6>
-      <p class="mt-3">
-        🎬 A quick look at our Mathematics Camp for the BTech juniors! We covered everything from the basics to advanced
-        concepts, with a strong focus on Mental Math mastery ⚡🧠 and essential Class 11–12 mathematics 📚.<br /><br />
-        Take a look! 👇
+    <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light-subtle">
+      <h3 class="fw-bold text-dark mb-1">The September 2025 Math Training Camp</h3>
+      <h6 class="text-muted text-uppercase fw-semibold mb-3">📢 First-Year BTech Training Camp Recap! 📐✨</h6>
+      <p class="mb-3">
+        🎬 A quick look at our Mathematics Camp for the BTech juniors! We covered everything from the foundational core to
+        advanced techniques, with a strong focus on Mental Math mastery ⚡🧠 and essential Class 11–12 mathematics 📚.
       </p>
+      <p class="mb-4">Take a look below! 👇</p>
 
-      <div
-        id="personalImageGallery"
-        class="carousel slide rounded border shadow-sm my-3"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="{{ page.event_image | relative_url }}"
-              alt="Training Camp GIF"
-              class="img-fluid rounded w-100"
-            />
-          </div>
-        </div>
+      <div class="carousel-card p-2 bg-light">
+        <img
+          src="{{ page.event_image | relative_url }}"
+          alt="Training Camp GIF Animation"
+          class="img-fluid rounded-3 w-100"
+          style="max-height: 440px; object-fit: cover;"
+        >
       </div>
     </div>
   </div>
 </div>
 
-<hr class="my-4" />
+<hr class="my-4">
 
 <!-- Question Banks and Notes Section -->
 <div class="row g-4">
   <div class="col-12">
-    <div class="p-3 p-md-4 bg-white rounded shadow-sm border">
-      <div
-        class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3"
-      >
+    <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light-subtle">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
         <div>
-          <h4 class="mb-1">Question Banks and Notes -</h4>
+          <h4 class="fw-bold text-dark mb-1">Question Banks &amp; Resource Repository</h4>
           <p class="text-muted small mb-0">
-            📚 All the notes and question banks from the 6-day camp can be found here! 🚀✨
+            📚 All lecture notes and question sets from the 6-day intensive camp are organized below! 🚀✨
           </p>
         </div>
         <div>
@@ -95,7 +88,7 @@ tests:
             href="https://drive.google.com/drive/folders/1pUdMThV7tL4wZn1_cr9HowhA4MCWsgCr"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn btn-outline-primary btn-sm rounded-pill px-3 py-2 mono-tag"
+            class="btn btn-outline-primary btn-sm rounded-pill px-3 py-2 fw-semibold"
           >
             Open Folder in Google Drive &rarr;
           </a>
@@ -103,99 +96,91 @@ tests:
       </div>
 
       <div
-        class="border rounded bg-light overflow-hidden shadow-sm mb-2"
-        style="min-height: 230px; height: 25vh"
+        class="border border-light-subtle rounded-3 bg-light overflow-hidden shadow-sm mb-3"
+        style="min-height: 250px; height: 30vh;"
       >
         <iframe
           src="https://drive.google.com/embeddedfolderview?id=1pUdMThV7tL4wZn1_cr9HowhA4MCWsgCr#list"
           title="Google Drive Resource Folder"
-          style="display: block; width: 100%; height: 100%; border: none"
+          style="display: block; width: 100%; height: 100%; border: none;"
         >
-          Loading GFolder…
+          Loading Google Drive Folder…
         </iframe>
       </div>
-      <p class="text-muted small mb-4" style="font-size: 0.8rem">
+      <p class="text-muted small mb-4" style="font-size: 0.85rem;">
         ℹ️
         <em>
           If the embedded Google Drive folder does not display in your browser due to third-party cookie restrictions,
-          click the
-          <strong>Open Folder in Google Drive</strong> button above.
+          click the <strong>Open Folder in Google Drive</strong> button above.
         </em>
       </p>
 
-      <p>
-        📚 All the resources here were written and compiled by the Mathematics students as part of an intensive
-        preparation camp. The collection includes:
+      <p class="mb-2">
+        📚 All resources were written, vetted, and compiled by Mathematics Club organizers as part of an intensive
+        preparation camp. The syllabus roadmap includes:
       </p>
 
-      <ul>
-        <li>🧠 Mental Math notes and practice material</li>
-        <li>📝 Question Banks with solutions</li>
-        <li>📖 Detailed Mathematics notes</li>
-        <li>🎓 Class 11 & Class 12 Mathematics content</li>
-        <li>📋 Syllabus and topic roadmap</li>
+      <ul class="editorial-list mb-4">
+        <li><strong>🧠 Mental Math:</strong> Speed drills, rapid arithmetic shortcuts, and mental agility frameworks.</li>
+        <li><strong>📝 Curated Question Banks:</strong> Graded question banks complete with worked solutions.</li>
+        <li><strong>📖 Detailed Notes:</strong> Comprehensive concept breakdowns for high-yield topics.</li>
+        <li><strong>🎓 Pre-University Foundation:</strong> Key Class 11 and Class 12 bridge modules.</li>
+        <li><strong>📋 Evaluation Roadmaps:</strong> Chapter matrices and diagnostic evaluation rubrics.</li>
       </ul>
 
-      <p>We recommend starting with the syllabus to get an overview of the topics and learning path.</p>
-      <p>
-        🚀 A big thank you to all the participants whose enthusiasm, dedication, and hard work made the camp such a
-        rewarding experience.
+      <p class="mb-2">
+        We recommend beginning with the syllabus overview to establish a clear conceptual roadmap.
       </p>
       <p class="mb-0">
-        💯 Questions, corrections, or feedback are always welcome—feel free to reach out via email. Happy learning!
+        🚀 A huge thank you to all the participants whose dedication, curiosity, and energy made this camp such a
+        rewarding experience. Questions or corrections are always welcome via email. Happy solving!
       </p>
     </div>
   </div>
 </div>
 
-<hr class="my-4" />
+<hr class="my-4">
 
 <!-- Test Series Assessments -->
-<div class="row g-3">
+<div class="row g-4">
   <div class="col-12">
-    <div class="p-3 p-md-4 bg-white rounded shadow-sm border">
-      <h3 class="mb-4 text-primary times-text">Here are the Test series ➡️</h3>
+    <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light-subtle">
+      <h3 class="fw-bold text-dark mb-1">Assessment Test Series ➡️</h3>
+      <p class="text-muted small mb-4">Timed evaluation modules designed to test mastery across core mathematical domains.</p>
 
       {% for test in page.tests %}
-        <div class="row gx-4 gy-3 align-items-stretch mb-4">
+        <div class="row gx-4 gy-4 align-items-stretch mb-4">
           <!-- Test Form Card -->
           <div class="col-12 col-md-6">
-            <div
-              class="p-3 bg-white rounded shadow-sm border h-100 d-flex flex-column"
-            >
-              <h4 class="text-dark">{{ test.assessment_label }}</h4>
-              <p class="text-muted small mb-2">📝 Link to the Google Form below:</p>
-              <hr class="my-2 opacity-25" />
+            <div class="p-4 bg-white rounded-4 shadow-sm border border-light-subtle h-100 d-flex flex-column">
+              <h4 class="fw-bold text-dark mb-1">{{ test.assessment_label }}</h4>
+              <p class="text-muted small mb-3">📝 Attempt the evaluation via the Google Form below:</p>
 
-              <div
-                class="card h-100 shadow-sm border border-primary rounded-4 p-3 bg-white position-relative card-hover-effect"
-              >
-                <div class="card-body d-flex align-items-start p-0">
-                  <div class="me-3 p-2 bg-light rounded-3 text-primary fs-3 lh-1">📝</div>
+              <div class="card h-100 shadow-sm border border-primary-subtle rounded-4 p-4 bg-white position-relative card-hover-effect d-flex flex-column">
+                <div class="d-flex align-items-start gap-3 flex-grow-1">
+                  <div class="p-2 bg-primary-subtle text-primary rounded-3 fs-3 lh-1 flex-shrink-0">📝</div>
                   <div class="w-100">
-                    <h5 class="card-title fw-bold text-dark mb-2 times-text">
+                    <h5 class="card-title fw-bold text-dark mb-2">
                       {{ test.title }}
                     </h5>
-                    <p class="card-text text-muted small special-garamond mb-3">
-                      Use the form below to attempt questions based on the topics covered and discussed during the
-                      classes. 📚✨
-                      <br /><strong>Good luck, and do your best! 🚀</strong>
+                    <p class="card-text text-muted small mb-3" style="line-height: 1.6;">
+                      Use the form below to attempt questions based on topics covered during the classes.
+                      <br><strong class="text-dark">Good luck, and give it your best! 🚀</strong>
                     </p>
-                    <div
-                      class="d-flex align-items-center text-success small fw-bold font-monospace mb-3"
-                    >
-                      <span class="me-1">🎯</span> There are {{ test.questions }}
-                      Questions
+                    <div class="d-flex align-items-center text-success small fw-semibold font-monospace mb-3">
+                      <span class="me-1">🎯</span> There are {{ test.questions }} Questions
                     </div>
-                    <a
-                      href="{{ test.form_url }}"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="stretched-link text-decoration-none text-primary small fw-bold font-monospace"
-                    >
-                      Click to attempt the Test &rarr;
-                    </a>
                   </div>
+                </div>
+                <div class="mt-auto pt-3 border-top border-light-subtle">
+                  <a
+                    href="{{ test.form_url }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="stretched-link text-decoration-none text-primary small fw-semibold d-inline-flex align-items-center gap-1"
+                  >
+                    Click to attempt the Test <span>&rarr;</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -203,13 +188,15 @@ tests:
 
           <!-- Syllabus Matrix Card -->
           <div class="col-12 col-md-6">
-            <div class="p-4 bg-light rounded shadow-sm border h-100">
-              <h4 class="text-dark">{{ test.syllabus_title }}</h4>
-              <p class="text-muted small mb-3">🎯 Focus areas for this evaluation module:</p>
+            <div class="p-4 bg-light rounded-4 shadow-sm border border-light-subtle h-100">
+              <h4 class="fw-bold text-dark mb-1">{{ test.syllabus_title }}</h4>
+              <p class="text-muted small mb-3">🎯 Focus topics covered in this evaluation module:</p>
 
-              <ul class="list-unstyled fw-bold lh-lg ps-2 mb-0">
+              <ul class="list-unstyled fw-semibold lh-lg ps-1 mb-0">
                 {% for topic in test.syllabus_items %}
-                  <li class="mb-2 d-flex align-items-center"><span class="text-primary me-2">🔹</span> {{ topic }}</li>
+                  <li class="mb-2 d-flex align-items-center text-secondary">
+                    <span class="text-primary me-2">🔹</span> {{ topic }}
+                  </li>
                 {% endfor %}
               </ul>
             </div>
@@ -217,20 +204,20 @@ tests:
         </div>
 
         {% unless forloop.last %}
-          <hr class="my-4 opacity-25" />
+          <hr class="my-4 opacity-25">
         {% endunless %}
       {% endfor %}
 
-      <!-- Acknowledgements / Footer Note -->
-      <hr class="my-4 opacity-50" />
-      <div class="p-3 bg-light rounded border border-light-subtle">
-        <p class="mb-0 text-secondary" style="line-height: 1.6">
+      <!-- Gratitude & Dedication Closing Card -->
+      <div class="dedication-card mt-5">
+        <h2>Above All, Thank You, Jesus.</h2>
+        <p>
           I want to thank my seniors, professors, and HOD for all the love and support they’ve shown me for every plan I
-          come up with — even the dumb ones 😉. Also, a huge thanks to the juniors for sitting through the boring
-          lectures 😅 and still giving such a great performance during the event.
-          <br /><br />
-          <em> And last but definitely not least, thank Christ for giving me this opportunity. </em>
+          come up with — even the crazy ones 😉. Also, a huge thanks to the juniors for sitting through the intensive
+          sessions 😅 and still giving such an inspiring performance during the evaluations.
         </p>
+        <p class="dedication-highlight">By God's grace. For the glory of Jesus.</p>
+        <p class="dedication-signoff">Thank You, Jesus. &#10013;&#65039;&#10084;&#65039;</p>
       </div>
     </div>
   </div>

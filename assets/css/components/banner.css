@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Floating Notification Pill Banner Engine
+   Scope: Floating Google Form notification pill at viewport bottom.
+   ========================================================================== */
+
+.top-banner {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px;
+  background-color: #0d1117;
+  color: #f0f6fc;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  opacity: 0;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease, background-color 0.2s ease, border-color 0.2s ease;
+  max-width: 90vw;
+  font-family: var(--font-editorial-body, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.top-banner.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.top-banner:hover {
+  background-color: #161b22;
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.banner-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #238636;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.banner-content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.banner-close-btn {
+  background: transparent;
+  border: none;
+  color: #8b949e;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0 4px;
+  margin-left: 4px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease;
+}
+
+.banner-close-btn:hover {
+  color: #f0f6fc;
+}

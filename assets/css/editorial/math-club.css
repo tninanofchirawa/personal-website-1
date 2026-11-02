@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Math Club Unified Editorial Typography Scope
+   Scope: Enforces consistent Merriweather + Inter + JetBrains Mono pairing
+          across the 5 target pages: Math Club Index, HPL 1.0, HPL 2.0, SDG, Training Camp.
+   Text Mandate: Hero title is pure white (#ffffff) with NO dark shadows.
+   ========================================================================== */
+
+.math-club-editorial {
+  font-family: var(--font-editorial-body);
+  color: #374151;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hero Display Typography */
+.math-club-editorial .hero-banner h1 {
+  font-family: var(--font-editorial-heading) !important;
+  font-size: var(--fluid-hero-title) !important;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+.math-club-editorial .hero-banner p {
+  font-family: var(--font-editorial-mono) !important;
+  font-size: var(--fluid-hero-sub) !important;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-shadow: none !important;
+}
+
+/* Headings Hierarchy (Content Only - Never affects Hero Banner) */
+.math-club-editorial main h1,
+.math-club-editorial article h1,
+.math-club-editorial .page-content h1,
+.math-club-editorial h1:not(.hero-banner h1) {
+  font-family: var(--font-editorial-heading) !important;
+  font-size: var(--fluid-h1) !important;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #111827;
+}
+
+.math-club-editorial h2,
+.math-club-editorial .story-section h2 {
+  font-family: var(--font-editorial-heading) !important;
+  font-size: var(--fluid-h2) !important;
+  font-weight: 700;
+  line-height: 1.32;
+  letter-spacing: -0.02em;
+  color: #111827;
+}
+
+.math-club-editorial h3 {
+  font-family: var(--font-editorial-heading) !important;
+  font-size: var(--fluid-h3) !important;
+  font-weight: 700;
+  line-height: 1.36;
+  letter-spacing: -0.015em;
+  color: #111827;
+}
+
+.math-club-editorial h4 {
+  font-family: var(--font-editorial-heading) !important;
+  font-size: var(--fluid-h4) !important;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: #111827;
+}
+
+.math-club-editorial h5,
+.math-club-editorial .card-title {
+  font-family: var(--font-editorial-heading) !important;
+  font-size: var(--fluid-h5) !important;
+  font-weight: 700;
+  line-height: 1.42;
+  letter-spacing: -0.01em;
+  color: #111827;
+}
+
+.math-club-editorial h6 {
+  font-family: var(--font-editorial-body) !important;
+  font-size: var(--fluid-small) !important;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+/* Body Text & Paragraphs */
+.math-club-editorial p,
+.math-club-editorial li,
+.math-club-editorial .story-section p {
+  font-family: var(--font-editorial-body) !important;
+  font-size: var(--fluid-body) !important;
+  line-height: 1.78;
+  color: #374151;
+  max-width: 72ch;
+}
+
+/* Full width allowed inside centered story columns and cards */
+.math-club-editorial .story-section p,
+.math-club-editorial .story-lead,
+.math-club-editorial .card p,
+.math-club-editorial .card-text {
+  max-width: 100%;
+}
+
+/* Editorial Story Lead */
+.math-club-editorial .story-lead,
+.math-club-editorial .editorial-lead {
+  font-family: var(--font-editorial-heading) !important;
+  font-size: var(--fluid-lead) !important;
+  line-height: 1.75 !important;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: #1f2937 !important;
+}
+
+/* Card Descriptions, Small Text & Instruction Notes */
+.math-club-editorial .card p,
+.math-club-editorial p.small,
+.math-club-editorial .text-muted.small,
+.math-club-editorial .card-text,
+.math-club-editorial .card-body p {
+  font-family: var(--font-editorial-body) !important;
+  font-size: var(--fluid-small) !important;
+  line-height: 1.62;
+  color: #64748b;
+}
+
+/* Monospace Badges, Tags, Figure Captions & Metadata */
+.math-club-editorial .badge,
+.math-club-editorial .mono-tag,
+.math-club-editorial .section-tag,
+.math-club-editorial figcaption,
+.math-club-editorial .figure-caption {
+  font-family: var(--font-editorial-mono) !important;
+  font-size: var(--fluid-caption) !important;
+  letter-spacing: 0.03em;
+}
+
+.math-club-editorial .section-tag {
+  font-family: var(--font-editorial-body) !important;
+  font-size: 0.75rem !important;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+/* Accordion Component */
+.math-club-editorial .accordion-button {
+  font-family: var(--font-editorial-heading) !important;
+  font-size: var(--fluid-h4) !important;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Interactive Elements, Buttons, Action Links */
+.math-club-editorial .btn,
+.math-club-editorial .stretched-link,
+.math-club-editorial .story-nav a {
+  font-family: var(--font-editorial-body) !important;
+  font-size: var(--fluid-small);
+  font-weight: 600;
+}

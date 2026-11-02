@@ -3,7 +3,6 @@
     <!-- Brand / Logo -->
     <a
       class="navbar-brand text-warning fw-bold fs-4 ga-nav-link d-inline-flex align-items-center gap-2"
-      style="font-family: 'Times New Roman', Times, serif;"
       href="{{ '/' | relative_url }}"
     >
       <img
@@ -31,7 +30,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 font-monospace">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
         <!-- 1. Home -->
         <li class="nav-item">
           <a class="nav-link ga-nav-link" href="{{ '/index.html' | relative_url }}">Home</a>
@@ -75,7 +74,7 @@
           </ul>
         </li>
 
-        <!-- 3. Math Club -->
+        <!-- 3. Math Club Navigation Item -->
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle ga-dropdown-toggle"
@@ -95,25 +94,42 @@
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li>
-              <a class="dropdown-item ga-nav-link" href="{{ '/math-club/hpl.html' | relative_url }}"> 🏏 HPL Event </a>
+
+            <!-- Grouped HPL Series with Side Flyout -->
+            <li class="dropdown-submenu">
+              <a
+                class="dropdown-item ga-nav-link d-flex align-items-center justify-content-between submenu-toggle"
+                href="#"
+              >
+                <span>🏏 HPL Editions</span>
+              </a>
+              <ul class="dropdown-menu shadow-sm">
+                <li>
+                  <a class="dropdown-item ga-nav-link" href="{{ '/math-club/hpl.html' | relative_url }}">
+                    HPL 1.0 <span class="badge bg-light text-secondary border ms-1">Inaugural</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item ga-nav-link" href="{{ '/math-club/hpl2.html' | relative_url }}">
+                    HPL 2.0
+                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle ms-1">Auction</span>
+                  </a>
+                </li>
+              </ul>
             </li>
+
             <li>
               <a class="dropdown-item ga-nav-link" href="{{ '/math-club/sdg.html' | relative_url }}">
                 💡 National Science Day (SDG)
               </a>
             </li>
             <li>
-              <a
-                class="dropdown-item ga-nav-link"
-                href="{{ '/math-club/training-camp.html' | relative_url }}"
-              >
+              <a class="dropdown-item ga-nav-link" href="{{ '/math-club/training-camp.html' | relative_url }}">
                 🚨 Math Training Camp
               </a>
             </li>
           </ul>
         </li>
-
         <!-- 4. Q&A -->
         <li class="nav-item dropdown">
           <a
