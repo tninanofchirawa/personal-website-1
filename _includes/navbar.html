@@ -30,7 +30,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
         <!-- 1. Home -->
         <li class="nav-item">
           <a class="nav-link ga-nav-link" href="{{ '/index.html' | relative_url }}">Home</a>
@@ -48,7 +48,6 @@
             Projects
           </a>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-            <!-- Main Work -->
             <li>
               <h6 class="dropdown-header text-uppercase fw-bold text-muted small">The Serious Stuff</h6>
             </li>
@@ -57,12 +56,9 @@
                 📊 Data Science & Research
               </a>
             </li>
-
             <li>
               <hr class="dropdown-divider">
             </li>
-
-            <!-- Side Quests -->
             <li>
               <h6 class="dropdown-header text-uppercase fw-bold text-muted small">The Distractions</h6>
             </li>
@@ -96,12 +92,15 @@
             </li>
 
             <!-- Grouped HPL Series with Side Flyout -->
-            <li class="dropdown-submenu">
+            <li class="dropdown-submenu position-relative">
               <a
                 class="dropdown-item ga-nav-link d-flex align-items-center justify-content-between submenu-toggle"
                 href="#"
+                role="button"
+                aria-expanded="false"
               >
                 <span>🏏 HPL Editions</span>
+                <span class="small ps-2">▶</span>
               </a>
               <ul class="dropdown-menu shadow-sm">
                 <li>
@@ -130,6 +129,7 @@
             </li>
           </ul>
         </li>
+
         <!-- 4. Q&A -->
         <li class="nav-item dropdown">
           <a

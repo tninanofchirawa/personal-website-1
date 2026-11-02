@@ -5,36 +5,48 @@
 
 /* Navbar Brand & Item Typography */
 .navbar-brand {
-  font-family: var(--font-editorial-heading) !important;
+  font-family: var(--font-editorial-heading, inherit) !important;
   font-weight: 700;
   letter-spacing: -0.015em;
 }
 
 .navbar-nav .nav-link,
 .dropdown-menu .dropdown-item {
-  font-family: var(--font-editorial-body) !important;
-  font-size: var(--fluid-small);
+  font-family: var(--font-editorial-body, inherit) !important;
+  font-size: var(--fluid-small, 0.95rem);
   letter-spacing: -0.005em;
   font-weight: 500;
 }
 
-/* Submenu Flyout Architecture */
+/* Submenu Base Positioning */
 .dropdown-submenu {
   position: relative;
 }
 
-/* Desktop: Fly out to the left to prevent horizontal screen overflow */
+/* ==========================================================================
+   Desktop: Flyout Submenu (>= 992px)
+   ========================================================================== */
 @media (min-width: 992px) {
-  .dropdown-submenu:hover > .dropdown-menu {
-    display: block;
+
+  /* Submenu is hidden by default and positioned to fly out to the left */
+  .dropdown-submenu>.dropdown-menu {
+    display: none;
+    position: absolute;
     top: 0;
     right: 100%;
     left: auto;
     margin-top: -6px;
-    margin-right: 0;
+    margin-right: 0.125rem;
+  }
+
+  /* Reveal on hover or when toggled via script with .show */
+  .dropdown-submenu:hover>.dropdown-menu,
+  .dropdown-submenu>.dropdown-menu.show {
+    display: block;
     animation: fadeInSubmenu 0.18s ease-in-out;
   }
 
+  /* Left-pointing arrow indicating left flyout */
   .submenu-toggle::after {
     display: inline-block;
     margin-left: auto;
@@ -46,7 +58,8 @@
     transition: transform 0.15s ease, color 0.15s ease;
   }
 
-  .dropdown-submenu:hover > .submenu-toggle::after {
+  .dropdown-submenu:hover>.submenu-toggle::after,
+  .dropdown-submenu>.submenu-toggle[aria-expanded="true"]::after {
     transform: translateX(-3px);
     color: #0d6efd;
   }
@@ -57,21 +70,26 @@
     opacity: 0;
     transform: translateX(4px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-/* Mobile: Smoothly indented nested menu */
+/* ==========================================================================
+   Mobile: In-Flow Nested Accordion (< 992px)
+   ========================================================================== */
 @media (max-width: 991.98px) {
   .dropdown-submenu .dropdown-menu {
     display: block;
-    position: static;
+    position: static !important;
     float: none;
+    transform: none !important;
     border: 0;
+    border-left: 2px solid rgba(148, 163, 184, 0.25);
     background: #f8fafc;
-    margin: 0.35rem 0.5rem 0.5rem 0.75rem;
+    margin: 0.35rem 0.5rem 0.5rem 1rem;
     padding: 0.35rem 0.5rem;
     border-radius: 0.5rem;
     box-shadow: none;
@@ -88,6 +106,7 @@
     background-color: #e2e8f0;
   }
 
+  /* On mobile, keep the toggle visible as a static section header */
   .submenu-toggle {
     pointer-events: none;
   }
