@@ -1,0 +1,218 @@
+/* ==========================================================================
+   Story Package & Narrative Editorial Styling System
+   Scope: Unified narrative typography, mobile scrollers, and ticket cards
+          across Math Club (HPL 1.0, HPL 2.0, SDG, Training Camp, and Hub).
+   ========================================================================== */
+
+/* 1. Base Story Package Scope & Typography Stack */
+.story-package {
+  font-family: 'Merriweather', Georgia, serif;
+  color: #2b2b2b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings (h1 - h4): Outfit, tracking tight, bold */
+.story-package h1,
+.story-package h2,
+.story-package h3,
+.story-package h4 {
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #111827;
+}
+
+.story-package h1 {
+  font-size: clamp(1.85rem, 3.5vw + 0.5rem, 2.75rem);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.story-package h2 {
+  font-size: clamp(1.4rem, 2.2vw + 0.4rem, 1.95rem);
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.story-package h3 {
+  font-size: clamp(1.2rem, 1.5vw + 0.4rem, 1.55rem);
+  line-height: 1.35;
+  margin-top: 1.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.story-package h4 {
+  font-size: clamp(1.05rem, 1vw + 0.4rem, 1.3rem);
+  line-height: 1.4;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Paragraphs & Narrative Text: Merriweather, 1.05rem, line-height 1.85, soft dark contrast #2b2b2b */
+.story-package p,
+.story-package .narrative-text,
+.story-package .story-section p {
+  font-family: 'Merriweather', Georgia, serif !important;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #2b2b2b;
+  margin-bottom: 1.35rem;
+}
+
+.story-package .lead,
+.story-package .story-lead {
+  font-family: 'Merriweather', Georgia, serif !important;
+  font-size: 1.2rem;
+  line-height: 1.85;
+  font-weight: 300;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+/* Badges, Technical Tags, and Meta Lines: JetBrains Mono or uppercase mono-tag */
+.story-package .badge,
+.story-package .technical-tag,
+.story-package .meta-line,
+.story-package .mono-tag,
+.story-package .section-tag {
+  font-family: 'JetBrains Mono', monospace !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+}
+
+.story-package .editorial-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+
+.story-package .editorial-list li {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: #2b2b2b;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  position: relative;
+}
+
+.story-package .editorial-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #6366f1;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   2. Responsive Poster Sizing Engine
+   ========================================================================== */
+.responsive-poster,
+.story-poster img {
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.08), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* ==========================================================================
+   3. Touch-Friendly Overflow Scroller (Mobile Poster Strip & Showcase Boards)
+   ========================================================================== */
+.poster-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.25rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem 0.25rem 1rem 0.25rem;
+  scrollbar-width: thin;
+}
+
+.poster-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.poster-scroll-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 999px;
+}
+
+.poster-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 999px;
+}
+
+.poster-scroll-item {
+  flex: 0 0 82vw;
+  max-width: 420px;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 768px) {
+  .poster-scroll-item {
+    flex: 0 0 calc(50% - 0.75rem);
+    max-width: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .poster-scroll-container.strip-3-col .poster-scroll-item {
+    flex: 0 0 calc(33.333% - 0.85rem);
+  }
+}
+
+/* ==========================================================================
+   4. Ticket Cards (Main Index Math & Club Highlights)
+   ========================================================================== */
+.ticket-card {
+  border: 1px solid var(--bs-border-color-subtle, #e2e8f0);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+  transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.24s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.ticket-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px -4px rgba(0, 0, 0, 0.09), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+  border-color: rgba(13, 110, 253, 0.35);
+}
+
+.ticket-card .ticket-title {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.ticket-card .ticket-teaser {
+  font-family: 'Merriweather', Georgia, serif !important;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ticket-card .ticket-pill {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}

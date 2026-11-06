@@ -1,7 +1,0 @@
-/* ==========================================================================
-   Cards Compatibility Proxy
-   Forwards to components/cards.css and editorial/story.css
-   ========================================================================== */
-
-@import url('components/cards.css');
-@import url('editorial/story.css');

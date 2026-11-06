@@ -3,19 +3,91 @@
    Scope: Top navigation bar, desktop flyout submenu, mobile indented accordion.
    ========================================================================== */
 
-/* Navbar Brand & Item Typography */
-.navbar-brand {
-  font-family: var(--font-editorial-heading, inherit) !important;
-  font-weight: 700;
-  letter-spacing: -0.015em;
+/* Navbar Brand & Item Alignment & Typography */
+.navbar {
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
 }
 
-.navbar-nav .nav-link,
+.navbar-brand {
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.015em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  line-height: 1;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.navbar-brand img {
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.05);
+}
+
+/* Nav Links Typography, Scale & Spacing */
+.navbar-nav {
+  align-items: center;
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  padding: 0.5rem 0.85rem !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+  position: relative;
+  transition: color 0.2s ease, opacity 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Subtle Hover & Active Indicator States */
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0.15rem;
+  left: 0.85rem;
+  right: 0.85rem;
+  height: 2px;
+  background-color: var(--bs-warning, #ffc107);
+  transform: scaleX(0);
+  transition: transform 0.22s ease-in-out;
+  transform-origin: center;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #ffffff !important;
+  opacity: 1;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  transform: scaleX(1);
+}
+
 .dropdown-menu .dropdown-item {
-  font-family: var(--font-editorial-body, inherit) !important;
-  font-size: var(--fluid-small, 0.95rem);
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 0.95rem;
   letter-spacing: -0.005em;
   font-weight: 500;
+  padding: 0.45rem 1rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  background-color: #f1f5f9;
+  color: #0d6efd;
 }
 
 /* Submenu Base Positioning */

@@ -1,0 +1,34 @@
+<!-- Unified Responsive Hero Banner Engine -->
+<header class="hero-banner d-flex justify-content-center align-items-center text-center px-3 pt-5 pb-4 shadow-sm"
+  style="background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('{% if page.hero_image %}{{ page.hero_image | relative_url }}{% else %}{{ '/assets/images/home/Bible.jpg' | relative_url }}{% endif %}');">
+  <div class="container text-center d-flex flex-column align-items-center justify-content-center mx-auto">
+    {% if page.breadcrumbs %}
+    <nav aria-label="breadcrumb" class="mb-2 text-center">
+      <ol class="breadcrumb justify-content-center mb-0 small">
+        {% for crumb in page.breadcrumbs %}
+          {% if forloop.last %}
+            <li class="breadcrumb-item active text-white opacity-75" aria-current="page">{{ crumb.title }}</li>
+          {% else %}
+            <li class="breadcrumb-item"><a href="{{ crumb.url | relative_url }}" class="text-white text-decoration-none opacity-90">{{ crumb.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ol>
+    </nav>
+    {% endif %}
+
+    {% if page.hero_badge %}
+    <div class="hero-badge-wrap mb-2 text-center">
+      <span class="badge bg-white bg-opacity-25 text-white border border-white border-opacity-50 rounded-pill px-3 py-1 text-uppercase mono-tag fw-semibold">
+        {{ page.hero_badge }}
+      </span>
+    </div>
+    {% endif %}
+
+    <h1 class="display-5 fw-bold text-uppercase tracking-wide text-white mb-2 text-center w-100">
+      {% if page.hero_title %}{{ page.hero_title }}{% else %}{{ page.title }}{% endif %}
+    </h1>
+    {% if page.hero_subtitle %}
+    <p class="lead mb-0 text-light opacity-75 font-monospace text-center mx-auto w-100">{{ page.hero_subtitle }}</p>
+    {% endif %}
+  </div>
+</header>

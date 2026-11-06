@@ -21,6 +21,9 @@
   letter-spacing: -0.025em;
   color: #ffffff !important;
   text-shadow: none !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .math-club-editorial .hero-banner p {
@@ -29,6 +32,9 @@
   letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.9) !important;
   text-shadow: none !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 /* Headings Hierarchy (Content Only - Never affects Hero Banner) */

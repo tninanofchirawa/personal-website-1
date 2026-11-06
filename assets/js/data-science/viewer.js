@@ -188,11 +188,35 @@
       gridEl.classList.remove('d-none');
     } catch (err) {
       console.error('Viewer error:', err);
+      const isRateLimit = err && (err.isRateLimit || err.status === 403 || err.status === 429);
+      const folderUrl = `https://github.com/${config.user}/${config.repo}/tree/${config.branch}/${encodeURIComponent(folder)}`;
+
       loaderEl.innerHTML = `
-        <div class="alert alert-warning mono-tag text-center" role="alert">
-          Unable to load folder contents at this time. Please check your network connection or try again later.
+        <div class="col-12 my-3">
+          <div class="card p-4 p-md-5 text-center border border-warning-subtle rounded-4 bg-light shadow-sm">
+            <div class="mb-3 fs-1">🛡️</div>
+            <h4 class="fw-bold text-dark mb-2">
+              ${isRateLimit ? 'GitHub API Rate Limit Safeguard' : 'Directory Sync Notice'}
+            </h4>
+            <p class="text-secondary small mb-4 col-md-8 mx-auto" style="line-height: 1.6;">
+              ${isRateLimit
+                ? 'Unauthenticated requests to the GitHub API are capped at 60 requests/hr per IP. You can browse all source code files and notebooks in this folder directly on GitHub!'
+                : 'Unable to sync files from GitHub at this moment. You can view all files in this directory directly on GitHub!'}
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+              <a href="${folderUrl}" target="_blank" rel="noopener noreferrer"
+                 class="btn btn-outline-dark btn-sm rounded-pill px-4 py-2 mono-tag">
+                Open Directory on GitHub &rarr;
+              </a>
+              <button type="button" onclick="window.location.reload()"
+                 class="btn btn-primary btn-sm rounded-pill px-4 py-2 mono-tag">
+                Retry Sync
+              </button>
+            </div>
+          </div>
         </div>
       `;
+      loaderEl.classList.remove('d-none');
     }
   }
 
