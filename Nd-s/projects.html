@@ -145,52 +145,54 @@ hero_image: assets/images/Nds/Building2.jpg
           </div>
 
           <!-- Card 3: CSES Archive -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="card h-100 shadow-sm border rounded-4 p-4 bg-white d-flex flex-column position-relative card-hover-effect"
-            >
-              <div class="d-flex align-items-center justify-content-between mb-3">
-                <div
-                  class="d-inline-flex align-items-center justify-content-center bg-warning-subtle text-warning-emphasis rounded-3"
-                  style="width: 48px; height: 48px;"
-                >
-                  <span class="fs-4">⌨️</span>
+          {% comment %}
+            <div class="col-12 col-md-6 col-lg-4">
+              <div
+                class="card h-100 shadow-sm border rounded-4 p-4 bg-white d-flex flex-column position-relative card-hover-effect"
+              >
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div
+                    class="d-inline-flex align-items-center justify-content-center bg-warning-subtle text-warning-emphasis rounded-3"
+                    style="width: 48px; height: 48px;"
+                  >
+                    <span class="fs-4">⌨️</span>
+                  </div>
+                  <span
+                    class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle rounded-pill px-3 py-2 mono-tag"
+                  >
+                    In Progress
+                  </span>
                 </div>
-                <span
-                  class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle rounded-pill px-3 py-2 mono-tag"
-                >
-                  In Progress
-                </span>
-              </div>
 
-              <h5 class="fw-bold text-dark mb-1">One Problem Closer to Sanity.</h5>
-              <p class="text-muted small mb-3">AC today. TLE tomorrow.</p>
+                <h5 class="fw-bold text-dark mb-1">One Problem Closer to Sanity.</h5>
+                <p class="text-muted small mb-3">AC today. TLE tomorrow.</p>
 
-              <div class="ticket-box p-3 border-start border-3 border-warning mb-3 flex-grow-1">
-                <div class="d-flex justify-content-between align-items-center mb-1">
-                  <span class="text-uppercase fw-bold text-muted mono-tag" style="letter-spacing: 0.04em;">Spec</span>
-                  <span class="text-muted mono-tag">One at a Time</span>
+                <div class="ticket-box p-3 border-start border-3 border-warning mb-3 flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="text-uppercase fw-bold text-muted mono-tag" style="letter-spacing: 0.04em;">Spec</span>
+                    <span class="text-muted mono-tag">One at a Time</span>
+                  </div>
+                  <p class="small text-secondary mb-2 mt-1">
+                    Tackling CSES one problem at a time. Solutions shall be documented, bugs shall be investigated, and
+                    suspicious test cases shall be treated as personal enemies.
+                  </p>
+                  <div class="d-flex align-items-center gap-2 pt-2 border-top border-light-subtle">
+                    <span class="badge bg-white text-dark border px-2 py-1 mono-tag">C++</span>
+                    <span class="badge bg-white text-muted border px-2 py-1 mono-tag">AC & TLE</span>
+                  </div>
                 </div>
-                <p class="small text-secondary mb-2 mt-1">
-                  Tackling CSES one problem at a time. Solutions shall be documented, bugs shall be investigated, and
-                  suspicious test cases shall be treated as personal enemies.
-                </p>
-                <div class="d-flex align-items-center gap-2 pt-2 border-top border-light-subtle">
-                  <span class="badge bg-white text-dark border px-2 py-1 mono-tag">C++</span>
-                  <span class="badge bg-white text-muted border px-2 py-1 mono-tag">AC & TLE</span>
-                </div>
-              </div>
 
-              <div class="pt-2 mt-auto border-top">
-                <a
-                  href="{{ '/Nd-s/cses.html' | relative_url }}"
-                  class="stretched-link text-dark text-decoration-none small fw-semibold"
-                >
-                  View the Chaos &rarr;
-                </a>
+                <div class="pt-2 mt-auto border-top">
+                  <a
+                    href="{{ '/Nd-s/cses.html' | relative_url }}"
+                    class="stretched-link text-dark text-decoration-none small fw-semibold"
+                  >
+                    View the Chaos &rarr;
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          {% endcomment %}
 
           <!-- Card 4: Clean Google Search -->
           <div class="col-12 col-md-6 col-lg-4">
