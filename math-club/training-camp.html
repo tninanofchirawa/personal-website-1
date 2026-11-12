@@ -2,105 +2,372 @@
 layout: default
 title: Training Camp
 hero_title: Math Training Camp
-hero_subtitle: Its Maths Classes 😑
-hero_badge: Training Camp · BTech Series
+hero_subtitle: Prepping for St. Joseph's — and realizing I am not cut out to be a professor
+hero_badge: Training Camp · St. Joseph's Prep
 hero_image: assets/images/math-club/training-camp/Hero Image/math.png
 event_image: assets/images/math-club/training-camp/GIF/math-prep.gif
 
-# Assessment Test Series Configuration
+# GForm Tests Configuration
 tests:
-  - assessment_label: "1st Assessment"
-    title: "Test 1"
+  - assessment_label: "GForm Test 01"
+    title: "Test 1: The Honeymoon Phase"
     questions: 20
     form_url: "https://forms.gle/yvbFkdZNsSP23s5z9"
-    syllabus_title: "Syllabus Matrix - Test 1"
+    summary: "The warm-up round—testing basic speed, core algebra, and counting before the panic set in."
+    syllabus_title: "Topics Covered"
     syllabus_items:
       - "Quadratic Equations"
       - "Permutations and Combinations"
       - "Sequence and Series"
       - "Probability"
 
-  - assessment_label: "2nd Assessment"
-    title: "Test 2"
+  - assessment_label: "GForm Test 02"
+    title: "Test 2: When Reality Hit"
     questions: 25
     form_url: "https://forms.gle/c3Zs9MLHrbbfBWp88"
-    syllabus_title: "Syllabus Matrix - Test 2"
+    summary: "Twenty-five questions of pure higher-secondary math designed to undo the post-+2 memory wipe."
+    syllabus_title: "Topics Covered"
     syllabus_items:
       - "Sets, Relations and Functions"
       - "Calculus"
 
-  - assessment_label: "3rd Assessment"
-    title: "Test 3"
+  - assessment_label: "GForm Test 03"
+    title: "Test 3: The Final Stretch"
     questions: 20
     form_url: "https://forms.gle/VsPZdFAV9q3nYK2t9"
-    syllabus_title: "Syllabus Matrix - Test 3"
+    summary: "The last checkpoint right alongside internal exams before heading into the St. Joseph's arena."
+    syllabus_title: "Topics Covered"
     syllabus_items:
       - "Conic Sections"
       - "Statistics"
       - "Probability"
 ---
+<style>
+  .memory-archive {
+    --memory-ink: #20252b;
+    --memory-muted: #646b73;
+    --memory-line: #e8e9eb;
+    --memory-accent: #315b79;
+    --memory-soft: #f2f5f7;
+  }
 
-<!-- Top Navigation Row -->
-<div class="story-package">
-  <div class="story-nav mb-4">
-    <a href="index.html" class="text-decoration-none text-secondary small fw-semibold mono-tag">
+  .activity-tag {
+    color: var(--memory-accent);
+    font-family: var(--bs-font-monospace, monospace);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .memory-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .memory-section-heading h2 {
+    margin-bottom: 0.35rem;
+    color: var(--memory-ink);
+  }
+
+  .memory-section-heading p {
+    margin-bottom: 0;
+    color: var(--memory-muted);
+  }
+
+  /* Editorial Narrative */
+  .story-article {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+
+  .story-prose p {
+    font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: #3f464e;
+    margin-bottom: 1.35rem;
+  }
+
+  .story-lead {
+    font-size: 1.2rem !important;
+    color: var(--memory-ink) !important;
+  }
+
+  .story-callout {
+    margin-top: 2rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--memory-soft);
+    border-left: 3px solid var(--memory-accent);
+    border-radius: 0 0.75rem 0.75rem 0;
+    font-size: 0.96rem;
+    line-height: 1.7;
+    color: var(--memory-ink);
+  }
+
+  /* GIF / Visual Feature */
+  .visual-story-frame {
+    background: #fff;
+    border: 1px solid var(--memory-line);
+    border-radius: 1.25rem;
+    box-shadow: 0 14px 34px rgba(25, 35, 45, 0.06);
+    overflow: hidden;
+    padding: 1rem;
+  }
+
+  .visual-story-frame img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.85rem;
+    display: block;
+  }
+
+  /* Drive Vault Container */
+  .drive-vault-card {
+    background: #fff;
+    border: 1px solid var(--memory-line);
+    border-radius: 1.25rem;
+    box-shadow: 0 8px 24px rgba(25, 35, 45, 0.05);
+    overflow: hidden;
+  }
+
+  .drive-embed-frame {
+    border: 1px solid var(--memory-line);
+    border-radius: 0.85rem;
+    overflow: hidden;
+    height: 320px;
+    background: #f8fafc;
+  }
+
+  /* Larger, Detailed GForm Test Cards */
+  .gform-card {
+    background: #fff;
+    border: 1px solid var(--memory-line);
+    border-left: 4px solid var(--memory-accent);
+    border-radius: 1.25rem;
+    box-shadow: 0 10px 28px rgba(25, 35, 45, 0.06);
+    padding: 2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .gform-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px rgba(25, 35, 45, 0.1);
+    border-color: #cbd5e1;
+  }
+
+  .gform-badge-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .question-pill {
+    background: var(--memory-soft);
+    color: var(--memory-accent);
+    font-family: var(--bs-font-monospace, monospace);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(49, 91, 121, 0.16);
+  }
+
+  .gform-summary {
+    color: var(--memory-muted);
+    font-size: 0.96rem;
+    line-height: 1.65;
+    margin-bottom: 1.35rem;
+  }
+
+  .syllabus-box {
+    background: #f8fafc;
+    border: 1px solid var(--memory-line);
+    border-radius: 0.9rem;
+    padding: 1.15rem 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .syllabus-chip-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.65rem;
+  }
+
+  .syllabus-chip {
+    background: #fff;
+    color: var(--memory-ink);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--memory-line);
+  }
+
+  .gform-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.85rem 1.25rem;
+    border-radius: 0.8rem;
+    background: var(--memory-accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.92rem;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+    margin-top: auto;
+  }
+
+  .gform-cta-btn:hover {
+    background: #23445c;
+    color: #fff;
+  }
+
+  /* Centered Closing Dedication */
+  .dedication-box {
+    max-width: 760px;
+    margin: 4rem auto 1rem;
+    padding: 2.5rem 2rem;
+    background: #fff;
+    border: 1px solid var(--memory-line);
+    border-radius: 1.25rem;
+    text-align: center;
+    box-shadow: 0 8px 26px rgba(25, 35, 45, 0.05);
+  }
+
+  .dedication-box h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--memory-ink);
+    margin-bottom: 1rem;
+  }
+
+  .dedication-prose {
+    font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: #4b525a;
+    max-width: 640px;
+    margin: 0 auto 1.35rem;
+  }
+</style>
+
+<div class="story-package memory-archive">
+  <!-- Back Navigation -->
+  <nav class="story-nav mb-4" aria-label="Breadcrumb navigation">
+    <a href="{{ '/index.html' | relative_url }}" class="text-decoration-none text-secondary small fw-semibold">
       &larr; Back to Math Club
     </a>
-  </div>
+  </nav>
 
-<!-- Introduction Card with GIF Banner -->
-<div class="row g-4 justify-content-center">
-  <div class="col-12 col-md-10 col-xl-8">
-    <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light-subtle">
-      <h3 class="fw-bold text-dark mb-1">The September 2025 Math Training Camp</h3>
-      <h6 class="text-muted text-uppercase fw-semibold mb-3">📢 First-Year BTech Training Camp Recap! 📐✨</h6>
-      <p class="mb-3">
-        🎬 A quick look at our Mathematics Camp for the BTech juniors! We covered everything from the foundational core to
-        advanced techniques, with a strong focus on Mental Math mastery ⚡🧠 and essential Class 11–12 mathematics 📚.
+  <!-- Editorial Story Header & Narrative -->
+  <article class="story-article py-2 py-md-4 mb-5">
+    <header class="text-center mb-4 pb-3 border-bottom">
+      <span class="activity-tag">THE ST. JOSEPH'S PREP &middot; 2025</span>
+      <h1 class="display-6 mt-2 mb-2 fw-bold" style="color: var(--memory-ink);">
+        From "You Don't Belong There" to Running the Camp
+      </h1>
+      <p class="text-muted small mb-0 font-monospace">
+        HOW A SIMPLE PRAYER LED TO SIX DAYS OF CHALK DUST &amp; HUMBLING REALITY
       </p>
-      <p class="mb-4">Take a look below! 👇</p>
+    </header>
 
-      <div class="carousel-card p-2 bg-light">
-        <img
-          src="{{ page.event_image | relative_url }}"
-          alt="Training Camp GIF Animation"
-          class="img-fluid rounded-3 w-100"
-          style="max-height: 440px; object-fit: cover;"
-        >
+    <div class="story-prose">
+      <p class="story-lead">
+        Back in January during my second semester, I stumbled across a strange realization: our department had a Math
+        Club, and none of us from M.Sc. Mathematics were actually in it. Confused, I walked up to a senior faculty
+        member and asked why mathematics students were left out of their own club. The response was blunt:
+        <em>"You don't belong there."</em> It stung. I walked away, said a small, simple prayer about it, and let it go.
+      </p>
+
+      <p>
+        Fast forward to May 2025—that very same year. Out of nowhere, the HOD called me in, and just like that, I was
+        appointed President of the Math Club. Talk about an answered prayer. Thanks to the momentum from our science
+        competitions and the backing of our seniors and faculty (yes, even the ones who once told me to mind my own
+        business), we suddenly had the keys to rebuild the club from scratch.
+      </p>
+
+      <p>
+        When the new batch arrived, I knew we had a tradition to keep: representing our department at the annual
+        <strong>St. Joseph's Math Competition</strong>. There was just one small problem—most students perform a
+        complete factory reset on their brains the second their +2 board exams end. When I announced I was going to
+        train them from the ground up, my seniors and friends just laughed. They knew the mountain of work I was
+        volunteering myself for.
+      </p>
+
+      <p>
+        Out of roughly 150 members on paper, about 50 showed up to the club, and I pitched daily prep sessions. It
+        started strong with 15 dedicated students and eventually narrowed down to a core squad of 7. Trying to cram
+        massive portions into daily sessions while juggling everyone's upcoming internal exams was rough—and it taught
+        me one thing for certain: I definitely do not want to be a professor.
+      </p>
+
+      <p class="mb-0">
+        When competition day arrived at St. Joseph's, other colleges rolled in with entire M.Sc. squads, while we were a
+        brand-new crew treating this as a passionate side hustle. We lost—and yeah, it hurt. Yet watching those seven
+        students study through their internals, put up with all my flaws as a rookie teacher, and show up every day made
+        it one of my favourite memories.
+      </p>
+    </div>
+
+    <!-- GIF Card -->
+    <div class="visual-story-frame mt-4">
+      <img
+        src="{{ page.event_image | relative_url }}"
+        alt="Training Camp GIF Animation"
+        loading="lazy"
+      >
+      <div class="text-center mt-3">
+        <span class="text-secondary small font-monospace">
+          📸 Undoing the post-+2 memory wipe, one daily session at a time
+        </span>
       </div>
     </div>
-  </div>
-</div>
 
-<hr class="my-4">
+    <aside class="story-callout">
+      <span class="activity-tag d-block mb-1">LESSON LEARNED</span>
+      Covering huge portions in a short window is brutal, and teaching is no joke. We didn't bring home the trophy from
+      St. Joseph's, but to the seven who stuck around till the end—you made every chaotic class worth it.
+    </aside>
+  </article>
 
-<!-- Question Banks and Notes Section -->
-<div class="row g-4">
-  <div class="col-12">
-    <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light-subtle">
-      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
-        <div>
-          <h4 class="fw-bold text-dark mb-1">Question Banks &amp; Resource Repository</h4>
-          <p class="text-muted small mb-0">
-            📚 All lecture notes and question sets from the 6-day intensive camp are organized below! 🚀✨
-          </p>
-        </div>
-        <div>
-          <a
-            href="https://drive.google.com/drive/folders/1pUdMThV7tL4wZn1_cr9HowhA4MCWsgCr"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-outline-primary btn-sm rounded-pill px-3 py-2 fw-semibold"
-          >
-            Open Folder in Google Drive &rarr;
-          </a>
-        </div>
+  <hr class="my-5">
+
+  <!-- Resource Vault Section -->
+  <section class="mb-5" aria-labelledby="heading-vault">
+    <div class="memory-section-heading">
+      <div>
+        <span class="activity-tag">THE STUDY VAULT &middot; NOTES &amp; MATERIALS</span>
+        <h2 id="heading-vault" class="h3 mt-2 fw-bold">Camp Notes &amp; Question Banks</h2>
+        <p class="small">Everything we compiled to refresh +2 fundamentals before St. Joseph's.</p>
       </div>
+      <div>
+        <a
+          href="https://drive.google.com/drive/folders/1pUdMThV7tL4wZn1_cr9HowhA4MCWsgCr"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-sm px-3 py-2 fw-bold font-monospace"
+          style="background: var(--memory-soft); color: var(--memory-accent); border: 1px solid rgba(49, 91, 121, 0.2); border-radius: 999px;"
+        >
+          Open in Drive &rarr;
+        </a>
+      </div>
+    </div>
 
-      <div
-        class="border border-light-subtle rounded-3 bg-light overflow-hidden shadow-sm mb-3"
-        style="min-height: 250px; height: 30vh;"
-      >
+    <div class="drive-vault-card p-4 p-md-5">
+      <div class="drive-embed-frame mb-3">
         <iframe
           src="https://drive.google.com/embeddedfolderview?id=1pUdMThV7tL4wZn1_cr9HowhA4MCWsgCr#list"
           title="Google Drive Resource Folder"
@@ -109,119 +376,92 @@ tests:
           Loading Google Drive Folder…
         </iframe>
       </div>
-      <p class="text-muted small mb-4" style="font-size: 0.85rem;">
-        ℹ️
-        <em>
-          If the embedded Google Drive folder does not display in your browser due to third-party cookie restrictions,
-          click the <strong>Open Folder in Google Drive</strong> button above.
-        </em>
+      <p class="text-muted small font-monospace mb-4">
+        &bull; If your browser blocks third-party Drive iframes, use the "Open in Drive" button above.
       </p>
 
-      <p class="mb-2">
-        📚 All resources were written, vetted, and compiled by Mathematics Club organizers as part of an intensive
-        preparation camp. The syllabus roadmap includes:
-      </p>
-
-      <ul class="editorial-list mb-4">
-        <li><strong>🧠 Mental Math:</strong> Speed drills, rapid arithmetic shortcuts, and mental agility frameworks.</li>
-        <li><strong>📝 Curated Question Banks:</strong> Graded question banks complete with worked solutions.</li>
-        <li><strong>📖 Detailed Notes:</strong> Comprehensive concept breakdowns for high-yield topics.</li>
-        <li><strong>🎓 Pre-University Foundation:</strong> Key Class 11 and Class 12 bridge modules.</li>
-        <li><strong>📋 Evaluation Roadmaps:</strong> Chapter matrices and diagnostic evaluation rubrics.</li>
-      </ul>
-
-      <p class="mb-2">
-        We recommend beginning with the syllabus overview to establish a clear conceptual roadmap.
-      </p>
-      <p class="mb-0">
-        🚀 A huge thank you to all the participants whose dedication, curiosity, and energy made this camp such a
-        rewarding experience. Questions or corrections are always welcome via email. Happy solving!
-      </p>
-    </div>
-  </div>
-</div>
-
-<hr class="my-4">
-
-<!-- Test Series Assessments -->
-<div class="row g-4">
-  <div class="col-12">
-    <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light-subtle">
-      <h3 class="fw-bold text-dark mb-1">Assessment Test Series ➡️</h3>
-      <p class="text-muted small mb-4">Timed evaluation modules designed to test mastery across core mathematical domains.</p>
-
-      {% for test in page.tests %}
-        <div class="row gx-4 gy-4 align-items-stretch mb-4">
-          <!-- Test Form Card -->
-          <div class="col-12 col-md-6">
-            <div class="p-4 bg-white rounded-4 shadow-sm border border-light-subtle h-100 d-flex flex-column">
-              <h4 class="fw-bold text-dark mb-1">{{ test.assessment_label }}</h4>
-              <p class="text-muted small mb-3">📝 Attempt the evaluation via the Google Form below:</p>
-
-              <div class="card h-100 shadow-sm border border-primary-subtle rounded-4 p-4 bg-white position-relative card-hover-effect d-flex flex-column">
-                <div class="d-flex align-items-start gap-3 flex-grow-1">
-                  <div class="p-2 bg-primary-subtle text-primary rounded-3 fs-3 lh-1 flex-shrink-0">📝</div>
-                  <div class="w-100">
-                    <h5 class="card-title fw-bold text-dark mb-2">
-                      {{ test.title }}
-                    </h5>
-                    <p class="card-text text-muted small mb-3" style="line-height: 1.6;">
-                      Use the form below to attempt questions based on topics covered during the classes.
-                      <br><strong class="text-dark">Good luck, and give it your best! 🚀</strong>
-                    </p>
-                    <div class="d-flex align-items-center text-success small fw-semibold font-monospace mb-3">
-                      <span class="me-1">🎯</span> There are {{ test.questions }} Questions
-                    </div>
-                  </div>
-                </div>
-                <div class="mt-auto pt-3 border-top border-light-subtle">
-                  <a
-                    href="{{ test.form_url }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="stretched-link text-decoration-none text-primary small fw-semibold d-inline-flex align-items-center gap-1"
-                  >
-                    Click to attempt the Test <span>&rarr;</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Syllabus Matrix Card -->
-          <div class="col-12 col-md-6">
-            <div class="p-4 bg-light rounded-4 shadow-sm border border-light-subtle h-100">
-              <h4 class="fw-bold text-dark mb-1">{{ test.syllabus_title }}</h4>
-              <p class="text-muted small mb-3">🎯 Focus topics covered in this evaluation module:</p>
-
-              <ul class="list-unstyled fw-semibold lh-lg ps-1 mb-0">
-                {% for topic in test.syllabus_items %}
-                  <li class="mb-2 d-flex align-items-center text-secondary">
-                    <span class="text-primary me-2">🔹</span> {{ topic }}
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {% unless forloop.last %}
-          <hr class="my-4 opacity-25">
-        {% endunless %}
-      {% endfor %}
-
-      <!-- Gratitude & Dedication Closing Card -->
-      <div class="dedication-card mt-5">
-        <h2>Above All, Thank You, Jesus.</h2>
-        <p>
-          I want to thank my seniors, professors, and HOD for all the love and support they’ve shown me for every plan I
-          come up with — even the crazy ones 😉. Also, a huge thanks to the juniors for sitting through the intensive
-          sessions 😅 and still giving such an inspiring performance during the evaluations.
+      <div class="story-prose">
+        <p style="font-size: 1rem; margin-bottom: 0.75rem;">
+          Inside this folder are the crash-course sheets we put together to bridge the gap before competition day:
         </p>
-        <p class="dedication-highlight">By God's grace. For the glory of Jesus.</p>
-        <p class="dedication-signoff">Thank You, Jesus. &#10013;&#65039;&#10084;&#65039;</p>
+        <ul class="editorial-list mb-0 ps-3" style="color: #4b525a; line-height: 1.8;">
+          <li>
+            <strong>Mental Math Shortcuts:</strong> Speed drills for calculating faster without touching a calculator.
+          </li>
+          <li><strong>Curated Problem Sets:</strong> Practice sheets built to shake off the +2 rust.</li>
+          <li><strong>Concept Breakdowns:</strong> Condensed notes covering high-yield competition topics.</li>
+          <li>
+            <strong>Class 11 &amp; 12 Refresher Guides:</strong> The core formulas you forget five minutes after finals.
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
-</div>
+  </section>
+
+  <hr class="my-5">
+
+  <!-- GForm Tests Section -->
+  <section class="mb-5" aria-labelledby="heading-tests">
+    <div class="memory-section-heading">
+      <div>
+        <span class="activity-tag">CHECKPOINTS &middot; PRACTICE EVALUATIONS</span>
+        <h2 id="heading-tests" class="h3 mt-2 fw-bold">GForm Tests</h2>
+        <p class="small">The three online practice tests our squad took alongside their internal exams.</p>
+      </div>
+      <span class="text-muted small font-monospace">03 GFORM TESTS</span>
+    </div>
+
+    <div class="row g-4">
+      {% for test in page.tests %}
+        <div class="col-12 col-lg-4">
+          <article class="gform-card">
+            <div class="gform-badge-row">
+              <span class="activity-tag">{{ test.assessment_label }}</span>
+              <span class="question-pill">{{ test.questions }} Questions</span>
+            </div>
+
+            <h3 class="h4 fw-bold text-dark mb-2">{{ test.title }}</h3>
+            <p class="gform-summary">{{ test.summary }}</p>
+
+            <div class="syllabus-box">
+              <span class="activity-tag d-block" style="font-size: 0.68rem;">
+                {{ test.syllabus_title }}
+              </span>
+              <div class="syllabus-chip-list">
+                {% for topic in test.syllabus_items %}
+                  <span class="syllabus-chip">{{ topic }}</span>
+                {% endfor %}
+              </div>
+            </div>
+
+            <a
+              href="{{ test.form_url }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="gform-cta-btn"
+            >
+              Open GForm Test &rarr;
+            </a>
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Centered Closing Dedication -->
+  <section class="dedication-box">
+    <span class="activity-tag d-block mb-2">GRATITUDE &middot; FINAL NOTES</span>
+    <h3>Above All, Thank You, Jesus.</h3>
+    <div class="dedication-prose">
+      <p class="mb-0">
+        Looking back from that quiet prayer in January to standing with our team at St. Joseph's, none of this happened
+        by accident. Thank you to my seniors, professors, and HOD for trusting me with the club, and to the seven
+        students who showed up daily and stood by me through every flaw.
+      </p>
+    </div>
+    <p class="font-monospace small mt-3 mb-1" style="color: var(--memory-accent); font-weight: 700;">
+      By God's grace. For the glory of Jesus.
+    </p>
+    <p class="text-muted small mb-0 font-monospace">Thank You, Jesus. &#10013;&#65039;&#10084;&#65039;</p>
+  </section>
 </div>
