@@ -1,237 +1,469 @@
 ---
 layout: default
-title: Hits Math Club
-hero_title: HITS Math Club
-hero_subtitle: All Activities that I was involved in...
-hero_badge: Campus Chapter · Highlights
+title: Math Club Memories
+hero_title: A Few Math Club Memories
+hero_subtitle: Some events, a little chaos, and plenty of people who made it happen.
+hero_badge: Hindustan Mathematics Club · Memories
 hero_image: assets/images/math-club/index/Hero/Hero_image.png
 
-# Math Club Highlights Carousel
-# To add a new photo, simply add a new entry below!
-math_club_gallery:
-  - image: assets/images/math-club/index/Images/National Math Day.jpg
-    caption: 📸 National Math Day
-    alt: National Math Day
-  - image: assets/images/math-club/index/Images/seniors-made-mini-satellite.jpg
-    caption: 📸 🛰️ Seniors Showcasing a Mini Satellite at the Nandambakkam Defence Expo
-    alt: Seniors Mini Satellite
-  - image: assets/images/math-club/index/Images/super-interesting.jpg
-    caption: 📸 Math is Fun (outreach for 12th Class Students)
-    alt: Math is Fun Outreach
-  - image: assets/images/math-club/index/Images/event-in-nadambakkam (1).jpg
-    caption: 📸 Defence Expo 2025
-    alt: Defence Expo 2025
+# Activity Archive
+activities:
+  - title: "Cricket, Calculations & Chaos"
+    tag: "THE BEGINNING"
+    description: "Our first HPL experiment brought cricket and mathematics together — with plenty of planning, noise and improvisation."
+    link: "/math-club/hpl.html"
+    symbol: "🏏"
+    image: "assets/images/math-club/hpl/Images/desiginig-the-event (1).jpg"
+
+  - title: "The Auction That Almost Had an App"
+    tag: "THE SEQUEL"
+    description: "A bigger HPL, a live auction, an abandoned app idea and a team that learned to adapt on the fly."
+    link: "/math-club/hpl2.html"
+    symbol: "🔨"
+    image: "assets/images/math-club/hpl/Images/HPL2.jpeg"
+
+  - title: "A Water Rocket & a Podium"
+    tag: "SCIENCE FAIR · 2025"
+    description: "A team project involving websites, prototypes and a water rocket — eventually earning us second place."
+    link: "/math-club/sdg.html"
+    symbol: "🚀"
+    image: "assets/images/math-club/sdg/Images/Image 2.jpg"
+
+  - title: "Six Days of Maths"
+    tag: "TRAINING CAMP"
+    description: "A mathematics camp for B.Tech juniors, complete with notes, question banks and assessment tests."
+    link: "/math-club/training-camp.html"
+    symbol: "📐"
+    image: "assets/images/math-club/training-camp/ticket phots.jpg"
 ---
-<div class="story-package">
-  <!-- Welcome Introduction Card -->
-  <div class="row g-4 justify-content-center">
-    <div class="col-12 col-md-10">
-      <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light-subtle">
-        <p class="story-lead mb-3">
-          The Mathematics Club at HITS had quite the eventful 2025–26 academic year 🚀. Between HPL, SDG, mathematics
-          competitions, field trips, training camps, and outreach activities, there was certainly no shortage of things
-          to do — or excuses to say, "We'll manage it somehow." 😌
-        </p>
+<style>
+  .memory-archive {
+    --memory-ink: #20252b;
+    --memory-muted: #646b73;
+    --memory-line: #e8e9eb;
+    --memory-accent: #315b79;
+    --memory-soft: #f2f5f7;
+  }
 
-        <p class="mb-3">
-          ✨ This page brings together some of the highlights from the year. Not every event has made it here (even this
-          website has its limits, unlike some of our seniors' confidence 😏), but there's enough to give our seniors a
-          chance to relive the memories and our juniors a glimpse of what they've signed up for. Consider it a recap, a
-          record, and perhaps a gentle warning. 😉
-        </p>
+  .memory-intro {
+    max-width: 780px;
+    margin-inline: auto;
+  }
 
-        <p class="mb-0">
-          I've created detailed pages for events where I had the opportunity to contribute, whether in a leading or
-          supporting role, including HPL 🏏, SDG 🌍, and the Mathematics Training Camp 📖. Other activities, such as
-          National Mathematics Day celebrations, outings, and various competitions, are featured here as well. Together,
-          they capture a little of the hard work, teamwork, last-minute arrangements, and occasional chaos that make the
-          Mathematics Club what it is. To our seniors: thank you for setting the standards (and the expectations). To
-          our juniors: all the best — you'll understand soon enough. 😌
-        </p>
+  .memory-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .memory-section-heading h2 {
+    margin-bottom: 0.35rem;
+    color: var(--memory-ink);
+  }
+
+  .memory-section-heading p {
+    margin-bottom: 0;
+    color: var(--memory-muted);
+  }
+
+  .activity-tag {
+    color: var(--memory-accent);
+    font-family: var(--bs-font-monospace, monospace);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* Activity Cards */
+  .activity-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid var(--memory-line);
+    border-radius: 1rem;
+    background: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .activity-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(25, 35, 45, 0.08);
+  }
+
+  .activity-card-image-wrap {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    background: #f1f3f5;
+  }
+
+  .activity-card-placeholder {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    min-height: 190px;
+    place-items: center;
+    background: radial-gradient(circle at 80% 20%, rgba(49, 91, 121, 0.12), transparent 34%),
+      linear-gradient(135deg, #f5f7f8, #e9eef2);
+    color: var(--memory-accent);
+    font-size: 3rem;
+  }
+
+  .activity-card-placeholder span {
+    display: grid;
+    width: 76px;
+    height: 76px;
+    place-items: center;
+    border: 1px solid rgba(49, 91, 121, 0.15);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.85);
+  }
+
+  .activity-card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 1.25rem;
+  }
+
+  .activity-card-body h3 {
+    margin: 0.5rem 0;
+    color: var(--memory-ink);
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
+
+  .activity-card-body p {
+    color: var(--memory-muted);
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .activity-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: auto;
+    padding-top: 1.25rem;
+    color: var(--memory-accent);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: gap 0.2s ease, color 0.2s ease;
+  }
+
+  .activity-card-link:hover {
+    gap: 0.7rem;
+    color: #172f42;
+  }
+  /* Editorial Photo Chronicles */
+  .memoir-chapters {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-top: 2.5rem;
+  }
+
+  .chapter-entry {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+  }
+
+  .chapter-entry-reverse {
+    flex-direction: row-reverse;
+  }
+
+  /* Text column: compact and readable */
+  .chapter-content {
+    flex: 1;
+  }
+
+  .chapter-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--bs-font-monospace, monospace);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--memory-accent);
+    margin-bottom: 0.65rem;
+  }
+
+  .meta-separator {
+    color: #cbd5e1;
+  }
+
+  .meta-period {
+    color: var(--memory-muted);
+    font-weight: 600;
+  }
+
+  .chapter-heading {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--memory-ink);
+    line-height: 1.3;
+    margin: 0 0 0.9rem 0;
+  }
+
+  .chapter-prose {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #3f464e;
+    margin: 0;
+    font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+  }
+
+  /* Figure & Photo: Much larger on desktop/laptop */
+  .chapter-figure {
+    flex: 1.4;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chapter-figure img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 1rem;
+    border: 1px solid var(--memory-line);
+    box-shadow: 0 14px 34px rgba(25, 35, 45, 0.09);
+    transition: transform 0.3s ease;
+  }
+
+  .chapter-figure img:hover {
+    transform: scale(1.015);
+  }
+
+  .chapter-figure figcaption {
+    font-size: 0.85rem;
+    color: var(--memory-muted);
+    font-style: italic;
+    margin-top: 0.75rem;
+    line-height: 1.45;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 991.98px) {
+    .chapter-entry {
+      gap: 2.5rem;
+    }
+
+    .chapter-figure img {
+      height: 320px;
+    }
+  }
+
+  /* Mobile: Stacked, slightly larger & full-width */
+  @media (max-width: 768px) {
+    .chapter-entry,
+    .chapter-entry-reverse {
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .chapter-figure {
+      width: 100%;
+    }
+
+    .chapter-figure img {
+      height: 260px;
+    }
+  }
+</style>
+
+<div class="story-package memory-archive">
+  <!-- Back Link -->
+  <nav class="story-nav mb-4" aria-label="Breadcrumb navigation">
+    <a href="{{ '/index.html' | relative_url }}" class="text-decoration-none text-secondary small fw-semibold">
+      &larr; Back to HOME
+    </a>
+  </nav>
+
+  <!-- Intro -->
+  <section class="memory-intro text-center py-3 py-md-4 mb-5">
+    <span class="activity-tag">A LITTLE ARCHIVE</span>
+    <h1 class="display-6 mt-3 mb-3 fw-bold">Not Always Pretty. Always a Story.</h1>
+    <p class="text-secondary lh-lg mb-3">
+      A few events, unexpected detours, ambitious plans and the occasional bit of organised chaos. Some grew into full
+      projects; others live on as photographs and stories. Either way, these are the moments that made being part of the
+      Mathematics Club memorable.
+    </p>
+    <p class="text-secondary lh-lg mb-0">
+      Have a look around — the bigger adventures have their own project files, while the chronicles below pair our
+      favourite snapshots with the stories of what actually happened behind the lens.
+    </p>
+  </section>
+
+  <!-- Activities Section -->
+  <section class="mb-5" aria-labelledby="heading-activities">
+    <div class="memory-section-heading">
+      <div>
+        <span class="activity-tag">THE BIGGER STORIES</span>
+        <h2 id="heading-activities" class="h3 mt-2 fw-bold">Activities &amp; Adventures</h2>
+        <p class="small">The projects, events and experiments that got a page of their own.</p>
       </div>
+      <span class="text-muted small font-monospace">
+        {{ page.activities | size | prepend: '0' | slice: -2, 2 }} STORIES
+      </span>
     </div>
-  </div>
 
-  <hr class="my-4">
-
-  <!-- Main Club Activities Directory -->
-  <div class="row g-4">
-    <div class="col-12">
-      <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light-subtle">
-        <!-- Header Section -->
-        <h2 class="fw-bold text-dark tracking-tight mb-2">Club Activities &amp; Shenanigans</h2>
-        <p class="text-muted small mb-4 col-lg-8" style="line-height: 1.6;">
-          A showcase of wild ideas, whiteboard scribbles, and moments where math somehow met sheer chaos. By God's
-          grace, I got to either steer the ship or help keep it afloat. Take a look around! 👀✨
-        </p>
-
-        <!-- Activity Cards Grid: Modernized Ticket Cards Layout -->
-        <div class="row g-4 mt-1">
-          <!-- Card 1: HPL 1.0 -->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card h-100 ticket-card border border-light-subtle rounded-4 p-4 bg-white position-relative d-flex flex-column">
-              <div class="d-flex align-items-center justify-content-between mb-3">
-                <div
-                  class="d-inline-flex align-items-center justify-content-center bg-danger-subtle text-danger rounded-3"
-                  style="width: 48px; height: 48px;"
-                >
-                  <span class="fs-4">🏏</span>
-                </div>
-              </div>
-              <h5 class="ticket-title">HPL 1.0</h5>
-              <p class="ticket-teaser flex-grow-1">
-                The inaugural pilot run that proved cricket and formulas can actually get along in high-energy problem
-                solving.
-              </p>
-              <div class="mt-auto pt-3 border-top border-light-subtle">
-                <a
-                  href="{{ '/math-club/hpl.html' | relative_url }}"
-                  class="stretched-link text-danger text-decoration-none small fw-semibold d-inline-flex align-items-center gap-1"
-                >
-                  The OG Story <span>&rarr;</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2: HPL 2.0 -->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card h-100 ticket-card border border-light-subtle rounded-4 p-4 bg-white position-relative d-flex flex-column">
-              <div class="d-flex align-items-center justify-content-between mb-3">
-                <div
-                  class="d-inline-flex align-items-center justify-content-center bg-primary-subtle text-primary rounded-3"
-                  style="width: 48px; height: 48px;"
-                >
-                  <span class="fs-4">🔨</span>
-                </div>
-              </div>
-              <h5 class="ticket-title">HPL 2.0</h5>
-              <p class="ticket-teaser flex-grow-1">
-                Live IPL-style mega auctions, crashing code, squad purse budgets, and calculated madness in real time.
-              </p>
-              <div class="mt-auto pt-3 border-top border-light-subtle">
-                <a
-                  href="{{ '/math-club/hpl2.html' | relative_url }}"
-                  class="stretched-link text-primary text-decoration-none small fw-semibold d-inline-flex align-items-center gap-1"
-                >
-                  Unpack the Chaos <span>&rarr;</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3: SDG Project -->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card h-100 ticket-card border border-light-subtle rounded-4 p-4 bg-white position-relative d-flex flex-column">
-              <div class="d-flex align-items-center justify-content-between mb-3">
-                <div
-                  class="d-inline-flex align-items-center justify-content-center bg-success-subtle text-success rounded-3"
-                  style="width: 48px; height: 48px;"
-                >
-                  <span class="fs-4">🏆</span>
-                </div>
-                <span class="ticket-pill badge bg-success-subtle text-success border border-success-subtle"
-                  >2nd Place</span
-                >
-              </div>
-              <h5 class="ticket-title">SDG Nexus</h5>
-              <p class="ticket-teaser flex-grow-1">
-                We crunched state championship formulas, modeled sustainability, built a water rocket, and took home the
-                silver trophy.
-              </p>
-              <div class="mt-auto pt-3 border-top border-light-subtle">
-                <a
-                  href="{{ '/math-club/sdg.html' | relative_url }}"
-                  class="stretched-link text-success text-decoration-none small fw-semibold d-inline-flex align-items-center gap-1"
-                >
-                  See the Victory <span>&rarr;</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4: Training Camp -->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card h-100 ticket-card border border-light-subtle rounded-4 p-4 bg-white position-relative d-flex flex-column">
-              <div class="d-flex align-items-center justify-content-between mb-3">
-                <div
-                  class="d-inline-flex align-items-center justify-content-center bg-warning-subtle text-warning-emphasis rounded-3"
-                  style="width: 48px; height: 48px;"
-                >
-                  <span class="fs-4">🧠</span>
-                </div>
-                <span class="ticket-pill badge bg-warning-subtle text-warning-emphasis border border-warning-subtle"
-                  >Workshops</span
-                >
-              </div>
-              <h5 class="ticket-title">Training Camp</h5>
-              <p class="ticket-teaser flex-grow-1">
-                Brain workouts, mental math drills, 3-part test series evaluation, and academic problem sets for B.Tech
-                juniors.
-              </p>
-              <div class="mt-auto pt-3 border-top border-light-subtle">
-                <a
-                  href="{{ '/math-club/training-camp.html' | relative_url }}"
-                  class="stretched-link text-warning-emphasis text-decoration-none small fw-semibold d-inline-flex align-items-center gap-1"
-                >
-                  Grab the Loot <span>&rarr;</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <hr class="my-4">
-
-  <!-- Math Club Carousel Slider -->
-  <div class="row g-4 justify-content-center">
-    <div class="col-12 col-md-10">
-      <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light-subtle">
-        <h3 class="fw-bold text-dark mb-1">Some Pics of Math Club 2025</h3>
-        <p class="text-muted small mb-4">Here’s a compilation of moments from the Math Club 📸✨</p>
-
-        <div class="carousel-card p-3">
-          <div id="mathClubGallerySlider" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              {% for item in page.math_club_gallery %}
-                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+    <div class="row g-4">
+      {% for item in page.activities %}
+        <div class="col-12 col-md-6 col-lg-4">
+          <a href="{{ item.link | relative_url }}" class="activity-card-anchor text-decoration-none">
+            <article class="activity-card">
+              <div class="activity-card-image-wrap">
+                {% if item.image and item.image != '' %}
                   <img
                     src="{{ item.image | relative_url }}"
-                    alt="{{ item.alt }}"
-                    class="d-block w-100 rounded"
-                    style="max-height: 480px; object-fit: cover;"
+                    alt="{{ item.title | escape }}"
+                    class="activity-card-image"
+                    loading="lazy"
                   >
-                  <div class="text-center mt-3">
-                    <span class="text-secondary small font-monospace">{{ item.caption }}</span>
+                {% else %}
+                  <div class="activity-card-placeholder" aria-hidden="true">
+                    <span>{{ item.symbol }}</span>
                   </div>
-                </div>
-              {% endfor %}
-            </div>
+                {% endif %}
+              </div>
 
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#mathClubGallerySlider"
-              data-bs-slide="prev"
-            >
-              <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#mathClubGallerySlider"
-              data-bs-slide="next"
-            >
-              <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+              <div class="activity-card-body">
+                <span class="activity-tag">{{ item.tag }}</span>
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+
+                <div class="activity-card-link">Read the story <span aria-hidden="true">&rarr;</span></div>
+              </div>
+            </article>
+          </a>
         </div>
-      </div>
+      {% endfor %}
     </div>
-  </div>
+  </section>
+
+  <hr class="my-5">
+
+  <!-- Editorial Photo Chronicles Section -->
+  <section class="mb-5" aria-labelledby="heading-photos">
+    <div class="memory-section-heading">
+      <div>
+        <span class="activity-tag">DEPARTMENT CHRONICLES</span>
+        <h2 id="heading-photos" class="h3 mt-2 fw-bold">Behind the Lens: Moments &amp; Milestones</h2>
+        <p class="small">A quiet look back at the trips, trials, and shared breakthroughs that shaped our year.</p>
+      </div>
+      <span class="text-muted small font-monospace">04 CHAPTERS</span>
+    </div>
+
+    <div class="memoir-chapters">
+      <!-- Chapter 1 -->
+      <article class="chapter-entry">
+        <div class="chapter-content">
+          <div class="chapter-meta">
+            <span class="meta-tag">Field Trip</span>
+            <span class="meta-separator">&bull;</span>
+            <time class="meta-period">2024 – 2025</time>
+          </div>
+          <h3 class="chapter-heading">A Trip to the Defence Expo: The 60-Meal Feat</h3>
+          <p class="chapter-prose">
+            Thanks to the state government, our department got the chance to head out to Nandambakkam. The exhibitions
+            were fascinating, but the true behind-the-scenes triumph was logistical: diplomatic persistence, quick
+            coordination, and somehow talking with event coordinators until all 60 of us walked away with free lunch
+            boxes.
+          </p>
+        </div>
+        <figure class="chapter-figure">
+          <img
+            src="{{ 'assets/images/math-club/index/Images/event-in-nadambakkam (1).jpg' | relative_url }}"
+            alt="Our visit to the Defence Expo at Nandambakkam"
+            loading="lazy"
+          >
+          <figcaption>The state expo where student negotiation skills were tested.</figcaption>
+        </figure>
+      </article>
+
+      <!-- Chapter 2 -->
+      <article class="chapter-entry chapter-entry-reverse">
+        <div class="chapter-content">
+          <div class="chapter-meta">
+            <span class="meta-tag">Exhibit &amp; Research</span>
+            <span class="meta-separator">&bull;</span>
+            <time class="meta-period">2024 – 2025</time>
+          </div>
+          <h3 class="chapter-heading">Watching Our Seniors Take Flight</h3>
+          <p class="chapter-prose">
+            Walking across the expo floor and seeing our own college banner was a distinct highlight. Our aerospace and
+            research seniors were stationed right in the thick of it, presenting mini-satellite modules and autonomous
+            drone systems. It grounded the theory we study into something tangible and flying.
+          </p>
+        </div>
+        <figure class="chapter-figure">
+          <img
+            src="{{ 'assets/images/math-club/index/Images/seniors-made-mini-satellite.jpg' | relative_url }}"
+            alt="Our aerospace and PhD seniors showcasing their satellite at the Defence Expo"
+            loading="lazy"
+          >
+          <figcaption>Mini satellites, UAV drones, and department pride on display.</figcaption>
+        </figure>
+      </article>
+
+      <!-- Chapter 3 -->
+      <article class="chapter-entry">
+        <div class="chapter-content">
+          <div class="chapter-meta">
+            <span class="meta-tag">Community Outreach</span>
+            <span class="meta-separator">&bull;</span>
+            <time class="meta-period">January 2026</time>
+          </div>
+          <h3 class="chapter-heading">Math Is Fun... Apparently</h3>
+          <p class="chapter-prose">
+            Supported by local initiatives, we took outreach away from quiet blackboards and straight into hands-on
+            games. We turned combinatorics and logic into energetic party games with unexpected rules. It was loud,
+            slightly unhinged, thoroughly messy, and had students laughing while solving math without realizing it.
+          </p>
+        </div>
+        <figure class="chapter-figure">
+          <img
+            src="{{ 'assets/images/math-club/index/Images/super-interesting.jpg' | relative_url }}"
+            alt="Math Is Fun outreach activities and interactive games"
+            loading="lazy"
+          >
+          <figcaption>Party games turned into mathematical puzzles.</figcaption>
+        </figure>
+      </article>
+
+      <!-- Chapter 4 -->
+      <article class="chapter-entry chapter-entry-reverse">
+        <div class="chapter-content">
+          <div class="chapter-meta">
+            <span class="meta-tag">Guest Lecture</span>
+            <span class="meta-separator">&bull;</span>
+            <time class="meta-period">February 2026</time>
+          </div>
+          <h3 class="chapter-heading">National Math Day: Sampling &amp; Reality</h3>
+          <p class="chapter-prose">
+            To mark National Math Day, we hosted an IIT professor who broke down random selection and sampling theory.
+            Instead of abstract proofs, we explored real-world quality control, material defect testing, and data
+            verification—demonstrating how basic probability safeguards industrial manufacturing.
+          </p>
+        </div>
+        <figure class="chapter-figure">
+          <img
+            src="{{ 'assets/images/math-club/index/Images/National Math Day.jpg' | relative_url }}"
+            alt="Math Day guest lecture on random selection and quality inspection"
+            loading="lazy"
+          >
+          <figcaption>From industrial inspections to statistical sampling.</figcaption>
+        </figure>
+      </article>
+    </div>
+  </section>
 </div>
