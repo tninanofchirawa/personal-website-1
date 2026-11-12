@@ -1,0 +1,636 @@
+---
+layout: default
+title: Math Model Miracle
+hero_title: Tamil Nadu State Championship
+hero_subtitle: A rollercoaster journey from setback to victory.
+hero_badge: State Championship Story
+hero_image: assets/images/math-club/others/water rocket/hero_image.png
+
+# TN Math Comp Photo Gallery
+tnsc_gallery:
+  - image: "assets/images/math-club/others/water rocket/St Josephs Competion.jpg"
+    caption: "Event orientation in the auditorium"
+    alt: "Lecture hall"
+
+  - image: "assets/images/math-club/others/water rocket/National Math Day St Josephs.png"
+    caption: "National Mathematics Day participation certificate"
+    alt: "Participation certificate"
+---
+<style>
+  .memory-archive {
+    --memory-ink: #20252b;
+    --memory-muted: #646b73;
+    --memory-line: #e8e9eb;
+    --memory-accent: #315b79;
+    --memory-soft: #f2f5f7;
+  }
+
+  .activity-tag {
+    color: var(--memory-accent);
+    font-family: var(--bs-font-monospace, monospace);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .memory-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .memory-section-heading h2 {
+    margin-bottom: 0.35rem;
+    color: var(--memory-ink);
+  }
+
+  .memory-section-heading p {
+    margin-bottom: 0;
+    color: var(--memory-muted);
+  }
+
+  /* Editorial Narrative */
+  .story-article {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+
+  .story-prose p {
+    font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: #3f464e;
+    margin-bottom: 1.35rem;
+  }
+
+  .story-lead {
+    font-size: 1.2rem !important;
+    color: var(--memory-ink) !important;
+  }
+
+  .story-callout {
+    margin-top: 2rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--memory-soft);
+    border-left: 3px solid var(--memory-accent);
+    border-radius: 0 0.75rem 0.75rem 0;
+    font-size: 0.96rem;
+    line-height: 1.7;
+    color: var(--memory-ink);
+  }
+
+  /* GIF / Visual Feature */
+  .visual-story-frame {
+    background: #fff;
+    border: 1px solid var(--memory-line);
+    border-radius: 1.25rem;
+    box-shadow: 0 14px 34px rgba(25, 35, 45, 0.06);
+    overflow: hidden;
+    padding: 1rem;
+  }
+
+  .visual-story-frame img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.85rem;
+    display: block;
+  }
+
+  /* Centered Closing Dedication */
+  .dedication-box {
+    max-width: 760px;
+    margin: 4rem auto 1rem;
+    padding: 2.5rem 2rem;
+    background: #fff;
+    border: 1px solid var(--memory-line);
+    border-radius: 1.25rem;
+    text-align: center;
+    box-shadow: 0 8px 26px rgba(25, 35, 45, 0.05);
+  }
+
+  .dedication-box h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--memory-ink);
+    margin-bottom: 1rem;
+  }
+
+  .dedication-prose {
+    font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: #4b525a;
+    max-width: 640px;
+    margin: 0 auto 1.35rem;
+  }
+
+  /* =========================================================
+   SDG EXHIBIT CAROUSEL
+   ========================================================= */
+
+  .carousel-card {
+    background: #fff;
+    border: 1px solid var(--memory-line);
+    border-radius: 1.25rem;
+    box-shadow: 0 14px 34px rgba(25, 35, 45, 0.06);
+    overflow: hidden;
+    padding: 1rem;
+  }
+
+  .carousel-image-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.85rem;
+    background: #f2f5f7;
+  }
+
+  .carousel-image-frame img {
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: contain;
+    background: #f2f5f7;
+  }
+
+  .carousel-meta-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2;
+    padding: 0.45rem 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50px;
+    background: rgba(20, 30, 40, 0.7);
+    color: #fff;
+    font-family: var(--bs-font-monospace, monospace);
+    font-size: 0.75rem;
+    font-weight: 700;
+    backdrop-filter: blur(10px);
+  }
+
+  .modern-carousel-control {
+    width: auto;
+    opacity: 1;
+    padding: 0 1rem;
+  }
+
+  .modern-control-pill {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.88);
+    color: var(--memory-ink);
+    font-size: 1.3rem;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(10px);
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+
+  .modern-control-pill:hover {
+    background: #fff;
+    transform: scale(1.08);
+  }
+
+  .modern-carousel-indicators {
+    position: static;
+    gap: 0.4rem;
+    margin: 1.25rem 0 0;
+  }
+
+  .modern-carousel-indicators [data-bs-target] {
+    width: 9px;
+    height: 9px;
+    margin: 0;
+    border: 0;
+    border-radius: 50px;
+    background-color: #b9c2ca;
+    opacity: 0.65;
+    transition: width 0.25s ease, background-color 0.25s ease;
+  }
+
+  .modern-carousel-indicators .active {
+    width: 26px;
+    background-color: var(--memory-accent);
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .carousel-card {
+      padding: 0.75rem;
+    }
+
+    .carousel-image-frame img {
+      height: 300px;
+    }
+
+    .modern-control-pill {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .carousel-image-frame img {
+      height: 240px;
+    }
+  }
+</style>
+<div class="story-package memory-archive">
+  <!-- Back Navigation -->
+  <nav class="story-nav mb-4" aria-label="Breadcrumb navigation">
+    <a href="{{ 'math-club/index.html' | relative_url }}" class="text-decoration-none text-secondary small fw-semibold">
+      &larr; Back to Math Club
+    </a>
+  </nav>
+
+  <!-- Editorial Story Header & Narrative -->
+  <article class="story-article py-2 py-md-4 mb-5">
+    <header class="text-center mb-4 pb-3 border-bottom">
+      <span class="activity-tag d-block">THE TAMIL NADU STATE CHAMPIONSHIP &middot; 2025</span>
+
+      <h1
+        class="display-6 mt-2 mb-2 fw-bold text-center"
+        style="color: var(--memory-ink);"
+      >
+        The Bottle That Went to the State Championships
+      </h1>
+
+      <p class="text-muted small mb-0 font-monospace text-center">
+        FEBRUARY 2024 – JANUARY 2025 &middot; ONE WATER BOTTLE, TWO VICTORIES &amp; A LOT OF MATHEMATICS
+      </p>
+    </header>
+
+    <div class="story-prose">
+      <!-- 01: Pack Your Bags -->
+      <h3>01. "Pack Your Bags. We're Building a Project."</h3>
+
+      <p class="story-lead">It all started before I even knew what was happening.</p>
+
+      <p>
+        January 2025. My seniors came up to us juniors and essentially told us to pack our bags and get ready. We had a
+        project to make. A mathematics project.
+      </p>
+
+      <p>
+        I was genuinely shocked. What on earth was I supposed to make? A mathematics project? What could I possibly
+        build with the mathematics I knew?
+      </p>
+
+      <p>
+        My seniors reassured us that they would help us out this time. They even had something ready for us: a project
+        they had previously developed, detailing great mathematicians, their contributions and the Indian mathematical
+        minds who had shaped the subject through their discoveries and inventions.
+      </p>
+
+      <p>
+        Honestly, I thought it was awesome. A project about the people who built mathematics? That sounded like a pretty
+        good deal.
+      </p>
+
+      <p>Little did I know that the real show was happening at the other end of the room.</p>
+
+      <!-- 02: Meanwhile, a Water Bottle -->
+      <h3>02. Meanwhile, There Was a Water Bottle...</h3>
+
+      <p>
+        While we were looking through our mathematicians and their contributions, I noticed what my seniors were working
+        on.
+      </p>
+
+      <p>Something involving water. And a rocket.</p>
+
+      <p>Well, to be honest, it looked rather silly.</p>
+
+      <p>
+        They were planning to use a project they had originally developed during their first year for a college-level
+        Mathematics competition. It was a water rocket, made using a reusable plastic bottle, filled with water and
+        powered by pressurised air from an air pump.
+      </p>
+
+      <p>
+        I couldn't quite understand how that was supposed to compete with all the elaborate mathematics projects other
+        colleges would bring. I told my senior what I thought.
+      </p>
+
+      <p>He just smiled.</p>
+
+      <p>
+        Then came a piece of advice that I still remember:
+        <strong
+          >"People don't necessarily give awards to the most complicated project. They remember the one that catches
+          their attention. It's all about how you sell your project."</strong
+        >
+      </p>
+
+      <p>
+        He explained that plenty of teams would arrive with books, charts, elaborate models and pages of calculations.
+        But if we wanted to stand out, we had to make people interested in what we had built. Use mathematics, sell the
+        idea and make them want to see it.
+      </p>
+
+      <p>I listened, although I wasn't entirely convinced. Then I asked him what exactly he was planning to build.</p>
+
+      <p>"A water rocket."</p>
+
+      <p>
+        I looked at him. He looked at me. And then he said something along the lines of:
+        <strong>"When it flies, everything is good."</strong>
+      </p>
+
+      <p>Fair enough. 😂</p>
+
+      <p>
+        What I didn't fully appreciate at the time was that there was actually quite a bit of mathematics behind that
+        bottle. My seniors had pages of calculations, optimisation work, charts and other material supporting the
+        design. They had done their homework. They simply didn't need to put all of it in front of the judges to make
+        their point.
+      </p>
+
+      <!-- 03: The First Victory -->
+      <h3>03. A Bottle with a History</h3>
+
+      <p>As I later came to discover, this wasn't the first time that little water rocket had made an appearance.</p>
+
+      <p>
+        Back in <strong>February 2024, on National Science Day</strong>, my seniors had presented the same project at
+        the university's SDG competition when they were first-year Math students. And they had WON!
+      </p>
+
+      <p>
+        It was the first time the Math seniors had won a competition with their bottle rocket, beating the first-year
+        B.Tech teams by wowing the judges with its flight, backed by calculations, charts and solid explanations. So,
+        this bottle already had a winning story before I even started questioning its potential!
+      </p>
+
+      <p>
+        I learnt this part of the story later, when my seniors were recounting their experiences to the HOD after
+        returning from the district competition. Suddenly, the project made a little more sense. This wasn't some
+        last-minute experiment they had put together. They had built it, tested it, presented it and already seen it
+        succeed.
+      </p>
+
+      <p>And now, in January 2025, they were taking it back out for another competition.</p>
+
+      <!-- 04: District Competition -->
+      <h3>04. January 9: A Day of Mathematics, Rockets and Biryani</h3>
+
+      <p>
+        On January 9, we headed to <strong>St. Joseph's College of Engineering</strong> for the district-level
+        Mathematics Project Competition.
+      </p>
+
+      <p>
+        My classmates and I weren't exactly expecting to win anything. We had already made our peace with that
+        possibility. In fact, I think we had mentally prepared ourselves for a much simpler mission: support our
+        seniors, get our On-Duty attendance and enjoy the day. There was free food too. So, naturally, morale was
+        reasonably high. 😂
+      </p>
+
+      <p>
+        The event wasn't just about the project competition, though. Alongside it, there were academic lectures and
+        sessions conducted by professors and researchers from reputed institutions, including the University of Madras
+        and other research establishments.
+      </p>
+
+      <p>
+        I was sent along with some of my classmates to attend one of these sessions. It turned out to be quite
+        interesting! We were introduced to topics such as graph colouring, connections and how these mathematical ideas
+        extended into practical applications. The discussions eventually touched upon things like satellites and the
+        kinds of networks and connections involved in such systems.
+      </p>
+
+      <p>
+        It was a rather different side of mathematics from what we usually encountered in our classrooms. But, of
+        course, there was one small problem. The water rocket competition was happening elsewhere, and I had absolutely
+        no idea what was going on!
+      </p>
+
+      <p>
+        I couldn't watch my seniors present their project or see what happened during the judging. I was attending the
+        lectures while the actual rocket business was happening outside.
+      </p>
+
+      <!-- 05: Biryani and Results -->
+      <h3>05. Biryani, Confidence and the Results</h3>
+
+      <p>
+        After the lectures, before the results were announced, we all went together as a group to enjoy the food. And
+        when I say food, I mean biryani and all the other goodies that came with the day. It was a pretty decent On-Duty
+        outing!
+      </p>
+
+      <p>
+        That was when my seniors started telling us how things had gone. Apparently, they had a very strong chance of
+        winning. They were talking about how enthusiastic the judges had been about their project, how interested they
+        were in the demonstration and how much attention the rocket had attracted.
+      </p>
+
+      <p>I was listening, but I still wasn't entirely sure what to expect.</p>
+
+      <p>
+        I had seen some of the other projects around the venue. One particularly impressive model from another reputed
+        college had caught my attention. It was a fairly large wooden mechanism, something like a roller, designed to
+        demonstrate probability by showing when a ball would fall. It looked expensive, well-built and technically
+        impressive.
+      </p>
+
+      <p>And then there was our water bottle. I couldn't help wondering how the two would compare.</p>
+
+      <p>By evening, the results were out.</p>
+
+      <p>
+        And guess what?
+        <strong>My seniors had WON!</strong>
+      </p>
+
+      <p>
+        According to my classmates who witnessed the demonstration, the rocket shot approximately
+        <strong>25 feet into the air</strong>. The judges apparently enjoyed it so much that they wanted to try it
+        themselves, and the demonstration was repeated three times!
+      </p>
+
+      <p>Three times!</p>
+
+      <p>
+        Suddenly, my senior's advice made a lot more sense. He hadn't needed to overwhelm the judges with pages of
+        calculations. He had built something that demonstrated its idea right in front of them.
+      </p>
+
+      <p>
+        The mathematics was behind the design, the calculations and the optimisation. The charts and supporting work
+        were there to explain it. But the flight was what captured everyone's attention. That little reusable bottle had
+        done exactly what he had promised.
+      </p>
+
+      <p>
+        It flew. And just like that, the project had won at the district level and qualified for the
+        <strong>Tamil Nadu State Mathematics Project Championship</strong>.
+      </p>
+
+      <!-- 06: State Championship -->
+      <h3>06. January 20: The State Championship</h3>
+
+      <p>The story didn't end at St. Joseph's.</p>
+
+      <p>
+        On January 20, my seniors travelled to <strong>Stella Maris College</strong> to compete at the Tamil Nadu State
+        Mathematics Project Championship, alongside the winners from other districts.
+      </p>
+
+      <p>I couldn't attend this one either, which is something I still wish I had been there for.</p>
+
+      <p>
+        But the news that came back was wonderful. The same project that had impressed the judges at the district
+        competition managed to capture their attention at the State level too.
+      </p>
+
+      <p>
+        <strong>They WON THE STATE CHAMPIONSHIP!</strong>
+      </p>
+
+      <p>
+        I was genuinely thrilled for them. Watching an idea that I had initially dismissed as a rather silly
+        water-bottle experiment go all the way to a State Championship victory was quite something.
+      </p>
+
+      <p>And perhaps, it taught me a lesson I wouldn't have learnt from a textbook.</p>
+
+      <p>
+        Sometimes, the best project isn't the one with the most complicated-looking model or the thickest explanation.
+        Sometimes, it's the one that makes someone stop, look and say:
+        <strong>"Wait. How did you do that?"</strong>
+      </p>
+
+      <p>
+        My seniors had understood something I hadn't. The mathematics mattered, but so did the way you communicated it.
+        They had the calculations, the optimisation and the technical work to back up their idea. They just knew when to
+        let the rocket do the talking.
+      </p>
+
+      <!--
+        =====================================================
+        TAMIL NADU STATE CHAMPIONSHIP — PHOTO MEMORIES
+        =====================================================
+      -->
+      <section class="mb-5 mt-5" aria-labelledby="heading-memories">
+        <div class="memory-section-heading">
+          <div>
+            <span class="activity-tag">THE PHOTO ALBUM</span>
+            <h2 id="heading-memories" class="h3 mt-2 fw-bold">A Little Photo Dump</h2>
+            <p class="small">Memories worth keeping.</p>
+          </div>
+
+          <span class="text-muted small font-monospace">
+            {{ page.tnsc_gallery | size | prepend: '0' | slice: -2, 2 }} Pic's
+          </span>
+        </div>
+
+        <div class="carousel-card p-3 p-md-4">
+          <div
+            id="tnscImageSlider"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-interval="5000"
+            data-bs-pause="hover"
+          >
+            <!-- Photos -->
+            <div class="carousel-inner">
+              {% for item in page.tnsc_gallery %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                  <div class="carousel-image-frame">
+                    <span class="carousel-meta-badge">
+                      {{ forloop.index | prepend: '0' | slice: -2, 2 }}
+                      /
+                      {{ forloop.length | prepend: '0' | slice: -2, 2 }}
+                    </span>
+
+                    <img
+                      src="{{ item.image | relative_url }}"
+                      alt="{{ item.alt | escape }}"
+                      class="d-block w-100"
+                      loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+                    >
+                  </div>
+
+                  <div class="text-center mt-3 px-2">
+                    <span class="text-secondary small font-monospace">
+                      {{ item.caption }}
+                    </span>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+
+            <!-- Previous / Next Controls -->
+            <button
+              class="carousel-control-prev modern-carousel-control"
+              type="button"
+              data-bs-target="#tnscImageSlider"
+              data-bs-slide="prev"
+              aria-label="Previous photo"
+            >
+              <span class="modern-control-pill" aria-hidden="true">&larr;</span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button
+              class="carousel-control-next modern-carousel-control"
+              type="button"
+              data-bs-target="#tnscImageSlider"
+              data-bs-slide="next"
+              aria-label="Next photo"
+            >
+              <span class="modern-control-pill" aria-hidden="true">&rarr;</span>
+              <span class="visually-hidden">Next</span>
+            </button>
+
+            <!-- Bottom Indicators -->
+            <div class="carousel-indicators modern-carousel-indicators">
+              {% for item in page.tnsc_gallery %}
+                <button
+                  type="button"
+                  data-bs-target="#tnscImageSlider"
+                  data-bs-slide-to="{{ forloop.index0 }}"
+                  class="{% if forloop.first %}active{% endif %}"
+                  {% if forloop.first %}
+                    aria-current="true"
+                  {% endif %}
+                  aria-label="Photo {{ forloop.index }}: {{ item.caption | escape }}"
+                ></button>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07: Another Chapter -->
+      <h3>07. The Story Wasn't Over Yet...</h3>
+
+      <p>
+        Of course, my seniors weren't done with the water rocket. After the State Championship, they started thinking
+        about how they could improve the project further, make a few modifications and take it in a new direction.
+      </p>
+
+      <p>There was another competition coming up in February: the university-level SDG competition.</p>
+
+      <p>And apparently, our little water rocket had another flight left in it.</p>
+
+      <p class="mb-0">
+        But that...
+        <strong
+          ><a
+            href="{{ '/math-club/sdg.html' | relative_url }}"
+            class="text-dark"
+            style="font-family: inherit; font-size: inherit;"
+            >is a story for another page.</a
+          ></strong
+        >
+      </p>
+    </div>
+  </article>
