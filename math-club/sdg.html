@@ -2,96 +2,332 @@
 layout: default
 title: SDG Nexus
 hero_title: National Science Day
-hero_subtitle: 2nd Place at the National Science Fair 2025 🏆
+hero_subtitle: 2nd Place at the National Science Fair 2025
 hero_badge: SDG Nexus · 2nd Place
 hero_image: assets/images/math-club/sdg/Hero Image/hero image.jpg
 event_image: assets/images/math-club/sdg/Poster/Merged_poster.jpg
 
 # SDG Photo Gallery
-# To add a new photo, simply add a new item below!
 sdg_gallery:
   - image: assets/images/math-club/sdg/Images/Image 1.jpg
-    caption: 📸 LPG Gas leak Alarm
-    alt: LPG Gas leak Alarm
+    caption: LPG Gas Leak Alarm
+    alt: LPG Gas Leak Alarm
   - image: assets/images/math-club/sdg/Images/Image 2.jpg
-    caption: 📸 Water Rocket
+    caption: Water Rocket Prototype
     alt: Water Rocket
   - image: assets/images/math-club/sdg/Images/Image 3.jpg
-    caption: 📸 Biotech + Mechatronics
+    caption: Biotech + Mechatronics
     alt: Biotech + Mechatronics
   - image: assets/images/math-club/sdg/Images/Image 4.jpg
-    caption: 📸 Smart Drip Irrigation
+    caption: Smart Drip Irrigation
     alt: Smart Drip Irrigation
   - image: assets/images/math-club/sdg/Images/Image 5.jpg
-    caption: 📸 Autonomous Craft
+    caption: Autonomous Craft
     alt: Autonomous Craft
   - image: assets/images/math-club/sdg/Images/Image 6.jpg
-    caption: 📸 Clean Rain Water
+    caption: Clean Rain Water System
     alt: Clean Rain Water
   - image: assets/images/math-club/sdg/Images/Image 7.jpg
-    caption: 📸 Air Purification
+    caption: Air Purification Model
     alt: Air Purification
 ---
+<style>
+  .memory-archive {
+    --memory-ink: #20252b;
+    --memory-muted: #646b73;
+    --memory-line: #e8e9eb;
+    --memory-accent: #315b79;
+    --memory-soft: #f2f5f7;
+  }
 
-<div class="story-package">
-  <!-- Top Navigation Row -->
-  <div class="story-nav mb-4">
-    <a href="index.html" class="text-decoration-none text-secondary small fw-semibold mono-tag">
+  .activity-tag {
+    color: var(--memory-accent);
+    font-family: var(--bs-font-monospace, monospace);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .memory-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .memory-section-heading h2 {
+    margin-bottom: 0.35rem;
+    color: var(--memory-ink);
+  }
+
+  .memory-section-heading p {
+    margin-bottom: 0;
+    color: var(--memory-muted);
+  }
+
+  /* Editorial Narrative */
+  .story-article {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+
+  .story-prose p {
+    font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: #3f464e;
+    margin-bottom: 1.35rem;
+  }
+
+  .story-lead {
+    font-size: 1.2rem !important;
+    color: var(--memory-ink) !important;
+  }
+
+  .story-callout {
+    margin-top: 2rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--memory-soft);
+    border-left: 3px solid var(--memory-accent);
+    border-radius: 0 0.75rem 0.75rem 0;
+    font-size: 0.96rem;
+    line-height: 1.7;
+    color: var(--memory-ink);
+  }
+
+  /* Poster Accordion */
+  .editorial-accordion {
+    border: 1px solid var(--memory-line);
+    border-radius: 1.25rem;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(25, 35, 45, 0.08); /* Clear clickable card depth */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+
+  .editorial-accordion:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(25, 35, 45, 0.12);
+    border-color: #cbd5e1;
+  }
+
+  .editorial-accordion .accordion-button {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--memory-ink);
+    background: #fff;
+    box-shadow: none;
+    padding: 1.2rem 1.5rem;
+    cursor: pointer;
+  }
+
+  .editorial-accordion .accordion-button:not(.collapsed) {
+    background: var(--memory-soft);
+    color: var(--memory-accent);
+    border-bottom: 1px solid var(--memory-line);
+  }
+
+  /* Full-Width Poster Image */
+  .editorial-accordion .accordion-body-wrapper {
+    padding: 0 !important; /* Removes padding so photo touches edges */
+    background: #f8fafc;
+  }
+
+  .responsive-poster {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important; /* Allows full vertical flow with zero cropped text */
+    max-height: none !important; /* Unlocks full height */
+    object-fit: contain;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  /* Modern Carousel: Natural Image Proportion */
+  .carousel-card {
+    background: #fff;
+    border: 1px solid var(--memory-line);
+    border-radius: 1.25rem;
+    box-shadow: 0 14px 34px rgba(25, 35, 45, 0.06);
+    overflow: hidden;
+  }
+
+  /* Large Responsive Frame for Portrait & Landscape */
+  .carousel-image-frame {
+    position: relative;
+    width: 100%;
+    height: 780px; /* Big height on laptops so tall vertical photos aren't sliced */
+    background: #111418; /* Dark gallery stage so portrait photos stand out */
+    border-radius: 0.9rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-image-frame img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important; /* Shows the FULL picture without cutting heads or rockets off */
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  /* Medium screens / tablets */
+  @media (max-width: 991.98px) {
+    .carousel-image-frame {
+      height: 600px;
+    }
+  }
+
+  /* Mobile phones */
+  @media (max-width: 575.98px) {
+    .carousel-image-frame {
+      height: 480px; /* Generous height on phone screens */
+    }
+  }
+
+  .carousel-card:hover .carousel-image-frame img {
+    transform: scale(1.015);
+  }
+
+  .carousel-meta-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(20, 25, 30, 0.68);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #fff;
+    font-family: var(--bs-font-monospace, monospace);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .modern-carousel-control {
+    width: 3.25rem;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+  }
+
+  .modern-carousel-control:hover {
+    opacity: 1;
+  }
+
+  .modern-control-pill {
+    display: inline-grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    color: var(--memory-ink);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+
+  .modern-carousel-control:hover .modern-control-pill {
+    background: #fff;
+    transform: scale(1.08);
+  }
+
+  .modern-carousel-indicators {
+    position: static;
+    margin: 0.85rem 0 0;
+    gap: 0.4rem;
+  }
+
+  .modern-carousel-indicators [data-bs-target] {
+    width: 24px;
+    height: 4px;
+    border-radius: 999px;
+    border: 0;
+    background-color: #cbd5e1;
+    opacity: 1;
+    transition: width 0.25s ease, background-color 0.25s ease;
+  }
+
+  .modern-carousel-indicators .active {
+    width: 38px;
+    background-color: var(--memory-accent);
+  }
+</style>
+<div class="story-package memory-archive">
+  <!-- Back Navigation -->
+  <nav class="story-nav mb-4" aria-label="Breadcrumb navigation">
+    <a href="{{ 'math-club/index.html' | relative_url }}" class="text-decoration-none text-secondary small fw-semibold">
       &larr; Back to Math Club
     </a>
-  </div>
+  </nav>
 
-  <!-- Introduction Card -->
-  <div class="row g-4 justify-content-center">
-    <div class="col-12 col-md-10">
-      <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light-subtle">
-        <p class="story-lead mb-3">
-          The School of Basic and Applied Sciences hosts the National Science Fair every year, and our team secured
-          <strong class="text-dark">2nd place</strong> in the 2025 edition 🏆🔥. Proof that mathematicians occasionally step out of their
-          notebooks and into the real world. 😌📐
-        </p>
+  <!-- Editorial Story Header & Narrative -->
+  <article class="story-article py-2 py-md-4 mb-5">
+    <header class="text-center mb-4 pb-3 border-bottom">
+      <span class="activity-tag">SCIENCE FAIR &middot; 2025</span>
+      <h1 class="display-6 mt-2 mb-2 fw-bold" style="color: var(--memory-ink);">A Water Rocket &amp; a Podium</h1>
+      <p class="text-muted small mb-0 font-monospace">SCHOOL OF BASIC AND APPLIED SCIENCES &middot; 2ND PLACE</p>
+    </header>
 
-        <p class="mb-3">
-          We presented our <em>Tamil Nadu State Championship Math Project 2025</em>
-          📚✨ with plenty of confidence — only to be outperformed by an excellent B.Tech team with an electricity-based
-          project ⚡👏. Congratulations to them! We graciously accepted second place and called it a learning experience.
-          Naturally. 😭😂
-        </p>
+    <div class="story-prose">
+      <p class="story-lead">
+        The School of Basic and Applied Sciences hosts the National Science Fair every year, and our team secured
+        <strong>2nd place</strong> in the 2025 edition—proof that mathematicians occasionally step out of their
+        notebooks and into the real world.
+      </p>
 
-        <p class="mb-3">
-          We built a website, experimented with servos and motors, and explored engineering ideas. Yet the real star was
-          our 🚀 water rocket. Months of work, and apparently, launching something into the air wins every time. 😂
-        </p>
+      <p>
+        We arrived presenting our <em>Tamil Nadu State Championship Math Project 2025</em> with plenty of confidence,
+        only to be edged out by an excellent B.Tech team demonstrating an electricity-based system. We graciously
+        accepted second place, congratulated the winners, and immediately filed the whole experience under character
+        development.
+      </p>
 
-        <p class="mb-3">
-          Jokes aside, seeing our efforts recognised was genuinely rewarding 🥳✨. It reminded us that mathematics can go
-          beyond lecture notes and exam papers.
-        </p>
+      <p>
+        In the weeks leading up to the fair, we built a dedicated project website, wired up servos and motors, and
+        tested several engineering prototypes. Yet when the judges walked the floor, the undisputed crowd-pleaser was
+        our pressurized water rocket. Months of calculations and code, and as it turns out, launching something
+        physically into the air wins every time.
+      </p>
 
-        <p class="mb-0">
-          <em>And the juniors ask, "What happened in 2026?"</em> 🤔 Assignments, deadlines, club events, and a spectacular
-          shortage of time. 😭😂 No sequel this year, unfortunately. Juniors, consider this a warning: start early — your
-          future seniors are watching. 😌📚
-        </p>
-      </div>
+      <p class="mb-0">
+        Jokes aside, seeing our department's work recognised on the podium was genuinely rewarding. It was a clear
+        reminder that applied mathematics can travel far beyond lecture notes and exam papers.
+      </p>
     </div>
-  </div>
 
-  <!-- Poster Accordion -->
-  <div class="row g-4 justify-content-center mt-1">
-    <div class="col-12 col-md-10">
-      <div class="accordion accordion-flush border border-light-subtle rounded-4 overflow-hidden shadow-sm bg-white" id="sdgPosterMenu">
+    <aside class="story-callout">
+      <span class="activity-tag d-block mb-1">A NOTE FOR THE JUNIORS</span>
+      <strong>"What happened in 2026?"</strong> Assignments, tight deadlines, club events, and a spectacular shortage of
+      hours in the day meant there was no sequel this year. Consider this an official warning: start building early—your
+      seniors are watching.
+    </aside>
+
+    <!-- Event Poster Accordion -->
+    <div class="mt-4 pt-2">
+      <div class="accordion accordion-flush editorial-accordion" id="sdgPosterMenu">
         <div class="accordion-item border-0">
           <h2 class="accordion-header" id="headingPoster">
             <button
-              class="accordion-button collapsed fw-bold px-4 py-3"
+              class="accordion-button collapsed px-4 py-3"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapsePoster"
               aria-expanded="false"
               aria-controls="collapsePoster"
             >
-              📜 The Event Poster
+              <span class="activity-tag me-2">ARCHIVE</span> View the Official Event Poster
             </button>
           </h2>
           <div
@@ -100,11 +336,11 @@ sdg_gallery:
             aria-labelledby="headingPoster"
             data-bs-parent="#sdgPosterMenu"
           >
-            <div class="text-center p-3 p-md-4 bg-light-subtle">
+            <div class="accordion-body-wrapper border-top">
               <img
                 src="{{ page.event_image | relative_url }}"
                 alt="SDG Event Poster"
-                class="img-fluid responsive-poster"
+                class="responsive-poster"
                 loading="lazy"
               >
             </div>
@@ -112,79 +348,90 @@ sdg_gallery:
         </div>
       </div>
     </div>
-  </div>
+  </article>
 
-  <hr class="my-4">
+  <hr class="my-5">
 
-  <!-- Mobile Touch-Friendly Showcase Scroller -->
-  <div class="row g-4 justify-content-center">
-    <div class="col-12 col-md-10">
-      <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light-subtle">
-        <h3 class="fw-bold text-dark mb-1">Project Exhibits &amp; Highlights</h3>
-        <p class="text-muted small mb-3">Swipe through models and prototypes from our team and sister departments 📸✨</p>
+  <!-- Exhibit Showcase Carousel -->
+  <section class="mb-5" aria-labelledby="heading-exhibits">
+    <div class="memory-section-heading">
+      <div>
+        <span class="activity-tag">EXHIBIT ARCHIVE</span>
+        <h2 id="heading-exhibits" class="h3 mt-2 fw-bold">Models, Prototypes &amp; Highlights</h2>
+        <p class="small">Snapshots of exhibits built by our team and sister departments at the fair.</p>
+      </div>
+      <span class="text-muted small font-monospace">
+        {{ page.sdg_gallery | size | prepend: '0' | slice: -2, 2 }} EXHIBITS
+      </span>
+    </div>
 
-        <div class="poster-scroll-container">
+    <div class="carousel-card p-3 p-md-4">
+      <div
+        id="sdgImageSlider"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="5000"
+      >
+        <div class="carousel-inner">
           {% for item in page.sdg_gallery %}
-            <div class="poster-scroll-item">
-              <div class="card h-100 border border-light-subtle rounded-4 overflow-hidden shadow-sm bg-white">
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+              <div class="carousel-image-frame">
+                <span class="carousel-meta-badge"> 0{{ forloop.index }} / 0{{ forloop.length }} </span>
+
                 <img
                   src="{{ item.image | relative_url }}"
-                  alt="{{ item.alt }}"
-                  class="img-fluid w-100"
-                  style="aspect-ratio: 16/10; object-fit: cover;"
+                  alt="{{ item.alt | escape }}"
+                  class="d-block w-100"
                   loading="lazy"
                 >
-                <div class="p-3 text-center">
-                  <span class="mono-tag small text-muted">{{ item.caption }}</span>
-                </div>
+              </div>
+
+              <div class="text-center mt-3 px-2">
+                <span class="text-secondary small font-monospace">
+                  {{ item.caption }}
+                </span>
               </div>
             </div>
           {% endfor %}
         </div>
-      </div>
-    </div>
-  </div>
 
-  <hr class="my-4">
+        <!-- Frosted Glass Controls -->
+        <button
+          class="carousel-control-prev modern-carousel-control"
+          type="button"
+          data-bs-target="#sdgImageSlider"
+          data-bs-slide="prev"
+        >
+          <span class="modern-control-pill" aria-hidden="true">&larr;</span>
+          <span class="visually-hidden">Previous</span>
+        </button>
 
-  <!-- SDG Gallery Carousel -->
-  <div class="row g-4 justify-content-center">
-    <div class="col-12 col-md-10">
-      <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border border-light-subtle">
-        <h3 class="fw-bold text-dark mb-1">SDG 2025 Slide Deck View</h3>
-        <p class="text-muted small mb-4">
-          Interactive full-width slide carousel for desktop and presentations 📽️
-        </p>
+        <button
+          class="carousel-control-next modern-carousel-control"
+          type="button"
+          data-bs-target="#sdgImageSlider"
+          data-bs-slide="next"
+        >
+          <span class="modern-control-pill" aria-hidden="true">&rarr;</span>
+          <span class="visually-hidden">Next</span>
+        </button>
 
-        <div class="carousel-card p-3">
-          <div id="sdgImageSlider" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              {% for item in page.sdg_gallery %}
-                <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                  <img
-                    src="{{ item.image | relative_url }}"
-                    alt="{{ item.alt }}"
-                    class="d-block w-100 rounded"
-                    style="max-height: 480px; object-fit: cover;"
-                  >
-                  <div class="text-center mt-3">
-                    <span class="text-secondary small font-monospace">{{ item.caption }}</span>
-                  </div>
-                </div>
-              {% endfor %}
-            </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#sdgImageSlider" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#sdgImageSlider" data-bs-slide="next">
-              <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+        <!-- Bottom Pill Indicators -->
+        <div class="carousel-indicators modern-carousel-indicators">
+          {% for item in page.sdg_gallery %}
+            <button
+              type="button"
+              data-bs-target="#sdgImageSlider"
+              data-bs-slide-to="{{ forloop.index0 }}"
+              class="{% if forloop.first %}active{% endif %}"
+              {% if forloop.first %}
+                aria-current="true"
+              {% endif %}
+              aria-label="Slide {{ forloop.index }}: {{ item.caption | escape }}"
+            ></button>
+          {% endfor %}
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
