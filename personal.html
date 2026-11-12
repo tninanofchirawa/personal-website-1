@@ -3,114 +3,379 @@ layout: default
 title: Personal
 hero_title: About Me
 hero_subtitle: Mainly Pics... Bcoz, who wants to read
+hero_badge: Timothy · Personal Archive
 hero_image: assets/images/personal/Hero_image.jpg
 event_image: assets/images/personal/Events.gif
 
 # HITS Campus Photo Gallery
-# To add a new photo, simply append a new item below!
 hits_gallery:
   - image: assets/images/personal/hits-events/0) Mig-fighter.jpg
-    caption: 📸 Mig Fighter
+    caption: MiG Fighter on Campus
     alt: Mig Fighter
   - image: assets/images/personal/hits-events/1) a-small-dance-event-at-hits.jpg
-    caption: 📸 Dance Events (happen every now and then)
+    caption: Dance Events (happen every now and then)
     alt: Dance Events
   - image: assets/images/personal/hits-events/2) auto-dept-at-hits.jpg
-    caption: 📸 Vintage Car
+    caption: Vintage Car — Automobile Dept
     alt: Vintage Car
   - image: assets/images/personal/hits-events/3) romanian-ambassador.jpg
-    caption: 📸 Romanian Ambassador visits HITS
+    caption: Romanian Ambassador Visits HITS
     alt: Romanian Ambassador visits HITS
   - image: assets/images/personal/hits-events/4) serniors-project-gyan-disha-2025.jpg
-    caption: 📸 Gyan Disha 2025
+    caption: Gyan Disha 2025
     alt: Gyan Disha 2025
   - image: assets/images/personal/hits-events/5) winning-gyan-disha-2026.jpg
-    caption: 📸 Winning Gyan Disha 2026 (with Super Senior)
+    caption: Winning Gyan Disha 2026 (with Super Senior)
     alt: Winning Gyan Disha 2026
   - image: assets/images/personal/hits-events/6) christmas-at-hits-2024.jpg
-    caption: 📸 Christmas in HITS
+    caption: Christmas at HITS 2024
     alt: Christmas in HITS
   - image: assets/images/personal/hits-events/7) Chapel.jpg
-    caption: 📸 A Peaceful Abode
+    caption: A Peaceful Abode — Campus Chapel
     alt: Chapel
 ---
-<!-- Introduction Card -->
-<div class="row g-4 justify-content-center">
-  <div class="col-12 col-md-10">
-    <div class="p-4 bg-white rounded shadow-sm border">
-      <p>Hi, I'm Timothy 👋, and I'm from Chennai.</p>
+<style>
+  .memory-archive {
+    --memory-ink: #20252b;
+    --memory-muted: #646b73;
+    --memory-line: #e8e9eb;
+    --memory-accent: #315b79;
+    --memory-soft: #f2f5f7;
+  }
 
-      <p>
-        I am currently pursuing an Integrated M.Sc. in Mathematics 🎓 at Hindustan Institute of Technology and Science
-        (HITS).
+  .activity-tag {
+    color: var(--memory-accent);
+    font-family: var(--bs-font-monospace, monospace);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .memory-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .memory-section-heading h2 {
+    margin-bottom: 0.35rem;
+    color: var(--memory-ink);
+  }
+
+  .memory-section-heading p {
+    margin-bottom: 0;
+    color: var(--memory-muted);
+  }
+
+  /* Editorial Narrative */
+  .story-article {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+
+  .story-prose p {
+    font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: #3f464e;
+    margin-bottom: 1.35rem;
+  }
+
+  .story-lead {
+    font-size: 1.2rem !important;
+    color: var(--memory-ink) !important;
+  }
+
+  .story-callout {
+    margin-top: 1.75rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--memory-soft);
+    border-left: 3px solid var(--memory-accent);
+    border-radius: 0 0.75rem 0.75rem 0;
+    font-size: 0.96rem;
+    line-height: 1.7;
+    color: var(--memory-ink);
+  }
+
+  /* Modern Carousel (Tall Portrait-Friendly Stage) */
+  .carousel-card {
+    background: #fff;
+    border: 1px solid var(--memory-line);
+    border-radius: 1.25rem;
+    box-shadow: 0 14px 34px rgba(25, 35, 45, 0.06);
+    overflow: hidden;
+  }
+
+  .carousel-image-frame {
+    position: relative;
+    width: 100%;
+    height: 760px;
+    background: #111418;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-image-frame img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .carousel-meta-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(20, 25, 30, 0.72);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #fff;
+    font-family: var(--bs-font-monospace, monospace);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .modern-carousel-control {
+    width: 3.25rem;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+  }
+
+  .modern-carousel-control:hover {
+    opacity: 1;
+  }
+
+  .modern-control-pill {
+    display: inline-grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    color: var(--memory-ink);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+
+  .modern-carousel-control:hover .modern-control-pill {
+    background: #fff;
+    transform: scale(1.08);
+  }
+
+  .modern-carousel-indicators {
+    position: static;
+    margin: 0.85rem 0 0;
+    gap: 0.4rem;
+  }
+
+  .modern-carousel-indicators [data-bs-target] {
+    width: 24px;
+    height: 4px;
+    border-radius: 999px;
+    border: 0;
+    background-color: #cbd5e1;
+    opacity: 1;
+    transition: width 0.25s ease, background-color 0.25s ease;
+  }
+
+  .modern-carousel-indicators .active {
+    width: 38px;
+    background-color: var(--memory-accent);
+  }
+
+  /* GIF / Outside Events Frame */
+  .visual-story-frame {
+    background: #fff;
+    border: 1px solid var(--memory-line);
+    border-radius: 1.25rem;
+    box-shadow: 0 14px 34px rgba(25, 35, 45, 0.06);
+    overflow: hidden;
+    padding: 1rem;
+  }
+
+  .visual-story-frame img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.85rem;
+    display: block;
+  }
+
+  @media (max-width: 991.98px) {
+    .carousel-image-frame {
+      height: 580px;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .carousel-image-frame {
+      height: 460px;
+    }
+  }
+</style>
+
+<div class="story-package memory-archive">
+  <!-- Back Navigation -->
+  <nav class="story-nav mb-4" aria-label="Breadcrumb navigation">
+    <a href="{{ '/index.html' | relative_url }}" class="text-decoration-none text-secondary small fw-semibold">
+      &larr; Back to Home
+    </a>
+  </nav>
+
+  <!-- Editorial Intro -->
+  <article class="story-article py-2 py-md-4 mb-5">
+    <header class="text-center mb-4 pb-3 border-bottom">
+      <span class="activity-tag">CHENNAI &middot; HITS</span>
+      <h1 class="display-6 mt-2 mb-2 fw-bold" style="color: var(--memory-ink);">Hi, I'm Timothy.</h1>
+      <p class="text-muted small mb-0 font-monospace">
+        INTEGRATED M.SC. IN MATHEMATICS &middot; HINDUSTAN INSTITUTE OF TECHNOLOGY AND SCIENCE
       </p>
+    </header>
 
-      <p class="mb-0">
-        Above all, I am grateful to my Creator and Saviour for His grace, mercy, and guidance throughout my journey.
-        🙏✨ Thank You, Jesus! 🥳
+    <div class="story-prose">
+      <p class="story-lead">
+        I'm from Chennai, currently pursuing an Integrated M.Sc. in Mathematics at Hindustan Institute of Technology and
+        Science (HITS). Since most people visit an About page to look at photos rather than read an essay, I kept this
+        short and let the camera roll do the talking.
       </p>
     </div>
-  </div>
-</div>
 
-<hr class="my-4">
+    <aside class="story-callout">
+      <span class="activity-tag d-block mb-1">GRATITUDE</span>
+      Above all, I am grateful to my Creator and Saviour for His grace, mercy, and guidance throughout my journey.
+      <strong>Thank You, Jesus!</strong>
+    </aside>
+  </article>
 
-<!-- HITS Campus Image Carousel -->
-<div class="row g-4 justify-content-center">
-  <div class="col-12 col-md-10">
-    <div class="p-4 bg-white rounded shadow-sm border">
-      <h3>Pic in HITS 🎓</h3>
-      <p class="text-muted">📸✨ Here are some Pictures that were captured in HITS.</p>
+  <hr class="my-5">
 
-      <div id="ImageSlider" class="carousel slide shadow-sm rounded overflow-hidden" data-bs-ride="carousel">
+  <!-- HITS Campus Image Carousel -->
+  <section class="mb-5" aria-labelledby="heading-hits-pics">
+    <div class="memory-section-heading">
+      <div>
+        <span class="activity-tag">CAMPUS SNAPSHOTS</span>
+        <h2 id="heading-hits-pics" class="h3 mt-2 fw-bold">Pics in HITS</h2>
+        <p class="small">Random sights, exhibitions, events, and quiet corners captured around campus.</p>
+      </div>
+      <span class="text-muted small font-monospace">
+        {{ page.hits_gallery | size | prepend: '0' | slice: -2, 2 }} PHOTOS
+      </span>
+    </div>
+
+    <div class="carousel-card p-3 p-md-4">
+      <div
+        id="ImageSlider"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="5000"
+      >
         <div class="carousel-inner">
           {% for item in page.hits_gallery %}
             <div class="carousel-item {% if forloop.first %}active{% endif %}">
-              <figure class="figure d-block text-center m-0 bg-light p-3">
-                <img src="{{ item.image | relative_url }}" alt="{{ item.alt }}" class="img-fluid rounded shadow-sm">
-                <figcaption class="figure-caption text-muted font-italic mt-2" style="font-size: 1rem;">
+              <div class="carousel-image-frame">
+                <span class="carousel-meta-badge"> 0{{ forloop.index }} / 0{{ forloop.length }} </span>
+
+                <img
+                  src="{{ item.image | relative_url }}"
+                  alt="{{ item.alt | escape }}"
+                  class="d-block w-100"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="text-center mt-3 px-2">
+                <span class="text-secondary small font-monospace">
                   {{ item.caption }}
-                </figcaption>
-              </figure>
+                </span>
+              </div>
             </div>
           {% endfor %}
         </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#ImageSlider" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+        <!-- Frosted Glass Controls -->
+        <button
+          class="carousel-control-prev modern-carousel-control"
+          type="button"
+          data-bs-target="#ImageSlider"
+          data-bs-slide="prev"
+        >
+          <span class="modern-control-pill" aria-hidden="true">&larr;</span>
+          <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#ImageSlider" data-bs-slide="next">
-          <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+
+        <button
+          class="carousel-control-next modern-carousel-control"
+          type="button"
+          data-bs-target="#ImageSlider"
+          data-bs-slide="next"
+        >
+          <span class="modern-control-pill" aria-hidden="true">&rarr;</span>
+          <span class="visually-hidden">Next</span>
         </button>
-      </div>
-    </div>
-  </div>
-</div>
 
-<hr class="my-4">
-
-<!-- Outside Events Card -->
-<div class="row g-4 justify-content-center">
-  <div class="col-12 col-md-10 col-xl-8">
-    <div class="p-4 bg-white rounded shadow-sm border">
-      <h3>Events Outside HITS</h3>
-      <h6>📢 Here are some Events/Hackthons ✨</h6>
-      <p class="mt-3">
-        🎬 Here's a glimpse of the events, competitions, and activities our team took part in across different colleges
-        in Chennai 📚🏆✨. Each journey brought new challenges, new friendships, and valuable experiences along the way.
-        🚀
-        <br>
-        <br>
-        Take a look! 👇
-      </p>
-
-      <div id="personalImageGallery" class="carousel slide rounded border shadow-sm my-3" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="{{ page.event_image | relative_url }}" alt="Events Outside HITS" class="img-fluid rounded w-100">
-          </div>
+        <!-- Bottom Pill Indicators -->
+        <div class="carousel-indicators modern-carousel-indicators">
+          {% for item in page.hits_gallery %}
+            <button
+              type="button"
+              data-bs-target="#ImageSlider"
+              data-bs-slide-to="{{ forloop.index0 }}"
+              class="{% if forloop.first %}active{% endif %}"
+              {% if forloop.first %}
+                aria-current="true"
+              {% endif %}
+              aria-label="Slide {{ forloop.index }}: {{ item.caption | escape }}"
+            ></button>
+          {% endfor %}
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <hr class="my-5">
+
+  <!-- Outside Events Section -->
+  <section class="story-article mb-5" aria-labelledby="heading-outside-events">
+    <div class="memory-section-heading">
+      <div>
+        <span class="activity-tag">OFF CAMPUS &middot; CHENNAI</span>
+        <h2 id="heading-outside-events" class="h3 mt-2 fw-bold">Events &amp; Hackathons Outside HITS</h2>
+        <p class="small">Competitions, inter-college trips, and team challenges across the city.</p>
+      </div>
+    </div>
+
+    <div class="story-prose">
+      <p>
+        Here's a quick glimpse of the events, competitions, and hackathons our team took part in across different
+        colleges in Chennai. Each journey brought new challenges, new friendships, and plenty of stories along the way.
+      </p>
+    </div>
+
+    <div class="visual-story-frame mt-3">
+      <img
+        src="{{ page.event_image | relative_url }}"
+        alt="Events Outside HITS"
+        loading="lazy"
+      >
+      <div class="text-center mt-3">
+        <span class="text-secondary small font-monospace">
+          Highlights from inter-college competitions &amp; events
+        </span>
+      </div>
+    </div>
+  </section>
 </div>
