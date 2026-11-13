@@ -31,7 +31,14 @@ Gemfile.lock
 vendor/
 .gem/
 
-# --- 5. Operating System Junk & Hidden Thumbs ---
+# --- 5. Local Media & Helper Scripts (Hosted on Google Drive) ---
+assets/images/
+Docs and Pics/
+*.mp4
+*.py
+drive_map.json
+
+# --- 6. Operating System Junk & Hidden Thumbs ---
 .DS_Store
 .DS_Store?
 ._*
@@ -43,7 +50,7 @@ Thumbs.db:encryptable
 desktop.ini
 $RECYCLE.BIN/
 
-# --- 6. Editor & IDE Settings ---
+# --- 7. Editor & IDE Settings ---
 .vscode/
 .idea/
 *.sublime-project
@@ -52,7 +59,7 @@ $RECYCLE.BIN/
 *.swo
 *~
 
-# --- 7. Temporary, Scratch & Log Files ---
+# --- 8. Temporary, Scratch & Log Files ---
 *.log
 *.tmp
 *.bak
@@ -61,18 +68,9 @@ scratch/
 npm-debug.log*
 yarn-debug.log*
 
-# --- 8. Databases & Local Datastores ---
+# --- 9. Databases & Local Datastores ---
 *.sqlite
 *.sqlite3
 *.db
-*.py
-assets/images/
 
 
-# Local media & helper files (hosted on Google Drive)
-assets/images/
-Docs and Pics/
-*.mp4
-.private/
-drive_map.json
-replace_links.py
