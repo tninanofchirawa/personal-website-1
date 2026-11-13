@@ -67,3 +67,12 @@ yarn-debug.log*
 *.db
 *.py
 assets/images/
+
+
+# Local media & helper files (hosted on Google Drive)
+assets/images/
+Docs and Pics/
+*.mp4
+.private/
+drive_map.json
+replace_links.py
