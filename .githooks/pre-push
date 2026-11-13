@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "Clearing local Jekyll cache before push..."
+bundle exec jekyll clean
