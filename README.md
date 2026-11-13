@@ -2,7 +2,7 @@
 
   <!-- THE WHITE HORSE OF ROHAN -->
   <a href="https://tninanofchirawa.github.io/personal-website-1/index.html" target="_blank" rel="noopener noreferrer">
-    <img src="assets/images/home/Rohan_round.png" alt="The White Horse of Rohan — Clan Emblem" width="145" />
+    <img src="https://drive.google.com/thumbnail?id=1F4sYtaGzEWVR6RE_XzSou6ncfoclmPiw&sz=w1200" alt="The White Horse of Rohan — Clan Emblem" width="145" referrerpolicy="no-referrer" />
   </a>
 
   <h1>⚔️ Welcome to Timothy's Realm ⚔️</h1>
@@ -10,14 +10,14 @@
   <p><em>A little corner of Middle-earth, where mathematics meets curiosity.</em></p>
 
   <a href="https://tninanofchirawa.github.io/personal-website-1/index.html" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/🏇%20Ride%20To%20The%20Golden%20Hall-Enter%20The%20Realm-d4af37?style=for-the-badge&labelColor=14251a" alt="Enter the Golden Hall" />
+    <img src="https://img.shields.io/badge/🏇%20Ride%20To%20The%20Golden%20Hall-Enter%20The%20Realm-d4af37?style=for-the-badge&labelColor=14251a" alt="Enter the Golden Hall" referrerpolicy="no-referrer" />
   </a>
 
 <sub>💡 <em>Ctrl + Click (or Cmd + Click on Mac) to open the realm in a new tab.</em></sub>
 
 🐎 ━━━━━━━━━━━ ᛋᛏᚱᛁᛞᛖᚱ • ᚱᛟᚻᚨᚾ ━━━━━━━━━━━ 🐎
 
-  <img src="assets/images/home/marquee.svg" alt="Real-World Data Studies • Mathematical Modeling • HITS Events and Milestones" width="100%" />
+  <img src="https://drive.google.com/thumbnail?id=155Vnixkl-9DBZkpk-YscElDmzyx0a6-i&sz=w1200" alt="Real-World Data Studies • Mathematical Modeling • HITS Events and Milestones" width="100%" referrerpolicy="no-referrer" />
 
 ⚔️ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ⚔️
 

@@ -66,3 +66,4 @@ yarn-debug.log*
 *.sqlite3
 *.db
 *.py
+assets/images/
