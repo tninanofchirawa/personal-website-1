@@ -1,0 +1,65 @@
+Dual License: Code & Hero Media (MIT) | Personal Photography & Location Media (All Rights Reserved)
+
+Copyright (c) 2026 Timothy Philip Ninan
+
+==============================================================================
+1. OPEN PERMISSIVE LICENSE (MIT)
+==============================================================================
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated template files (the "Software"), including 
+website source code, layouts, stylesheets, scripts, UI theme graphics, and 
+generic hero banners designated for public template use, to deal in the 
+Software without restriction, including without limitation the rights to use, 
+copy, modify, merge, publish, distribute, sublicense, and/or sell copies of 
+the Software, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+==============================================================================
+2. PERSONAL PHOTOGRAPHY, EVENT GALLERIES & LOCATION MEDIA (ALL RIGHTS RESERVED)
+==============================================================================
+All personal photographs, event photography, campus/location shots, candid 
+images, portraits, and original gallery media captured by the author (whether 
+stored locally or embedded via external links across pages and folders such as 
+/math-club, /personal.html, or project galleries) are STRICTLY EXCLUDED from 
+the MIT License.
+
+All rights to these personal, event, and location images are reserved by the 
+copyright holder.
+
+You may NOT:
+- Copy, duplicate, scrape, hotlink, or redistribute these personal/location photos.
+- Re-host or publish these images on third-party websites, apps, social media, or print.
+- Create derivative works, modifications, or AI training datasets utilizing these photos.
+- Use any of these images without explicit, written, prior consent from the author.
+
+Anyone forking, cloning, or redistributing this repository or template MUST 
+replace all personal photography, event media, and external image links with 
+their own media.
+
+==============================================================================
+3. PROJECT SPECIFICATIONS, PROPOSALS & ACADEMIC WRITE-UPS (UPON REQUEST ONLY)
+==============================================================================
+All original project ideas, mathematical models, system architecture 
+specifications, research write-ups, and study/competition documentation 
+contained in this repository (including content under /d-s, /Nd-s, /q-a, 
+/math-club, or markdown notes) are licensed under conditional use.
+
+You MAY NOT copy, implement, fork, or redistribute these project concepts, 
+models, blueprints, or write-ups without prior permission.
+
+To request permission to adopt, adapt, or build upon these projects:
+- Contact the author directly via the contact page (/contact.html) on the site.
+- State your intended use case (e.g., academic research, open-source collaboration, 
+  or educational development).
+- Written consent from the author is required before public deployment, 
+  publication, or commercial implementation.

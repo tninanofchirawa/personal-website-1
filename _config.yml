@@ -10,3 +10,11 @@ url: "https://tninanofchirawa.github.io/personal-website-1/" # GitHub Pages URL
 
 # Google Analytics tracking ID
 google_analytics: G-LN7Y2T4WQV
+
+# Excluded folders and files from Jekyll build
+exclude:
+  - support/_archive_unused
+  - support/scripts
+  - vendor
+  - .bundle
+

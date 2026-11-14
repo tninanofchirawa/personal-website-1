@@ -24,6 +24,8 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 .sass-cache/
+_archive_unused/
+support/_archive_unused/
 
 # --- 4. Ruby & Bundler Environments ---
 Gemfile.lock
@@ -33,10 +35,12 @@ vendor/
 
 # --- 5. Local Media & Helper Scripts (Hosted on Google Drive) ---
 assets/images/
+support/images/
 Docs and Pics/
 *.mp4
 *.py
 drive_map.json
+support/scripts/
 
 # --- 6. Operating System Junk & Hidden Thumbs ---
 .DS_Store
