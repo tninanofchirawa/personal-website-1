@@ -1,0 +1,46 @@
+# Navigation Menu Structure
+brand:
+  title: "Timothy's Website"
+  logo: "https://drive.google.com/thumbnail?id=1VkMWnKIdbeFpTHrqUI3EetKzFHZeBLr5&sz=w1200"
+  url: "/"
+
+links:
+  - title: "Home"
+    url: "/index.html"
+
+  - title: "Projects"
+    dropdown:
+      - header: "The Serious Stuff"
+      - title: "📊 Data Science & Research"
+        url: "/d-s/index.html"
+      - divider: true
+      - header: "The Distractions"
+      - title: "🛠️ Side Quests"
+        url: "/Nd-s/projects.html"
+
+  - title: "Math Club"
+    dropdown:
+      - title: "🎉 Club Highlights"
+        url: "/math-club/index.html"
+      - divider: true
+      - title: "🏏 HPL Editions"
+        submenu:
+          - title: "HPL 1.0"
+            url: "/math-club/hpl.html"
+          - title: "HPL 2.0"
+            url: "/math-club/hpl2.html"
+      - title: "💡 National Science Day (SDG)"
+        url: "/math-club/sdg.html"
+      - title: "🚨 Math Training Camp"
+        url: "/math-club/training-camp.html"
+
+  - title: "Q&A"
+    dropdown:
+      - title: "📜 Terms & Policy"
+        url: "/q-a/index.html"
+      - divider: true
+      - title: "🔗 Useful Resources"
+        url: "/q-a/1-qa.html"
+
+  - title: "About Me"
+    url: "/personal.html"

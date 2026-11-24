@@ -1,18 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+  <div class="container">
     <!-- Brand / Logo -->
     <a
       class="navbar-brand text-warning fw-bold fs-4 ga-nav-link d-inline-flex align-items-center gap-2"
       href="{{ '/' | relative_url }}"
     >
       <img
-        src="https://drive.google.com/thumbnail?id=1VkMWnKIdbeFpTHrqUI3EetKzFHZeBLr5&sz=w1200"
-        alt="Rohan Logo"
+        src="https://drive.google.com/thumbnail?id=1VkMWnKIdbeFpTHrqUI3EetKzFHZeBLr5&sz=w120"
+        alt="Timothy's Website Logo"
         width="38"
         height="38"
         class="rounded-circle"
         style="object-fit: cover;"
-       referrerpolicy="no-referrer">
+        referrerpolicy="no-referrer"
+      >
       <span>Timothy's Website</span>
     </a>
 
@@ -33,27 +34,39 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
         <!-- 1. Home -->
         <li class="nav-item">
-          <a class="nav-link ga-nav-link" href="{{ '/index.html' | relative_url }}">Home</a>
+          <a
+            class="nav-link ga-nav-link{% if page.url == '/index.html' or page.url == '/' %} active{% endif %}"
+            {% if page.url == '/index.html' or page.url == '/' %}
+              aria-current="page"
+            {% endif %}
+            href="{{ '/index.html' | relative_url }}"
+          >
+            Home
+          </a>
         </li>
 
         <!-- 2. Projects Dropdown -->
         <li class="nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle ga-dropdown-toggle"
+            class="nav-link dropdown-toggle ga-dropdown-toggle{% if page.url contains '/d-s/' or page.url contains '/Nd-s/' %} active{% endif %}"
             href="#"
+            id="projectsDropdown"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
             Projects
           </a>
-          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="projectsDropdown">
             <li>
               <h6 class="dropdown-header text-uppercase fw-bold text-muted small">The Serious Stuff</h6>
             </li>
             <li>
-              <a class="dropdown-item ga-nav-link" href="{{ '/d-s/index.html' | relative_url }}">
-                📊 Data Science & Research
+              <a
+                class="dropdown-item ga-nav-link{% if page.url contains '/d-s/' %} active{% endif %}"
+                href="{{ '/d-s/index.html' | relative_url }}"
+              >
+                <span aria-hidden="true">📊</span> Data Science & Research
               </a>
             </li>
             <li>
@@ -63,89 +76,59 @@
               <h6 class="dropdown-header text-uppercase fw-bold text-muted small">The Distractions</h6>
             </li>
             <li>
-              <a class="dropdown-item ga-nav-link" href="{{ '/Nd-s/projects.html' | relative_url }}">
-                🛠️ Side Quests
+              <a
+                class="dropdown-item ga-nav-link{% if page.url contains '/Nd-s/' %} active{% endif %}"
+                href="{{ '/Nd-s/projects.html' | relative_url }}"
+              >
+                <span aria-hidden="true">🛠️</span> Side Quests
               </a>
             </li>
           </ul>
         </li>
 
-        <!-- 3. Math Club Navigation Item -->
-        <li class="nav-item dropdown">
+        <!-- 3. Math Club (Single Link) -->
+        <li class="nav-item">
           <a
-            class="nav-link dropdown-toggle ga-dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+            class="nav-link ga-nav-link{% if page.url contains '/math-club/' %} active{% endif %}"
+            {% if page.url == '/math-club/index.html' or page.url == '/math-club/' %}
+              aria-current="page"
+            {% endif %}
+            href="{{ '/math-club/index.html' | relative_url }}"
           >
             Math Club
           </a>
-          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-            <li>
-              <a class="dropdown-item ga-nav-link" href="{{ '/math-club/index.html' | relative_url }}">
-                🎉 Club Highlights
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <!-- Grouped HPL Series with Side Flyout -->
-            <li class="dropdown-submenu position-relative">
-              <a
-                class="dropdown-item ga-nav-link d-flex align-items-center justify-content-between submenu-toggle"
-                href="#"
-                role="button"
-                aria-expanded="false"
-              >
-                <span>🏏 HPL Editions</span>
-                <span class="small ps-2">▶</span>
-              </a>
-              <ul class="dropdown-menu shadow-sm">
-                <li>
-                  <a class="dropdown-item ga-nav-link" href="{{ '/math-club/hpl.html' | relative_url }}"> HPL 1.0 </a>
-                </li>
-                <li>
-                  <a class="dropdown-item ga-nav-link" href="{{ '/math-club/hpl2.html' | relative_url }}"> HPL 2.0 </a>
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <a class="dropdown-item ga-nav-link" href="{{ '/math-club/sdg.html' | relative_url }}">
-                💡 National Science Day (SDG)
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item ga-nav-link" href="{{ '/math-club/training-camp.html' | relative_url }}">
-                🚨 Math Training Camp
-              </a>
-            </li>
-          </ul>
         </li>
 
         <!-- 4. Q&A -->
         <li class="nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle ga-dropdown-toggle"
+            class="nav-link dropdown-toggle ga-dropdown-toggle{% if page.url contains '/q-a/' %} active{% endif %}"
             href="#"
+            id="qaDropdown"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
             Q&A
           </a>
-          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="qaDropdown">
             <li>
-              <a class="dropdown-item ga-nav-link" href="{{ '/q-a/index.html' | relative_url }}"> 📜 Terms & Policy </a>
+              <a
+                class="dropdown-item ga-nav-link{% if page.url == '/q-a/index.html' %} active{% endif %}"
+                href="{{ '/q-a/index.html' | relative_url }}"
+              >
+                <span aria-hidden="true">📜</span> Terms & Policy
+              </a>
             </li>
             <li>
               <hr class="dropdown-divider">
             </li>
             <li>
-              <a class="dropdown-item ga-nav-link" href="{{ '/q-a/1-qa.html' | relative_url }}">
-                🔗 Useful Resources
+              <a
+                class="dropdown-item ga-nav-link{% if page.url == '/q-a/1-qa.html' %} active{% endif %}"
+                href="{{ '/q-a/1-qa.html' | relative_url }}"
+              >
+                <span aria-hidden="true">🔗</span> Useful Resources
               </a>
             </li>
           </ul>
@@ -153,7 +136,15 @@
 
         <!-- 5. About Me -->
         <li class="nav-item">
-          <a class="nav-link ga-nav-link" href="{{ '/personal.html' | relative_url }}">About Me</a>
+          <a
+            class="nav-link ga-nav-link{% if page.url == '/personal.html' %} active{% endif %}"
+            {% if page.url == '/personal.html' %}
+              aria-current="page"
+            {% endif %}
+            href="{{ '/personal.html' | relative_url }}"
+          >
+            About Me
+          </a>
         </li>
       </ul>
     </div>

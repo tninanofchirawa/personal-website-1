@@ -1,0 +1,82 @@
+---
+layout: default
+permalink: /personal.html
+page_css: /assets/css/pages/personal.css
+title: Personal
+hero_title: About Me
+hero_subtitle: Mainly Pics... Bcoz, who wants to read
+hero_badge: Timothy · Personal Archive
+hero_image: https://drive.google.com/thumbnail?id=1641UaMTVQVa08LyFK-ihkrdGUL07KWtU&sz=w1200
+event_image: https://drive.google.com/thumbnail?id=1ait3LD-C7M8vk_HpWvm3QNkEPn1zyXCu&sz=w1200
+---
+<div class="story-package memory-archive">
+  <!-- Back Navigation -->
+  <nav class="story-nav mb-4" aria-label="Breadcrumb navigation">
+    <a href="{{ '/index.html' | relative_url }}" class="text-decoration-none text-secondary small fw-semibold">
+      &larr; Back to Home
+    </a>
+  </nav>
+
+  <!-- Editorial Intro -->
+  <article class="story-article py-2 py-md-4 mb-5">
+    <header class="text-center mb-4 pb-3 border-bottom">
+      <span class="activity-tag">CHENNAI &middot; HITS</span>
+      <h1 class="display-6 mt-2 mb-2 fw-bold" style="color: var(--memory-ink);">Hi, I'm Timothy.</h1>
+      <p class="text-muted small mb-0 font-monospace">
+        INTEGRATED M.SC. IN MATHEMATICS &middot; HINDUSTAN INSTITUTE OF TECHNOLOGY AND SCIENCE
+      </p>
+    </header>
+
+    <div class="story-prose">
+      <p class="story-lead">
+        I'm from Chennai, currently pursuing an Integrated M.Sc. in Mathematics at Hindustan Institute of Technology and
+        Science (HITS). Since most people visit an About page to look at photos rather than read an essay, I kept this
+        short and let the camera roll do the talking.
+      </p>
+    </div>
+
+    <aside class="story-callout">
+      <span class="activity-tag d-block mb-1">GRATITUDE</span>
+      Above all, I am grateful to my Creator and Saviour for His grace, mercy, and guidance throughout my journey.
+      <strong>Thank You, Jesus!</strong>
+    </aside>
+  </article>
+
+  <hr class="my-5">
+
+  <!-- HITS Campus Image Carousel Component -->
+  {% include components/hits-gallery.html %}
+
+  <hr class="my-5">
+
+  <!-- Outside Events Section -->
+  <section class="story-article mb-5" aria-labelledby="heading-outside-events">
+    <div class="memory-section-heading">
+      <div>
+        <span class="activity-tag">OFF CAMPUS &middot; CHENNAI</span>
+        <h2 id="heading-outside-events" class="h3 mt-2 fw-bold">Events &amp; Hackathons Outside HITS</h2>
+        <p class="small">Competitions, inter-college trips, and team challenges across the city.</p>
+      </div>
+    </div>
+
+    <div class="story-prose">
+      <p>
+        Here's a quick glimpse of the events, competitions, and hackathons our team took part in across different
+        colleges in Chennai. Each journey brought new challenges, new friendships, and plenty of stories along the way.
+      </p>
+    </div>
+
+    <div class="visual-story-frame mt-3">
+      <img
+        src="{{ page.event_image }}"
+        alt="Events Outside HITS"
+        loading="lazy"
+        referrerpolicy="no-referrer">
+      <div class="text-center mt-3">
+        <span class="text-secondary small font-monospace">
+          Highlights from inter-college competitions &amp; events
+        </span>
+      </div>
+    </div>
+  </section>
+</div>

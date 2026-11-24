@@ -16,8 +16,11 @@
 <sub>💡 <em>Ctrl + Click (or Cmd + Click on Mac) to open the realm in a new tab.</em></sub>
 
 🐎 ━━━━━━━━━━━ ᛋᛏᚱᛁᛞᛖᚱ • ᚱᛟᚻᚨᚾ ━━━━━━━━━━━ 🐎
-
-  <img src="https://drive.google.com/thumbnail?id=155Vnixkl-9DBZkpk-YscElDmzyx0a6-i&sz=w1200" alt="Real-World Data Studies • Mathematical Modeling • HITS Events and Milestones" width="100%" referrerpolicy="no-referrer" />
+<img
+  src="assets/images/home/marquee.svg"
+  alt="Real-World Data Studies • Mathematical Modeling • HITS Events and Milestones"
+  width="100%"
+/>
 
 ⚔️ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ⚔️
 

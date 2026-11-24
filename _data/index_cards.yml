@@ -1,0 +1,25 @@
+# Main Directory Navigation Cards for Homepage
+cards:
+  - title: "Data Science Page"
+    icon: "📊"
+    icon_class: "text-primary"
+    link_class: "text-primary"
+    text: "📊 This page contains all intro to the survey forms, questionnaires, collected datasets, and the reports generated from their analysis. Feel free to explore the findings and contribute to ongoing projects. 🚀"
+    link_text: "View Page &rarr;"
+    url: "/d-s/index.html"
+
+  - title: "Q&A Reference"
+    icon: "💻"
+    icon_class: "text-warning"
+    link_class: "text-dark"
+    text: "📜 This page outlines the Terms and Conditions related to the data collected through our forms, including how the information is used, stored, and analyzed. 🔒📊"
+    link_text: "Open Page &rarr;"
+    url: "/q-a/index.html"
+
+  - title: "About Me"
+    icon: "🎓"
+    icon_class: "text-success"
+    link_class: "text-success"
+    text: "👋 Welcome! This page contains a brief introduction about me, my academic journey, interests, projects, and experiences. 📚✨"
+    link_text: "Load Page &rarr;"
+    url: "/personal.html"

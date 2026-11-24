@@ -1,0 +1,84 @@
+/* ==========================================================================
+   SDG Nexus Page Stylesheet (math-club/sdg.html)
+   Scope: Page-specific poster display and carousel frame adjustments for SDG Nexus.
+   Inherits: Shared narrative systems from editorial/story.css,
+             accordion layouts from components/accordion.css, and
+             carousel engines from components/carousel.css.
+   ========================================================================== */
+
+/* Full-Bleed Accordion Poster Display */
+.story-article .editorial-accordion .accordion-body-wrapper,
+.editorial-accordion .accordion-collapse .accordion-body-wrapper {
+  padding: 0;
+  background-color: var(--memory-soft, #f8fafc);
+}
+
+.editorial-accordion .accordion-body-wrapper .responsive-poster {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+/* Page-Specific Portrait/Tall Carousel Stage & Image Fit */
+.memory-gallery-wide .carousel-image-frame {
+  height: 780px;
+  background-color: var(--memory-soft, #f2f5f7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.memory-gallery-wide .carousel-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: var(--memory-soft, #f2f5f7);
+}
+
+/* Responsive Sizing */
+@media (max-width: 991.98px) {
+  .memory-gallery-wide .carousel-image-frame {
+    height: 600px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .memory-gallery-wide .carousel-image-frame {
+    height: 480px;
+  }
+}
+
+/* ==========================================================================
+   SDG Nexus Page Stylesheet (math-club/sdg.html)
+   Scope: Page-specific poster display and carousel frame adjustments for SDG Nexus.
+   Inherits: Shared narrative systems from editorial/story.css,
+             accordion layouts from components/accordion.css, and
+             carousel engines from components/carousel.css.
+   ========================================================================== */
+
+/* Full-Bleed Accordion Poster Display */
+.story-article .editorial-accordion .accordion-body-wrapper,
+.editorial-accordion .accordion-collapse .accordion-body-wrapper {
+  padding: 0;
+  background-color: var(--memory-soft, #f8fafc);
+}
+
+.editorial-accordion .accordion-body-wrapper .responsive-poster {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+

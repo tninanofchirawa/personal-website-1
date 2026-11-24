@@ -1,0 +1,79 @@
+<!-- HITS Campus Image Carousel Component -->
+<section class="mb-5" aria-labelledby="heading-hits-pics">
+  <div class="memory-section-heading">
+    <div>
+      <span class="activity-tag">CAMPUS SNAPSHOTS</span>
+      <h2 id="heading-hits-pics" class="h3 mt-2 fw-bold">Pics in HITS</h2>
+      <p class="small">Random sights, exhibitions, events, and quiet corners captured around campus.</p>
+    </div>
+    <span class="text-muted small font-monospace">
+      {{ site.data.hits_gallery.size | prepend: '0' | slice: -2, 2 }} PHOTOS
+    </span>
+  </div>
+
+  <div class="carousel-card p-3 p-md-4">
+    <div
+      id="ImageSlider"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      data-bs-interval="5000"
+    >
+      <div class="carousel-inner">
+        {% for item in site.data.hits_gallery %}
+        <div class="carousel-item{% if forloop.first %} active{% endif %}">
+          <div class="carousel-image-frame">
+            <span class="carousel-meta-badge">
+              {{ forloop.index | prepend: '0' | slice: -2, 2 }} / {{ site.data.hits_gallery.size | prepend: '0' | slice: -2, 2 }}
+            </span>
+
+            <img
+              src="{{ item.image }}"
+              alt="{{ item.alt }}"
+              class="d-block w-100"
+              loading="lazy"
+              referrerpolicy="no-referrer">
+          </div>
+
+          <div class="text-center mt-3 px-2">
+            <p class="text-secondary small font-monospace mb-0">{{ item.caption }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Carousel Navigation Controls -->
+      <button
+        class="carousel-control-prev modern-carousel-control"
+        type="button"
+        data-bs-target="#ImageSlider"
+        data-bs-slide="prev"
+      >
+        <span class="modern-control-pill" aria-hidden="true">&larr;</span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button
+        class="carousel-control-next modern-carousel-control"
+        type="button"
+        data-bs-target="#ImageSlider"
+        data-bs-slide="next"
+      >
+        <span class="modern-control-pill" aria-hidden="true">&rarr;</span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+      <!-- Carousel Slide Indicators -->
+      <div class="carousel-indicators modern-carousel-indicators">
+        {% for item in site.data.hits_gallery %}
+        <button
+          type="button"
+          data-bs-target="#ImageSlider"
+          data-bs-slide-to="{{ forloop.index0 }}"
+          {% if forloop.first %}class="active" aria-current="true"{% endif %}
+          aria-label="Slide {{ forloop.index }}: {{ item.caption }}"
+        ></button>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

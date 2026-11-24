@@ -1,0 +1,28 @@
+# Monthly Promise Verse Configuration
+# Update this file each month without editing HTML templates.
+
+current:
+  month: "November 2026"
+  reference: "Exodus 34:5-7"
+  text: |
+    Then the Lord came down in the cloud and stood there with him<br>
+    and proclaimed his name, the Lord. And he passed in front of Moses, proclaiming,<br><br>
+    “The Lord, the Lord, the compassionate and gracious God,<br>
+    slow to anger, abounding in love and faithfulness,<br>
+    maintaining love to thousands, and forgiving wickedness, rebellion and sin.<br>
+    Yet he does not leave the guilty unpunished;<br>
+    he punishes the children and their children for the sin of the parents<br>
+    to the third and fourth generation.”
+
+archive:
+  - month: "October 2026"
+    reference: "Luke 1:51-54"
+    text: |
+      He has shown strength with his arm;<br>
+      he has scattered the proud in the thoughts of their hearts;
+      he has brought down the mighty from their thrones<br>
+      and exalted those of humble estate;
+      he has filled the hungry with good things,<br>
+      and the rich he has sent away empty.
+      He has helped his servant Israel,<br>
+      in remembrance of his mercy,

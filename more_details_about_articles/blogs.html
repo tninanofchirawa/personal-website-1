@@ -1,0 +1,32 @@
+{% assign item = include.post | default: page %}
+{% assign raw_content = item.content | default: content %}
+{% assign words = raw_content | number_of_words %}
+{% assign mins = words | divided_by: 200 %}
+{% if mins < 1 %}{% assign mins = 1 %}{% endif %}
+
+<div class="post-meta d-flex flex-wrap align-items-center gap-2 text-muted small mb-3">
+  {% if item.date %}
+    <time datetime="{{ item.date | date_to_xmlschema }}">
+      {{ item.date | date: '%b %-d, %Y' }}
+    </time>
+  {% endif %}
+
+  {% if item.date and raw_content %}
+    <span aria-hidden="true">&bull;</span>
+  {% endif %}
+
+  {% if raw_content %}
+    <span class="read-time" title="{{ words }} words"> {{ mins }} min read </span>
+  {% endif %}
+
+  {% if item.categories.size > 0 %}
+    <span aria-hidden="true">&bull;</span>
+    <div class="post-categories d-inline-flex flex-wrap gap-1">
+      {% for category in item.categories %}
+        <span class="badge rounded-pill text-bg-light border fw-normal">
+          {{ category }}
+        </span>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

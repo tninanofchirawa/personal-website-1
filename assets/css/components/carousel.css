@@ -1,0 +1,150 @@
+/* ==========================================================================
+   Modern & Editorial Carousel Component
+   Scope: High-resolution portrait-friendly photo stage, pill controls,
+          meta tags, indicators, and responsive touch transitions.
+   ========================================================================== */
+
+/* Stage Card Container */
+.carousel-card {
+  background: #ffffff;
+  border: 1px solid var(--memory-line, #e8e9eb);
+  border-radius: 1.25rem;
+  box-shadow: 0 14px 34px rgba(25, 35, 45, 0.06);
+  overflow: hidden;
+}
+
+/* Photo Stage Frame */
+.carousel-image-frame {
+  position: relative;
+  width: 100%;
+  height: 760px;
+  background: #111418;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-image-frame img {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.carousel-card:hover .carousel-image-frame img {
+  transform: scale(1.015);
+}
+
+/* Floating Meta Badge */
+.carousel-meta-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(20, 25, 30, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-family: var(--bs-font-monospace, monospace);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Modern Control Pill Buttons */
+.modern-carousel-control {
+  width: 3.25rem;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.modern-carousel-control:hover {
+  opacity: 1;
+}
+
+.modern-control-pill {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: var(--memory-ink, #20252b);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.modern-carousel-control:hover .modern-control-pill {
+  background: #ffffff;
+  transform: scale(1.08);
+}
+
+/* Modern Bar Indicators */
+.modern-carousel-indicators {
+  position: static;
+  margin: 0.85rem 0 0;
+  gap: 0.4rem;
+}
+
+.modern-carousel-indicators [data-bs-target] {
+  width: 24px;
+  height: 4px;
+  border-radius: 999px;
+  border: 0;
+  background-color: #cbd5e1;
+  opacity: 1;
+  transition: width 0.25s ease, background-color 0.25s ease;
+}
+
+.modern-carousel-indicators .active {
+  width: 38px;
+  background-color: var(--memory-accent, #315b79);
+}
+
+/* Standard Bootstrap Carousel Fallback Enhancements */
+.carousel-item img {
+  max-height: 480px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 2rem;
+  height: 2rem;
+  background-size: 55%;
+}
+
+/* Breakpoint Scaling */
+@media (max-width: 991.98px) {
+  .carousel-image-frame {
+    height: 580px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-card {
+    padding: 0.75rem;
+  }
+
+  .modern-control-pill {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .carousel-image-frame {
+    height: 460px;
+  }
+}

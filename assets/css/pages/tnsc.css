@@ -1,0 +1,61 @@
+/* ==========================================================================
+   TNSC Page Stylesheet (math-club/tnsc.html)
+   Scope: Page-specific gallery sizing, image fit, and indicator refinements.
+   Inherits: Shared narrative systems from editorial/story.css and
+             carousel engines from components/carousel.css.
+   ========================================================================== */
+
+/* Landscape Carousel Stage & Image Fit */
+#summitImageSlider .carousel-image-frame {
+  height: 450px;
+  background-color: #f2f5f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#summitImageSlider .carousel-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #f2f5f7;
+}
+
+/* Left-Aligned Meta Badge */
+#summitImageSlider .carousel-meta-badge {
+  left: 1rem;
+  right: auto;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(20, 30, 40, 0.72);
+  backdrop-filter: blur(4px);
+}
+
+/* Rounded Dot Indicators Variant */
+#summitImageSlider .modern-carousel-indicators [data-bs-target] {
+  width: 9px;
+  height: 9px;
+  border-radius: 50px;
+  background-color: #b9c2ca;
+  opacity: 0.65;
+  transition: width 0.25s ease, background-color 0.25s ease, opacity 0.25s ease;
+}
+
+#summitImageSlider .modern-carousel-indicators .active {
+  width: 26px;
+  background-color: var(--memory-accent, #315b79);
+  opacity: 1;
+}
+
+/* Responsive Sizing */
+@media (max-width: 768px) {
+  #summitImageSlider .carousel-image-frame {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  #summitImageSlider .carousel-image-frame {
+    height: 240px;
+  }
+}

@@ -1,0 +1,11 @@
+/* ==========================================================================
+   Personal Page Stylesheet (personal.html)
+   Scope: Page-specific layout tweaks for Timothy's Personal / About showcase.
+   Inherits: Shared narrative systems from editorial/story.css and
+             portrait-friendly carousel engines from components/carousel.css.
+   ========================================================================== */
+
+/* Visual Story Frame Accent */
+.personal-story-frame {
+  margin-top: 1.5rem;
+}

@@ -1,0 +1,354 @@
+/* ==========================================================================
+   Story Package & Narrative Editorial Styling System
+   Scope: Unified narrative typography, mobile scrollers, and ticket cards
+          across Math Club (HPL 1.0, HPL 2.0, SDG, Training Camp, and Hub).
+   ========================================================================== */
+
+/* 1. Base Story Package Scope & Typography Stack */
+.story-package {
+  font-family: var(--font-editorial-heading, 'Merriweather', Georgia, serif);
+  color: var(--memory-ink, #20252b);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings (h1 - h4) */
+.story-package h1,
+.story-package h2,
+.story-package h3,
+.story-package h4 {
+  font-family: var(--font-editorial-display, var(--font-editorial-heading, 'Outfit', sans-serif));
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #111827;
+}
+
+.story-package h1 {
+  font-size: clamp(1.85rem, 3.5vw + 0.5rem, 2.75rem);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.story-package h2 {
+  font-size: clamp(1.4rem, 2.2vw + 0.4rem, 1.95rem);
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.story-package h3 {
+  font-size: clamp(1.2rem, 1.5vw + 0.4rem, 1.55rem);
+  line-height: 1.35;
+  margin-top: 1.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.story-package h4 {
+  font-size: clamp(1.05rem, 1vw + 0.4rem, 1.3rem);
+  line-height: 1.4;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Paragraphs & Narrative Text */
+.story-package p,
+.story-package .narrative-text,
+.story-package .story-section p {
+  font-family: var(--font-editorial-heading, 'Merriweather', Georgia, serif);
+  font-size: var(--fluid-body, 1.05rem);
+  line-height: 1.85;
+  color: #3f464e;
+  margin-bottom: 1.35rem;
+  max-width: 100%;
+}
+
+.story-package .lead,
+.story-package .story-lead {
+  font-family: var(--font-editorial-heading, 'Merriweather', Georgia, serif);
+  font-size: var(--fluid-lead, 1.2rem);
+  line-height: 1.8;
+  font-weight: 300;
+  color: var(--memory-ink, #1f2937);
+  margin-bottom: 2rem;
+}
+
+/* Badges, Technical Tags, and Meta Lines */
+.story-package .badge,
+.story-package .technical-tag,
+.story-package .meta-line,
+.story-package .mono-tag,
+.story-package .section-tag {
+  font-family: var(--font-editorial-mono, 'JetBrains Mono', monospace);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+}
+
+/* Custom Chevron List (Scoped to non-markdown story lists) */
+.story-package .editorial-list:not(.ticket-markdown-body .editorial-list) {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+
+.story-package .editorial-list:not(.ticket-markdown-body .editorial-list) li {
+  font-family: var(--font-editorial-heading, 'Merriweather', Georgia, serif);
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: #3f464e;
+  padding: 0.45rem 0 0.45rem 1.5rem;
+  position: relative;
+}
+
+.story-package .editorial-list:not(.ticket-markdown-body .editorial-list) li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--memory-accent, #315b79);
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   2. Responsive Poster Sizing Engine
+   ========================================================================== */
+.responsive-poster,
+.story-poster img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.08), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--memory-line, rgba(0, 0, 0, 0.06));
+}
+
+/* ==========================================================================
+   3. Touch-Friendly Overflow Scroller (Mobile Poster Strip & Showcase Boards)
+   ========================================================================== */
+.poster-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.25rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem 0.25rem 1rem 0.25rem;
+  scrollbar-width: thin;
+}
+
+.poster-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.poster-scroll-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 999px;
+}
+
+.poster-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 999px;
+}
+
+.poster-scroll-item {
+  flex: 0 0 82vw;
+  max-width: 420px;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 768px) {
+  .poster-scroll-item {
+    flex: 0 0 calc(50% - 0.75rem);
+    max-width: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .poster-scroll-container.strip-3-col .poster-scroll-item {
+    flex: 0 0 calc(33.333% - 0.85rem);
+  }
+}
+
+/* ==========================================================================
+   4. Ticket Cards (Main Index Math & Club Highlights)
+   ========================================================================== */
+.ticket-anchor {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.ticket-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--memory-line, #dce3ea);
+  border-radius: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 6px 18px -4px rgba(20, 35, 50, 0.06), 0 2px 6px -1px rgba(20, 35, 50, 0.03);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.2s ease;
+}
+
+.ticket-anchor:hover .ticket-card,
+.ticket-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 36px -6px rgba(20, 35, 50, 0.11), 0 4px 12px -2px rgba(20, 35, 50, 0.05);
+  border-color: var(--memory-accent, #315b79);
+}
+
+/* Ticket Cover Media & Serial Stamp */
+.ticket-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: var(--memory-soft, #f2f5f7);
+  border-bottom: 1px solid var(--memory-line, #e8e9eb);
+}
+
+.ticket-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ticket-anchor:hover .ticket-media img,
+.ticket-card:hover .ticket-media img {
+  transform: scale(1.04);
+}
+
+.ticket-serial {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  padding: 0.24rem 0.62rem;
+  border-radius: 6px;
+  background: rgba(17, 24, 39, 0.76);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  font-family: var(--font-editorial-mono, 'JetBrains Mono', monospace);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* Ticket Main Body */
+.ticket-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1.35rem 1.45rem 1.25rem;
+}
+
+.ticket-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.ticket-card .ticket-pill {
+  font-family: var(--font-editorial-mono, 'JetBrains Mono', monospace);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.26rem 0.7rem;
+  border-radius: 999px;
+  background-color: var(--memory-soft, #f2f5f7);
+  color: var(--memory-accent, #315b79);
+  border: 1px solid rgba(49, 91, 121, 0.16);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.ticket-anchor:hover .ticket-pill,
+.ticket-card:hover .ticket-pill {
+  background-color: var(--memory-accent, #315b79);
+  color: #ffffff;
+}
+
+.ticket-date {
+  font-family: var(--font-editorial-mono, 'JetBrains Mono', monospace);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--memory-muted, #646b73);
+  letter-spacing: 0.03em;
+}
+
+.ticket-card .ticket-title {
+  font-family: var(--font-editorial-display, var(--font-editorial-heading, 'Outfit', sans-serif));
+  font-size: 1.16rem;
+  font-weight: 700;
+  line-height: 1.36;
+  letter-spacing: -0.015em;
+  color: #111827;
+  margin-bottom: 0.6rem;
+}
+
+.ticket-card .ticket-teaser {
+  font-family: var(--font-editorial-heading, 'Merriweather', Georgia, serif);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #4b5563;
+  margin-bottom: 1.35rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Perforated Stub Footer with Side Cutout Notches */
+.ticket-stub {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 0.95rem;
+  border-top: 1.5px dashed #cbd5e1;
+  font-family: var(--font-editorial-mono, 'JetBrains Mono', monospace);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--memory-accent, #315b79);
+}
+
+.ticket-stub::before,
+.ticket-stub::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--bs-body-bg, #ffffff);
+  border: 1px solid var(--memory-line, #dce3ea);
+}
+
+.ticket-stub::before {
+  left: -29px;
+}
+
+.ticket-stub::after {
+  right: -29px;
+}
+
+.ticket-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.ticket-anchor:hover .ticket-arrow,
+.ticket-card:hover .ticket-arrow {
+  transform: translateX(4px);
+}
