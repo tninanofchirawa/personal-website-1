@@ -1,0 +1,29 @@
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 750 46"
+         width="100%"
+         role="img"
+         aria-label="Real-World Data Studies, Mathematical Modeling, HITS Events and Milestones">
+
+      <defs>
+        <clipPath id="rohan-marquee">
+          <rect x="2" y="2" width="746" height="42" rx="8"/>
+        </clipPath>
+      </defs>
+
+      <g clip-path="url(#rohan-marquee)">
+        <g font-family="Georgia, serif"
+           font-size="16"
+           font-weight="bold"
+           fill="#f0d98b">
+
+          <text y="29">
+            📊 Real-World Data Studies • 🧮 Mathematical Modeling • 🏆 HITS Events &amp; Milestones •
+            <animate attributeName="x"
+                     from="750" to="-750"
+                     dur="18s"
+                     repeatCount="indefinite"/>
+          </text>
+
+        </g>
+      </g>
+    </svg>
