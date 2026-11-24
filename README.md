@@ -19,10 +19,10 @@
   <p>🐎 ━━━━━━━━━━━ ᛋᛏᚱᛁᛞᛖᚱ • ᚱᛟᚻᚨᚾ ━━━━━━━━━━━ 🐎</p>
 
 <img
-  src="https://tninanofchirawa.github.io/personal-website-1/assets/images/home/marquee.svg"
-  alt="Real-World Data Studies • Mathematical Modeling • HITS Events and Milestones"
-  width="100%"
-/>
+    src="https://tninanofchirawa.github.io/personal-website-1/assets/marquee.svg"
+    alt="Real-World Data Studies • Mathematical Modeling • HITS Events and Milestones"
+    width="100%"
+  />
 
   <p>⚔️ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ⚔️</p>
 
