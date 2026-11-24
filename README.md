@@ -13,20 +13,20 @@
     <img src="https://img.shields.io/badge/🏇%20Ride%20To%20The%20Golden%20Hall-Enter%20The%20Realm-d4af37?style=for-the-badge&labelColor=14251a" alt="Enter the Golden Hall" referrerpolicy="no-referrer" />
   </a>
 
-<sub>💡 <em>Ctrl + Click (or Cmd + Click on Mac) to open the realm in a new tab.</em></sub>
+  <br />
+  <sub>💡 <em>Ctrl + Click (or Cmd + Click on Mac) to open the realm in a new tab.</em></sub>
 
-🐎 ━━━━━━━━━━━ ᛋᛏᚱᛁᛞᛖᚱ • ᚱᛟᚻᚨᚾ ━━━━━━━━━━━ 🐎
+  <p>🐎 ━━━━━━━━━━━ ᛋᛏᚱᛁᛞᛖᚱ • ᚱᛟᚻᚨᚾ ━━━━━━━━━━━ 🐎</p>
+
 <img
-  src="assets/images/home/marquee.svg"
-  alt="Real-World Data Studies • Mathematical Modeling • HITS Events and Milestones"
-  width="100%"
-/>
+    src="https://raw.githubusercontent.com/tninanofchirawa/personal-website-1/main/assets/images/home/marquee.svg"
+    alt="Real-World Data Studies • Mathematical Modeling • HITS Events and Milestones"
+    width="100%"
+  />
 
-⚔️ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ⚔️
+  <p>⚔️ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ⚔️</p>
 
-</div>
-
----
+## </div>
 
 ## 📖 The Story Behind This Site
 
