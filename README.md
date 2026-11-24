@@ -19,7 +19,7 @@
   <p>🐎 ━━━━━━━━━━━ ᛋᛏᚱᛁᛞᛖᚱ • ᚱᛟᚻᚨᚾ ━━━━━━━━━━━ 🐎</p>
 
 <img
-    src="https://raw.githubusercontent.com/tninanofchirawa/personal-website-1/main/assets/images/home/marquee.svg"
+    src="https://raw.githubusercontent.com/tninanofchirawa/personal-website-1/assets/images/home/marquee.svg"
     alt="Real-World Data Studies • Mathematical Modeling • HITS Events and Milestones"
     width="100%"
   />
